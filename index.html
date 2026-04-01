@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anastasia Uglova</title>
+  <meta name="description" content="Technologist and founder building relational AI for human thriving. Founder of Tethics & Chill, advisor to ex/ante.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Inter:wght@300;400;500;600;900&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --blue: #0a3bcf;
+      --blue-light: rgba(10, 59, 207, 0.08);
+      --blue-hover: #0830a8;
+      --sienna: #c2553a;
+      --sienna-light: rgba(194, 85, 58, 0.2);
+      --sienna-hover: rgba(194, 85, 58, 0.35);
+      --black: #111;
+      --gray-700: #333;
+      --gray-600: #555;
+      --gray-400: #999;
+      --gray-200: #e5e5e5;
+      --gray-100: #f7f7f7;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      color: var(--black);
+      line-height: 1.7;
+      font-size: 15px;
+      background: #fff;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--blue); text-decoration: none; }
+    a:hover { color: var(--blue-hover); }
+
+    /* LAYOUT — two-column like Wix site */
+    .page {
+      display: flex;
+      min-height: 100vh;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* LEFT SIDEBAR */
+    .sidebar {
+      width: 280px;
+      flex-shrink: 0;
+      padding: 3rem 2.5rem 3rem 2rem;
+      border-right: 1px solid var(--sienna-light);
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .sidebar-nav { flex: 1; }
+
+    .sidebar-section {
+      margin-bottom: 2rem;
+    }
+    .sidebar-label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--gray-400);
+      font-weight: 500;
+      margin-bottom: 0.6rem;
+    }
+
+    .sidebar-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      width: 100%;
+      padding: 0.55rem 0.85rem;
+      margin-bottom: 0.35rem;
+      border: 1px solid var(--sienna-light);
+      border-radius: 6px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--black);
+      background: transparent;
+      cursor: pointer;
+      text-decoration: none;
+      transition: border-color 0.15s, color 0.15s, background 0.15s;
+    }
+    .sidebar-btn:hover {
+      border-color: var(--sienna);
+      color: var(--sienna);
+      background: rgba(194, 85, 58, 0.04);
+    }
+    .sidebar-btn .arrow {
+      margin-left: auto;
+      font-size: 0.75rem;
+      opacity: 0.4;
+    }
+
+    .sidebar-contact {
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--sienna-light);
+      font-size: 0.8rem;
+      color: var(--gray-600);
+    }
+    .sidebar-contact a { color: var(--gray-600); }
+    .sidebar-contact a:hover { color: var(--blue); }
+
+    /* RIGHT MAIN */
+    .main {
+      flex: 1;
+      padding: 3rem 4rem 3rem 3.5rem;
+    }
+
+    /* HERO */
+    .hero {
+      display: flex;
+      gap: 2.5rem;
+      align-items: flex-start;
+      margin-bottom: 2.5rem;
+    }
+    .hero-photo {
+      width: 340px;
+      height: 340px;
+      border-radius: 50%;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+    .hero-text {
+      flex: 1;
+      padding-top: 1.5rem;
+    }
+    .hero-greeting {
+      font-size: 4.5rem;
+      font-weight: 900;
+      line-height: 1;
+      color: var(--blue);
+      letter-spacing: -0.04em;
+      margin-bottom: 1rem;
+    }
+    .hero-tagline {
+      font-family: 'Lora', serif;
+      font-size: 1.15rem;
+      font-weight: 400;
+      color: var(--black);
+      line-height: 1.5;
+    }
+
+    /* BIO */
+    .bio-label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--gray-400);
+      font-weight: 500;
+      margin-bottom: 0.75rem;
+    }
+    .bio p {
+      font-size: 0.92rem;
+      line-height: 1.8;
+      color: var(--gray-700);
+      font-weight: 300;
+      margin-bottom: 1rem;
+    }
+    .bio p:last-child { margin-bottom: 0; }
+    .bio em { font-style: italic; }
+    .bio a {
+      text-decoration-color: var(--sienna-light);
+      text-underline-offset: 3px;
+      color: var(--black);
+    }
+    .bio a:hover { text-decoration-color: var(--sienna); }
+
+    .divider {
+      border: none;
+      border-top: 1px solid var(--sienna-light);
+      margin: 2.5rem 0;
+    }
+
+    /* LINKS GRID */
+    .links-label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--gray-400);
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+    .links-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem;
+    }
+    .link-card {
+      display: block;
+      padding: 0.85rem 1rem;
+      border: 1px solid var(--sienna-light);
+      border-radius: 6px;
+      transition: border-color 0.15s, background 0.15s;
+      text-decoration: none;
+    }
+    .link-card:hover {
+      border-color: var(--sienna);
+      background: rgba(194, 85, 58, 0.04);
+    }
+    .link-card-title {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--black);
+      margin-bottom: 0.15rem;
+    }
+    .link-card:hover .link-card-title { color: var(--sienna); }
+    .link-card-desc {
+      font-size: 0.75rem;
+      color: var(--gray-600);
+      line-height: 1.4;
+      font-weight: 300;
+    }
+
+    /* FOOTER */
+    .footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--sienna-light);
+      font-size: 0.8rem;
+      color: var(--gray-400);
+      display: flex;
+      justify-content: space-between;
+    }
+    .footer a { color: var(--gray-600); }
+    .footer a:hover { color: var(--blue); }
+
+    /* MOBILE */
+    @media (max-width: 860px) {
+      .page { flex-direction: column; }
+      .sidebar {
+        width: 100%;
+        position: static;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid var(--sienna-light);
+        padding: 2rem 1.5rem;
+      }
+      .sidebar-contact { display: none; }
+      .main { padding: 2rem 1.5rem; }
+      .hero {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1.5rem;
+      }
+      .hero-photo { width: 200px; height: 200px; }
+      .hero-greeting { font-size: 3rem; }
+      .links-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- LEFT SIDEBAR -->
+  <aside class="sidebar">
+    <nav class="sidebar-nav">
+      <div class="sidebar-section">
+        <div class="sidebar-label">my venture</div>
+        <a class="sidebar-btn" href="https://www.betterhalf.ai" target="_blank">Better Half <span class="arrow">↗</span></a>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-label">agentic tech ecosystem</div>
+        <a class="sidebar-btn" href="https://tethicsandchill.com" target="_blank">Tethics &amp; Chill <span class="arrow">↗</span></a>
+        <a class="sidebar-btn" href="https://agentictechpodcast.com" target="_blank">Podcast <span class="arrow">↗</span></a>
+        <a class="sidebar-btn" href="https://anastasiauglova.substack.com" target="_blank">Substack <span class="arrow">↗</span></a>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-label">assorted links &amp; fun things</div>
+        <a class="sidebar-btn" href="https://schedule.sxsw.com/2026/events/PP149058" target="_blank">SXSW 2026 Talk <span class="arrow">↗</span></a>
+        <a class="sidebar-btn" href="https://repositories.lib.utexas.edu/items/cd56ceb5-2385-402a-ab9e-74ce84bc4e82" target="_blank">Agentic Tech Origin Story <span class="arrow">↗</span></a>
+        <a class="sidebar-btn" href="https://anastasiauglova.substack.com" target="_blank">Cognitive Consent <span class="arrow">↗</span></a>
+        <a class="sidebar-btn" href="https://anastasiauglova.substack.com" target="_blank">A Letter to Americans <span class="arrow">↗</span></a>
+        <a class="sidebar-btn" href="https://anastasiauglova.substack.com" target="_blank">Participatory Design in Web3 <span class="arrow">↗</span></a>
+        <a class="sidebar-btn" href="https://agentictechpodcast.com" target="_blank">re:hash Podcast <span class="arrow">↗</span></a>
+        <a class="sidebar-btn" href="#" target="_blank">On the Other Side <span class="arrow">↗</span></a>
+        <a class="sidebar-btn" href="#" target="_blank">WTAFF <span class="arrow">↗</span></a>
+        <a class="sidebar-btn" href="#" target="_blank">Original Separation <span class="arrow">↗</span></a>
+      </div>
+    </nav>
+
+    <div class="sidebar-contact">
+      <a href="mailto:anastasiau@gmail.com">anastasiau [at] gmail [dot] com</a>
+    </div>
+  </aside>
+
+  <!-- RIGHT MAIN -->
+  <main class="main">
+    <section class="hero">
+      <img src="images/headshot.jpg" alt="Anastasia Uglova" class="hero-photo">
+      <div class="hero-text">
+        <h1 class="hero-greeting">Hey,<br>human.</h1>
+        <p class="hero-tagline">I'm Anastasia and I'm building the droids we're looking for.</p>
+      </div>
+    </section>
+
+    <div class="bio-label">bio</div>
+    <div class="bio">
+      <p>Whatever happened to the cheerful sci-fi future our movies and TV promised us? We're a long way from AI like Data and C-3PO, who help us be us without pretending to <em>be</em> us. The deeper question isn't better guardrails or tougher regulation — it's what we ask AI to optimize for: human thriving, or human imitation?</p>
+
+      <p>I'm a technologist and founder building at the intersection of AI, human agency, and relational intelligence — the capacity to drive trust, agency, and real connection. I believe this is what the industry hasn't built yet, and what matters most.</p>
+
+      <p>At <a href="https://www.betterhalf.ai">Better Half</a>, I'm building relational AI that uses decision theory and human-AI psychology to deepen human connection. We're creating the first dataset of longitudinal healthy relating, so we can train AI on empirical signals of human thriving.</p>
+
+      <p>I coined the terms "agentic tech" and "tech for human agency" in my <a href="https://repositories.lib.utexas.edu/items/cd56ceb5-2385-402a-ab9e-74ce84bc4e82">research at UT Austin</a> and founded <a href="https://tethicsandchill.com">Tethics &amp; Chill</a>, an invitational community of founders, funders, builders, and thinkers advancing technologies that expand human agency. I also advise <a href="https://buildexante.com">ex/ante</a>, the earliest VC fund to back agentic tech.</p>
+
+      <p>Previously: AI security at Deloitte, NBC, NPR, the U.S. Senate, founding the Cato Daily Podcast (2006), and six years in East Africa advancing global health, workforce development, and women's education.</p>
+
+      <p>For fun: skydiving, acro yoga, ashtanga, climbing, skiing, and reading broadly across science, tech, sci-fi, and theology.</p>
+    </div>
+
+    <footer class="footer">
+      <span>&copy; 2026 Anastasia Uglova</span>
+      <span>
+        <a href="https://twitter.com/uglova" target="_blank">Twitter</a>
+        &nbsp;&middot;&nbsp;
+        <a href="https://www.linkedin.com/in/anastasiauglova/" target="_blank">LinkedIn</a>
+      </span>
+    </footer>
+  </main>
+
+</div>
+
+</body>
+</html>
