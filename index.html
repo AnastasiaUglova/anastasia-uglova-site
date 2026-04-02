@@ -285,16 +285,22 @@
       font-weight: 300;
     }
 
+    /* MOBILE CTA — hidden on desktop */
+    .mobile-cta {
+      display: none;
+    }
+
     /* FOOTER */
     .footer {
-      margin-top: 3rem;
+      margin-top: 0;
       margin-bottom: 2rem;
-      padding-top: 1.5rem;
+      padding: 1.5rem 4rem 0 3.5rem;
       border-top: 1px solid var(--sienna-light);
       font-size: 0.8rem;
       color: var(--gray-400);
       display: flex;
       justify-content: space-between;
+      margin-left: 380px;
     }
     .footer a { color: var(--gray-600); }
     .footer a:hover { color: var(--blue); }
@@ -333,7 +339,30 @@
       .hero-photo { width: 200px; height: 200px; }
       .hero-greeting { font-size: 3rem; }
       .links-grid { grid-template-columns: 1fr; }
-      .footer { flex-direction: column; gap: 0.5rem; }
+      .mobile-cta {
+        display: inline-block;
+        margin-top: 1rem;
+        padding: 0.6rem 1.4rem;
+        border: 1px solid var(--sienna-light);
+        border-radius: 6px;
+        font-family: 'Inter', sans-serif;
+        font-size: 0.85rem;
+        font-weight: 500;
+        color: var(--sienna);
+        text-decoration: none;
+        transition: border-color 0.15s, background 0.15s;
+      }
+      .mobile-cta:hover {
+        border-color: var(--sienna);
+        background: rgba(194, 85, 58, 0.04);
+      }
+      .footer {
+        order: 3;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-left: 0;
+        padding: 1.5rem 1.25rem 0;
+      }
     }
   </style>
 </head>
@@ -342,7 +371,7 @@
 <div class="page">
 
   <!-- LEFT SIDEBAR -->
-  <aside class="sidebar">
+  <aside class="sidebar" id="my-work">
     <nav class="sidebar-nav">
       <div class="sidebar-section">
         <div class="sidebar-label">my venture</div>
@@ -387,6 +416,7 @@
       <div class="hero-text">
         <h1 class="hero-greeting">Hey,<br>human.</h1>
         <p class="hero-tagline">I'm Anastasia and I'm building the droids we're looking for.</p>
+        <a href="#my-work" class="mobile-cta">Explore my work ↓</a>
       </div>
     </section>
 
@@ -407,17 +437,18 @@
       <p>For fun: skydiving, acro yoga, ashtanga, climbing, skiing, and reading broadly across science, tech, sci-fi, and theology.</p>
     </div>
 
-    <footer class="footer">
-      <span>&copy; 2026 Anastasia Uglova</span>
-      <span>
-        anastasiau [at] gmail [dot] com
-        &nbsp;&middot;&nbsp;
-        <a href="https://twitter.com/anastasiau" target="_blank">Twitter</a>
-        &nbsp;&middot;&nbsp;
-        <a href="https://www.linkedin.com/in/anastasiauglova/" target="_blank">LinkedIn</a>
-      </span>
-    </footer>
   </main>
+
+  <footer class="footer">
+    <span>&copy; 2026 Anastasia Uglova</span>
+    <span>
+      anastasiau [at] gmail [dot] com
+      &nbsp;&middot;&nbsp;
+      <a href="https://twitter.com/anastasiau" target="_blank">Twitter</a>
+      &nbsp;&middot;&nbsp;
+      <a href="https://www.linkedin.com/in/anastasiauglova/" target="_blank">LinkedIn</a>
+    </span>
+  </footer>
 
 </div>
 
