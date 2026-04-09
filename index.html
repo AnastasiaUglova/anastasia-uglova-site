@@ -285,32 +285,28 @@
       margin: 0;
       cursor: pointer;
     }
-    .talk-mini .sxsw-badge {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      background: #fff;
-      padding: 6px 8px;
-      border-radius: 4px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.35);
-      z-index: 2;
+    .talk-mini .sxsw-bar {
+      background: #000;
+      padding: 9px 12px;
       display: flex;
       align-items: center;
-      gap: 6px;
+      justify-content: space-between;
+      gap: 10px;
+      border-top: 1px solid rgba(255,255,255,0.08);
     }
-    .talk-mini .sxsw-badge img {
-      height: 22px;
+    .talk-mini .sxsw-bar img {
+      height: 16px;
       width: auto;
       display: block;
+      filter: invert(1);
     }
-    .talk-mini .sxsw-badge .yr {
+    .talk-mini .sxsw-bar .yr {
       font-family: 'Inter', sans-serif;
       font-weight: 700;
       font-size: 0.62rem;
-      letter-spacing: 0.1em;
-      color: #121212;
-      border-left: 1px solid rgba(0,0,0,0.2);
-      padding-left: 6px;
+      letter-spacing: 0.14em;
+      color: #efeadf;
+      opacity: 0.85;
     }
     .talk-mini .thumb img {
       width: 100%;
@@ -402,6 +398,7 @@
     }
     .talk-mini.collapsed .thumb,
     .talk-mini.collapsed .meta,
+    .talk-mini.collapsed .sxsw-bar,
     .talk-mini.collapsed .close,
     .talk-mini.collapsed .minimize { display: none; }
     .talk-mini.collapsed .pill { display: flex; }
@@ -463,8 +460,11 @@
     .talk-lightbox .close-btn:hover { color: #d96b5e; }
 
     @media (max-width: 720px) {
-      .talk-mini { width: 260px; right: 0.8rem; bottom: 0.8rem; }
-      .talk-mini .meta { padding: 0.55rem 0.75rem 0.7rem; }
+      .talk-mini { width: 200px; right: 0.75rem; bottom: 0.75rem; }
+      .talk-mini .meta { padding: 0.5rem 0.7rem 0.6rem; }
+      .talk-mini .title { font-size: 0.72rem; }
+      .talk-mini .sxsw-bar { padding: 7px 10px; }
+      .talk-mini .sxsw-bar img { height: 13px; }
       .talk-lightbox { padding: 1rem; }
     }
 
@@ -727,14 +727,17 @@
   </span>
   <button class="thumb" id="talkMiniOpen" aria-label="Play SXSW talk">
     <img src="images/sxsw-talk-slide.png" alt="Designing AI for Human Thriving — SXSW 2026">
-    <span class="sxsw-badge"><img src="images/sxsw-logo.svg" alt="SXSW"><span class="yr">2026</span></span>
     <span class="play-overlay" aria-hidden="true">
       <svg viewBox="0 0 68 48"><path d="M66.52 7.74a8 8 0 0 0-5.64-5.66C55.9 0 34 0 34 0S12.1 0 7.12 2.08A8 8 0 0 0 1.48 7.74 83 83 0 0 0 0 24a83 83 0 0 0 1.48 16.26 8 8 0 0 0 5.64 5.66C12.1 48 34 48 34 48s21.9 0 26.88-2.08a8 8 0 0 0 5.64-5.66A83 83 0 0 0 68 24a83 83 0 0 0-1.48-16.26z" fill="#f00"/><path d="M45 24 27 14v20" fill="#fff"/></svg>
     </span>
   </button>
   <div class="meta">
-    <div class="eyebrow">SXSW 2026 · Featured Talk</div>
+    <div class="eyebrow">Featured Talk</div>
     <div class="title">Designing AI for Human Thriving</div>
+  </div>
+  <div class="sxsw-bar">
+    <img src="images/SxSW_logo.png" alt="SXSW">
+    <span class="yr">2026</span>
   </div>
 </div>
 
@@ -767,6 +770,9 @@
     var minBtn = document.getElementById('talkMiniMin');
     var pill = document.getElementById('talkMiniPill');
     minBtn.addEventListener('click', function(e){ e.stopPropagation(); mini.classList.add('collapsed'); });
+    if (window.matchMedia('(max-width: 720px)').matches) {
+      mini.classList.add('collapsed');
+    }
     pill.addEventListener('click', function(){ mini.classList.remove('collapsed'); });
     pill.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); mini.classList.remove('collapsed'); } });
   })();
