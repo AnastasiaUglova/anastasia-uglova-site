@@ -373,7 +373,7 @@
     .talk-mini .minimize {
       position: absolute;
       top: 6px;
-      right: 34px;
+      right: 6px;
       width: 24px;
       height: 24px;
       border-radius: 50%;
@@ -719,7 +719,6 @@
 
 <!-- Floating SXSW talk mini-player -->
 <div class="talk-mini" id="talkMini">
-  <button class="close" id="talkMiniClose" aria-label="Dismiss">&times;</button>
   <button class="minimize" id="talkMiniMin" aria-label="Minimize">&ndash;</button>
   <span class="pill" id="talkMiniPill" role="button" tabindex="0">
     <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
@@ -750,8 +749,7 @@
   (function(){
     var mini = document.getElementById('talkMini');
     var openBtn = document.getElementById('talkMiniOpen');
-    var dismissBtn = document.getElementById('talkMiniClose');
-    var lb = document.getElementById('talkLightbox');
+var lb = document.getElementById('talkLightbox');
     var lbInner = document.getElementById('talkLightboxInner');
     var lbClose = document.getElementById('talkLightboxClose');
     function open(){
@@ -766,7 +764,6 @@
     lbClose.addEventListener('click', close);
     lb.addEventListener('click', function(e){ if (e.target === lb) close(); });
     document.addEventListener('keydown', function(e){ if (e.key === 'Escape') close(); });
-    dismissBtn.addEventListener('click', function(e){ e.stopPropagation(); mini.style.display = 'none'; });
     var minBtn = document.getElementById('talkMiniMin');
     var pill = document.getElementById('talkMiniPill');
     minBtn.addEventListener('click', function(e){ e.stopPropagation(); mini.classList.add('collapsed'); });
