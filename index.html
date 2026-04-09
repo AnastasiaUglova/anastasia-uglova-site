@@ -287,19 +287,30 @@
     }
     .talk-mini .sxsw-badge {
       position: absolute;
-      top: 8px;
-      left: 8px;
-      background: rgba(0,0,0,0.72);
-      color: #efeadf;
+      top: 10px;
+      left: 10px;
+      background: #fff;
+      padding: 6px 8px;
+      border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.35);
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .talk-mini .sxsw-badge img {
+      height: 22px;
+      width: auto;
+      display: block;
+    }
+    .talk-mini .sxsw-badge .yr {
       font-family: 'Inter', sans-serif;
       font-weight: 700;
       font-size: 0.62rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      padding: 4px 8px;
-      border-radius: 3px;
-      border-left: 2px solid #d96b5e;
-      z-index: 2;
+      letter-spacing: 0.1em;
+      color: #121212;
+      border-left: 1px solid rgba(0,0,0,0.2);
+      padding-left: 6px;
     }
     .talk-mini .thumb img {
       width: 100%;
@@ -363,6 +374,49 @@
       transition: background 0.15s ease;
     }
     .talk-mini .close:hover { background: rgba(0,0,0,0.8); }
+    .talk-mini .minimize {
+      position: absolute;
+      top: 6px;
+      right: 34px;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: rgba(0,0,0,0.55);
+      color: #fff;
+      border: none;
+      font-size: 16px;
+      line-height: 1;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      z-index: 2;
+      transition: background 0.15s ease;
+    }
+    .talk-mini .minimize:hover { background: rgba(0,0,0,0.8); }
+    /* Collapsed pill state */
+    .talk-mini.collapsed {
+      width: auto;
+      cursor: pointer;
+    }
+    .talk-mini.collapsed .thumb,
+    .talk-mini.collapsed .meta,
+    .talk-mini.collapsed .close,
+    .talk-mini.collapsed .minimize { display: none; }
+    .talk-mini.collapsed .pill { display: flex; }
+    .talk-mini .pill {
+      display: none;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 14px;
+      color: #efeadf;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+    .talk-mini .pill svg { width: 14px; height: 14px; fill: #d96b5e; }
 
     /* LIGHTBOX */
     .talk-lightbox {
@@ -666,9 +720,14 @@
 <!-- Floating SXSW talk mini-player -->
 <div class="talk-mini" id="talkMini">
   <button class="close" id="talkMiniClose" aria-label="Dismiss">&times;</button>
+  <button class="minimize" id="talkMiniMin" aria-label="Minimize">&ndash;</button>
+  <span class="pill" id="talkMiniPill" role="button" tabindex="0">
+    <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+    Watch SXSW talk
+  </span>
   <button class="thumb" id="talkMiniOpen" aria-label="Play SXSW talk">
     <img src="images/sxsw-talk-slide.png" alt="Designing AI for Human Thriving — SXSW 2026">
-    <span class="sxsw-badge">SXSW 2026</span>
+    <span class="sxsw-badge"><img src="images/sxsw-logo.svg" alt="SXSW"><span class="yr">2026</span></span>
     <span class="play-overlay" aria-hidden="true">
       <svg viewBox="0 0 68 48"><path d="M66.52 7.74a8 8 0 0 0-5.64-5.66C55.9 0 34 0 34 0S12.1 0 7.12 2.08A8 8 0 0 0 1.48 7.74 83 83 0 0 0 0 24a83 83 0 0 0 1.48 16.26 8 8 0 0 0 5.64 5.66C12.1 48 34 48 34 48s21.9 0 26.88-2.08a8 8 0 0 0 5.64-5.66A83 83 0 0 0 68 24a83 83 0 0 0-1.48-16.26z" fill="#f00"/><path d="M45 24 27 14v20" fill="#fff"/></svg>
     </span>
@@ -704,7 +763,12 @@
     lbClose.addEventListener('click', close);
     lb.addEventListener('click', function(e){ if (e.target === lb) close(); });
     document.addEventListener('keydown', function(e){ if (e.key === 'Escape') close(); });
-    dismissBtn.addEventListener('click', function(){ mini.style.display = 'none'; });
+    dismissBtn.addEventListener('click', function(e){ e.stopPropagation(); mini.style.display = 'none'; });
+    var minBtn = document.getElementById('talkMiniMin');
+    var pill = document.getElementById('talkMiniPill');
+    minBtn.addEventListener('click', function(e){ e.stopPropagation(); mini.classList.add('collapsed'); });
+    pill.addEventListener('click', function(){ mini.classList.remove('collapsed'); });
+    pill.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); mini.classList.remove('collapsed'); } });
   })();
 </script>
 
