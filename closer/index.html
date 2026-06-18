@@ -216,7 +216,16 @@
   .quotecard{ background:var(--white); color:var(--ink); border-radius:24px; padding:46px 44px 38px; position:relative; overflow:hidden; border:1px solid var(--line); border-left:5px solid var(--burg); box-shadow:0 30px 60px -34px rgba(34,31,27,.3); }
   .quotecard::before{ content:"“"; position:absolute; top:-30px; left:20px; font-family:"Fraunces"; font-size:170px; color:var(--burg-t); }
   .quotecard p{ font-family:"Fraunces",serif; font-style:italic; font-weight:300; font-size:clamp(23px,3vw,32px); line-height:1.32; position:relative; z-index:1; color:var(--ink); }
-  .quotecard p em{ color:var(--burg); font-style:italic; }
+  .quotecard p em{ color:var(--burg); font-style:italic; font-weight:700; }
+  .polaroids{ display:flex; flex-wrap:wrap; gap:16px; margin-top:30px; }
+  .polaroid{ background:#fff; padding:9px 9px 30px; border-radius:3px; box-shadow:0 12px 28px -10px rgba(0,0,0,.55); width:142px; transition:transform .25s, box-shadow .25s; }
+  .polaroid img{ width:100%; aspect-ratio:1/1; object-fit:cover; display:block; }
+  .polaroid .cap{ font-family:"Caveat",cursive; font-weight:600; font-size:17px; color:#2b2620; text-align:center; margin-top:7px; line-height:1; }
+  .polaroid:nth-child(1){ transform:rotate(-5deg); }
+  .polaroid:nth-child(2){ transform:rotate(3deg); margin-top:18px; }
+  .polaroid:nth-child(3){ transform:rotate(-2deg); margin-top:6px; }
+  .polaroid:hover{ transform:rotate(0) scale(1.05); box-shadow:0 20px 38px -12px rgba(0,0,0,.6); z-index:2; }
+  @media (max-width:540px){ .polaroid{ width:43%; } }
   .sign{ margin-top:26px; display:flex; align-items:baseline; gap:12px; flex-wrap:wrap; }
   .sign .nm{ font-family:"Caveat",cursive; font-weight:700; font-size:42px; color:var(--burg); line-height:1; transform:rotate(-4deg); }
   .sign .role{ font-size:13px; letter-spacing:.12em; text-transform:uppercase; font-weight:700; color:var(--ink-2); }
@@ -442,25 +451,16 @@
             <span class="tag">Climbing</span><span class="tag">Acro yoga</span><span class="tag">Skiing</span>
             <span class="tag">Pilates</span><span class="tag">Writing</span><span class="tag">Jewelry design</span>
           </div>
+          <div class="polaroids reveal d1">
+            <div class="polaroid"><img src="poly1.jpg" alt="Anastasia in a golden field" /><div class="cap">golden hour</div></div>
+            <div class="polaroid"><img src="poly2.jpg" alt="Anastasia laughing in the grass" /><div class="cap">off the clock</div></div>
+            <div class="polaroid"><img src="poly3.jpg" alt="Anastasia" /><div class="cap">no filter</div></div>
+          </div>
         </div>
         <div class="quotecard reveal d2">
           <p>High-ticket deals don't get won with pressure. They close the moment the buyer stops thinking about who they are now — and starts imagining <em>who they can be with you in their corner.</em></p>
           <div class="sign"><span class="nm">Anastasia</span><span class="role">my entire pitch, basically</span></div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CREDENTIALS -->
-  <section class="creds">
-    <div class="wrap">
-      <span class="eyebrow reveal"><span class="ln"></span> The foundation</span>
-      <h2 class="sec-head reveal">Credentials &amp; <em>craft.</em></h2>
-      <div class="credgrid">
-        <div class="cred reveal d1"><div class="clabel">Education</div><p><b>M.S. Information Security &amp; Privacy</b>, UT Austin<br><b>B.A. Government</b>, Cornell</p></div>
-        <div class="cred reveal d2"><div class="clabel">Sales craft</div><p>Sharpening the craft at the <b>Silver Selling Academy</b> — training to deliver the close with integrity.</p></div>
-        <div class="cred reveal d3"><div class="clabel">Selectivity</div><p><b>Global Health Corps</b> fellow — selected from a <b>&lt;2%</b> acceptance pool.</p></div>
-        <div class="cred reveal d4"><div class="clabel">Operator</div><p>Founder in <b>relational AI</b> · former <b>CIO</b>, Akilah Institute · founder &amp; chief convener of <a href="https://tethicsandchill.com" target="_blank" rel="noopener">Tethics &amp; Chill</a>.</p></div>
       </div>
     </div>
   </section>
@@ -476,6 +476,20 @@
         <div class="skillcol reveal d2"><h4>CRM &amp; sales</h4><ul><li>Salesforce</li><li>HubSpot</li><li>Pipeline &amp; forecasting</li><li>Sales enablement</li><li>+ any CRM</li></ul></div>
         <div class="skillcol reveal d3"><h4>Marketing</h4><ul><li>Squarespace</li><li>Wix</li><li>HubSpot</li><li>Email &amp; lifecycle</li><li>SEO &amp; content</li></ul></div>
         <div class="skillcol reveal d4"><h4>Collaboration</h4><ul><li>Notion</li><li>Slack</li><li>Airtable</li><li>Loom</li><li>Zoom &amp; Motion</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREDENTIALS -->
+  <section class="creds">
+    <div class="wrap">
+      <span class="eyebrow reveal"><span class="ln"></span> The foundation</span>
+      <h2 class="sec-head reveal">Credentials &amp; <em>craft.</em></h2>
+      <div class="credgrid">
+        <div class="cred reveal d1"><div class="clabel">Education</div><p><b>M.S. Information Security &amp; Privacy</b>, UT Austin<br><b>B.A. Government</b>, Cornell</p></div>
+        <div class="cred reveal d2"><div class="clabel">Sales craft</div><p>Sharpening the craft at the <b>Silver Selling Academy</b> — training to deliver the close with integrity.</p></div>
+        <div class="cred reveal d3"><div class="clabel">Selectivity</div><p><b>Global Health Corps</b> fellow — selected from a <b>&lt;2%</b> acceptance pool.</p></div>
+        <div class="cred reveal d4"><div class="clabel">Operator</div><p>Founder in <b>relational AI</b> · former <b>CIO</b>, Akilah Institute · founder &amp; chief convener of <a href="https://tethicsandchill.com" target="_blank" rel="noopener">Tethics &amp; Chill</a>.</p></div>
       </div>
     </div>
   </section>
