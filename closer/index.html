@@ -100,12 +100,12 @@
   .portrait .hint{ position:absolute; bottom:18px; left:0; right:0; text-align:center; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-2); font-weight:700; }
 
   /* ===== PRESS BAR ===== */
-  .pressbar{ background:var(--paper-2); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+  .pressbar{ background:var(--black); }
   .pressbar .wrap{ display:flex; flex-wrap:wrap; align-items:center; gap:14px 30px; padding-top:20px; padding-bottom:20px; }
-  .pressbar .flabel{ font-weight:700; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:var(--burg); }
+  .pressbar .flabel{ font-weight:700; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:rgba(250,247,241,.55); }
   .pressbar .marks{ display:flex; flex-wrap:wrap; align-items:center; gap:14px 30px; }
-  .mark-logo{ font-weight:800; font-size:20px; letter-spacing:-.01em; color:#0a0a0a; opacity:1; transition:opacity .2s, color .2s; }
-  a.mark-logo:hover{ opacity:1; color:var(--burg); }
+  .mark-logo{ font-weight:800; font-size:20px; letter-spacing:-.01em; color:#ece9e2; opacity:.9; transition:opacity .2s, color .2s; }
+  a.mark-logo:hover{ opacity:1; color:#fff; }
   .mark-logo.oracle{ letter-spacing:.16em; font-weight:700; }
   .mark-logo.eth{ font-family:"Fraunces",serif; font-weight:600; }
   .mark-logo.guardian{ font-family:"Fraunces",serif; font-weight:600; letter-spacing:-.01em; }
@@ -181,7 +181,7 @@
   .move .body p{ margin-top:10px; max-width:64ch; font-size:18px; color:var(--ink-2); }
 
   /* ===== SKILLS ===== */
-  .skills{ padding:86px 0; background:var(--paper-2); }
+  .skills{ padding:86px 0; background:var(--white); }
   .skills .sec-head{ max-width:none; }
   .skills .lead{ max-width:640px; margin-top:18px; font-size:19px; }
   .skillgrid{ display:grid; grid-template-columns:repeat(4,1fr); gap:30px 28px; margin-top:50px; }
@@ -217,8 +217,8 @@
   .quotecard::before{ content:"“"; position:absolute; top:-30px; left:20px; font-family:"Fraunces"; font-size:170px; color:var(--burg-t); }
   .quotecard p{ font-family:"Fraunces",serif; font-style:italic; font-weight:300; font-size:clamp(23px,3vw,32px); line-height:1.32; position:relative; z-index:1; color:var(--ink); }
   .quotecard p em{ color:var(--burg); font-style:italic; font-weight:700; }
-  .polaroids{ display:flex; flex-wrap:wrap; gap:16px; margin-top:30px; }
-  .polaroid{ background:#fff; padding:9px 9px 30px; border-radius:3px; box-shadow:0 12px 28px -10px rgba(0,0,0,.55); width:142px; transition:transform .25s, box-shadow .25s; }
+  .polaroids{ display:flex; flex-wrap:wrap; justify-content:center; gap:16px; margin-top:56px; }
+  .polaroid{ background:#fff; padding:9px 9px 30px; border-radius:3px; box-shadow:0 14px 30px -10px rgba(0,0,0,.6); width:122px; transition:transform .25s, box-shadow .25s; }
   .polaroid img{ width:100%; aspect-ratio:1/1; object-fit:cover; display:block; }
   .polaroid .cap{ font-family:"Caveat",cursive; font-weight:600; font-size:17px; color:#2b2620; text-align:center; margin-top:7px; line-height:1; }
   .polaroid:nth-child(1){ transform:rotate(-5deg); }
@@ -359,7 +359,7 @@
     <div class="wrap">
       <span class="flabel">Featured &amp; on stage</span>
       <div class="marks">
-        <img class="mark-logo sxsw-logo" src="SxSW_logo.png" alt="SXSW" />
+        <img class="mark-logo sxsw-logo" src="SxSW_logo_white.png" alt="SXSW" />
         <span class="mark-logo">TechCrunch</span>
         <span class="mark-logo guardian">The Guardian</span>
         <span class="mark-logo">Consensus</span>
@@ -453,17 +453,17 @@
             <span class="tag">Climbing</span><span class="tag">Acro yoga</span><span class="tag">Skiing</span>
             <span class="tag">Pilates</span><span class="tag">Writing</span><span class="tag">Jewelry design</span>
           </div>
-          <div class="polaroids reveal d1">
-            <div class="polaroid"><img src="poly1.jpg" alt="Anastasia standing on a horse on a mountaintop" /><div class="cap">on top of the world</div></div>
-            <div class="polaroid"><img src="poly2.jpg" alt="Anastasia hiking in the desert mountains" /><div class="cap">trailhead</div></div>
-            <div class="polaroid"><img src="poly3.jpg" alt="Anastasia, off duty" /><div class="cap">off duty</div></div>
-            <div class="polaroid"><img src="poly4.jpg" alt="Anastasia on safari" /><div class="cap">on safari</div></div>
-          </div>
         </div>
         <div class="quotecard reveal d2">
           <p>High-ticket deals don't get won with pressure. They close the moment the buyer stops thinking about who they are now — and starts imagining <em>who they can be with you in their corner.</em></p>
           <div class="sign"><span class="nm">Anastasia</span><span class="role">my entire pitch, basically</span></div>
         </div>
+      </div>
+      <div class="polaroids reveal">
+        <div class="polaroid"><img src="poly1.jpg" alt="Anastasia standing on a horse on a mountaintop" /><div class="cap">on top of the world</div></div>
+        <div class="polaroid"><img src="poly2.jpg" alt="Anastasia hiking in the desert mountains" /><div class="cap">trailhead</div></div>
+        <div class="polaroid"><img src="poly3.jpg" alt="Anastasia, off duty" /><div class="cap">off duty</div></div>
+        <div class="polaroid"><img src="poly4.jpg" alt="Anastasia on safari" /><div class="cap">on safari</div></div>
       </div>
     </div>
   </section>
@@ -540,6 +540,10 @@
         <input type="hidden" name="subject" value="closer" />
         <p hidden><label>Leave this empty: <input name="bot-field" /></label></p>
         <div class="q">
+          <label class="qlabel" for="name">What's your name?</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required>
+        </div>
+        <div class="q">
           <span class="qlabel">Do you need a polished closer for a high-ticket offer?</span>
           <div class="opts">
             <span class="opt"><input type="radio" name="need" id="need-y" value="Yes" required><label for="need-y">Yes</label></span>
@@ -549,6 +553,10 @@
         <div class="q">
           <label class="qlabel" for="closerate">What's your average close rate now?</label>
           <input type="text" id="closerate" name="closerate" placeholder="e.g. 20%, varies, not sure…">
+        </div>
+        <div class="q">
+          <label class="qlabel" for="bottlenecks">Any bottlenecks in your sales process?</label>
+          <input type="text" id="bottlenecks" name="bottlenecks" placeholder="What's getting in the way?">
         </div>
         <div class="q">
           <span class="qlabel">Would you like to close more prospects?</span>
