@@ -104,7 +104,7 @@
   .pressbar .wrap{ display:flex; flex-wrap:wrap; align-items:center; gap:14px 30px; padding-top:20px; padding-bottom:20px; }
   .pressbar .flabel{ font-weight:700; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:var(--burg); }
   .pressbar .marks{ display:flex; flex-wrap:wrap; align-items:center; gap:14px 30px; }
-  .mark-logo{ font-weight:800; font-size:20px; letter-spacing:-.01em; color:var(--ink); opacity:.66; transition:opacity .2s, color .2s; }
+  .mark-logo{ font-weight:800; font-size:20px; letter-spacing:-.01em; color:#0a0a0a; opacity:1; transition:opacity .2s, color .2s; }
   a.mark-logo:hover{ opacity:1; color:var(--burg); }
   .mark-logo.oracle{ letter-spacing:.16em; font-weight:700; }
   .mark-logo.eth{ font-family:"Fraunces",serif; font-weight:600; }
@@ -118,7 +118,7 @@
   .ft-close:hover{ background:var(--burg); }
   .ft-player{ position:relative; aspect-ratio:16/9; cursor:pointer; background:var(--paper-2); }
   .ft-poster{ width:100%; height:100%; object-fit:cover; object-position:50% 12%; display:block; }
-  .ft-play{ position:absolute; inset:0; margin:auto; width:60px; height:60px; display:grid; place-items:center; background:var(--burg); color:#fff; border-radius:50%; transition:transform .2s; animation:pulseB 2.6s infinite; }
+  .ft-play{ position:absolute; left:14px; bottom:14px; width:50px; height:50px; display:grid; place-items:center; background:var(--burg); color:#fff; border-radius:50%; transition:transform .2s; animation:pulseB 2.6s infinite; }
   .ft-play svg{ width:23px; height:23px; margin-left:3px; }
   .float-talk:hover .ft-play{ transform:scale(1.09); }
   @keyframes pulseB{ 0%{ box-shadow:0 0 0 0 rgba(125,39,59,.5);} 70%{ box-shadow:0 0 0 16px rgba(125,39,59,0);} 100%{ box-shadow:0 0 0 0 rgba(125,39,59,0);} }
