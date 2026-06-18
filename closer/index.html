@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Anastasia Uglova — Hard Rooms. Warm Closes.</title>
+<meta name="description" content="A consultative high-ticket closer & thought leader. Fifteen years earning the yes in the hardest rooms there are — NBC, NPR, Notion, Deloitte. Trust is the product." />
+<meta property="og:title" content="Anastasia Uglova — Hard Rooms. Warm Closes." />
+<meta property="og:description" content="A closer who wins high-ticket deals through trusted consultation, not pressure." />
+<meta property="og:image" content="headshot.jpg" />
+<meta property="og:type" content="website" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Hanken+Grotesk:wght@400;500;600;700;800&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+  :root{
+    --paper:    #FAF7F1;   /* warm off-white */
+    --paper-2:  #F0EBE2;   /* soft warm grey */
+    --white:    #FFFFFF;
+    --ink:      #221F1B;   /* warm charcoal */
+    --ink-2:    #6f695f;   /* muted */
+    --burg:     #7D273B;   /* the single accent */
+    --burg-d:   #611c2c;
+    --burg-t:   rgba(125,39,59,0.07);
+    --cream:    #FAF7F1;   /* text on dark */
+    --black:    #15120E;   /* warm near-black (bookends) */
+    --dgrey:    #2B2823;   /* warm charcoal grey (mid blocks) */
+    --rose:     #C76B7E;   /* light burgundy for accents on dark */
+    --line:     rgba(34,31,27,0.13);
+    --maxw:     1200px;
+  }
+
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html{ scroll-behavior:smooth; -webkit-text-size-adjust:100%; }
+  body{
+    background:var(--paper); color:var(--ink);
+    font-family:"Hanken Grotesk",sans-serif; font-size:18px; line-height:1.55;
+    overflow-x:hidden; position:relative; -webkit-font-smoothing:antialiased;
+  }
+  ::selection{ background:var(--burg); color:#fff; }
+  a{ color:inherit; text-decoration:none; }
+  .wrap{ width:100%; max-width:var(--maxw); margin:0 auto; padding:0 32px; }
+
+  /* ===== TICKER ===== */
+  .ticker{ background:var(--black); color:var(--cream); overflow:hidden; }
+  .ticker .track{ display:flex; width:max-content; animation:scroll 32s linear infinite; padding:10px 0; }
+  .ticker span{ font-weight:700; font-size:13px; letter-spacing:.16em; text-transform:uppercase; white-space:nowrap; padding:0 22px; display:flex; align-items:center; gap:22px; }
+  .ticker span::after{ content:"✦"; color:var(--rose); }
+  .ticker .hot{ color:var(--rose); font-weight:800; }
+  @keyframes scroll{ to{ transform:translateX(-50%); } }
+
+  /* ===== HERO ===== */
+  .hero{ position:relative; padding:56px 0 32px; }
+  .hero-grid{ display:grid; grid-template-columns:1.08fr .92fr; gap:48px; align-items:center; }
+
+  .eyebrow{ display:inline-flex; align-items:center; gap:10px; font-weight:700; font-size:13px; letter-spacing:.2em; text-transform:uppercase; color:var(--burg); }
+  .eyebrow .ln{ width:34px; height:2px; background:var(--burg); }
+
+  h1.title{ font-family:"Fraunces",serif; font-weight:600; font-size:clamp(44px,7vw,92px); line-height:.93; letter-spacing:-.025em; margin:22px 0 0; }
+  h1.title .l1{ display:block; color:var(--ink); white-space:nowrap; }
+  h1.title .l2{ display:block; font-style:italic; font-weight:500; color:var(--burg); white-space:nowrap; }
+  .star-blue{ color:var(--burg); font-style:normal; font-size:.6em; vertical-align:.06em; margin-left:.05em; }
+  .star-gold{ color:var(--ink); font-style:normal; font-size:.6em; vertical-align:.06em; margin-left:.05em; }
+
+  .annot{ font-family:"Caveat",cursive; font-weight:600; font-size:27px; color:var(--burg); display:inline-flex; align-items:flex-start; gap:8px; margin:16px 0 0 4px; transform:rotate(-3deg); }
+  .annot svg{ flex:none; margin-top:4px; }
+
+  .sub{ max-width:540px; margin:24px 0 0; font-size:clamp(18px,2vw,21px); color:var(--ink-2); }
+  .sub strong{ color:var(--ink); font-weight:700; }
+
+  .transfer{ max-width:540px; margin:22px 0 0; padding-left:18px; border-left:3px solid var(--burg); font-size:16.5px; color:var(--ink-2); }
+  .transfer b{ color:var(--ink); font-weight:700; }
+
+  .expertise{ display:flex; flex-wrap:wrap; align-items:center; gap:10px; margin-top:24px; }
+  .expertise .lbl{ font-weight:700; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-2); margin-right:4px; }
+  .xchip{ font-weight:600; font-size:14px; padding:7px 15px; border:1.5px solid var(--burg); color:var(--burg); border-radius:60px; background:var(--burg-t); }
+
+  .cta-row{ display:flex; flex-wrap:wrap; gap:18px 26px; align-items:center; margin-top:28px; }
+  .btn, .btn-primary{ display:inline-flex; align-items:center; gap:11px; font-weight:700; font-size:17px; padding:15px 30px; border-radius:60px; border:1.5px solid var(--burg); background:var(--burg); color:#fff; box-shadow:0 12px 26px -14px rgba(125,39,59,.55); transition:transform .2s cubic-bezier(.2,.8,.3,1), box-shadow .2s, background .2s; cursor:pointer; }
+  .btn:hover, .btn-primary:hover{ background:var(--burg-d); border-color:var(--burg-d); transform:translateY(-2px); box-shadow:0 16px 32px -14px rgba(125,39,59,.65); }
+  .btn .arrow, .btn-primary .arrow{ transition:transform .2s; }
+  .btn:hover .arrow, .btn-primary:hover .arrow{ transform:translateX(4px); }
+  .btn-text{ font-weight:700; font-size:16px; color:var(--ink); border-bottom:2px solid var(--line); padding-bottom:3px; transition:color .2s,border-color .2s; }
+  .btn-text:hover{ color:var(--burg); border-color:var(--burg); }
+
+  /* portrait */
+  .portrait-wrap{ position:relative; justify-self:center; }
+  .portrait{
+    width:min(400px,82vw); aspect-ratio:3/4;
+    border:1px solid var(--line);
+    border-radius:200px 200px 18px 18px / 230px 230px 18px 18px;
+    background:var(--paper-2);
+    box-shadow:0 30px 60px -32px rgba(34,31,27,.4);
+    position:relative; overflow:hidden; display:grid; place-items:center;
+  }
+  .portrait img{ width:100%; height:100%; object-fit:cover; object-position:50% 18%; display:block; }
+  .portrait .mono{ font-family:"Fraunces",serif; font-weight:600; font-size:128px; color:var(--ink-2); letter-spacing:-.04em; }
+  .portrait .hint{ position:absolute; bottom:18px; left:0; right:0; text-align:center; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-2); font-weight:700; }
+
+  /* ===== PRESS BAR ===== */
+  .pressbar{ background:var(--paper-2); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+  .pressbar .wrap{ display:flex; flex-wrap:wrap; align-items:center; gap:14px 30px; padding-top:20px; padding-bottom:20px; }
+  .pressbar .flabel{ font-weight:700; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:var(--burg); }
+  .pressbar .marks{ display:flex; flex-wrap:wrap; align-items:center; gap:14px 30px; }
+  .mark-logo{ font-weight:800; font-size:20px; letter-spacing:-.01em; color:var(--ink); opacity:.66; transition:opacity .2s, color .2s; }
+  a.mark-logo:hover{ opacity:1; color:var(--burg); }
+  .mark-logo.oracle{ letter-spacing:.16em; font-weight:700; }
+  .mark-logo.eth{ font-family:"Fraunces",serif; font-weight:600; }
+  .mark-logo.guardian{ font-family:"Fraunces",serif; font-weight:600; letter-spacing:-.01em; }
+  img.sxsw-logo{ height:18px; width:auto; display:inline-block; vertical-align:middle; }
+  .ft-sxsw{ height:11px; width:auto; display:inline-block; vertical-align:-1px; margin-right:4px; }
+
+  /* ===== FLOATING SXSW PLAYER ===== */
+  .float-talk{ position:fixed; right:24px; bottom:24px; z-index:9000; width:328px; max-width:calc(100vw - 32px); background:var(--white); border:1px solid var(--line); border-radius:16px; overflow:hidden; box-shadow:0 24px 56px -18px rgba(34,31,27,.32); }
+  .ft-close{ position:absolute; top:9px; right:9px; z-index:4; width:28px; height:28px; border-radius:50%; border:0; background:rgba(34,31,27,.55); color:#fff; font-size:16px; line-height:1; cursor:pointer; display:grid; place-items:center; transition:background .2s; }
+  .ft-close:hover{ background:var(--burg); }
+  .ft-player{ position:relative; aspect-ratio:16/9; cursor:pointer; background:var(--paper-2); }
+  .ft-poster{ width:100%; height:100%; object-fit:cover; object-position:50% 12%; display:block; }
+  .ft-play{ position:absolute; inset:0; margin:auto; width:60px; height:60px; display:grid; place-items:center; background:var(--burg); color:#fff; border-radius:50%; transition:transform .2s; animation:pulseB 2.6s infinite; }
+  .ft-play svg{ width:23px; height:23px; margin-left:3px; }
+  .float-talk:hover .ft-play{ transform:scale(1.09); }
+  @keyframes pulseB{ 0%{ box-shadow:0 0 0 0 rgba(125,39,59,.5);} 70%{ box-shadow:0 0 0 16px rgba(125,39,59,0);} 100%{ box-shadow:0 0 0 0 rgba(125,39,59,0);} }
+  .ft-player iframe{ width:100%; height:100%; border:0; display:block; }
+  .ft-bar{ display:flex; align-items:baseline; gap:10px; padding:11px 15px 12px; }
+  .ft-bar .ft-tag{ font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; font-weight:700; color:var(--burg); }
+  .ft-bar .ft-title{ font-size:14.5px; font-weight:700; color:var(--ink); }
+  @media (max-width:540px){ .float-talk{ width:228px; right:12px; bottom:12px; } }
+
+  /* ===== SHARED HEADS ===== */
+  .sec-head{ font-family:"Fraunces",serif; font-weight:500; font-size:clamp(32px,5vw,58px); line-height:1.02; letter-spacing:-.02em; margin-top:18px; max-width:14ch; color:var(--ink); }
+  .sec-head em{ font-style:italic; color:var(--burg); }
+  .lead{ margin-top:18px; font-size:18px; color:var(--ink-2); }
+
+  /* ===== PHILOSOPHY ===== */
+  .philosophy{ padding:84px 0; text-align:center; background:var(--paper); border-top:1px solid var(--line); }
+  .manifesto{ font-family:"Fraunces",serif; font-weight:500; font-size:clamp(27px,3.9vw,46px); line-height:1.14; letter-spacing:-.02em; max-width:none; margin:0 auto; color:var(--ink); }
+  .manifesto em{ font-style:italic; color:var(--burg); }
+  .manifesto-sub{ max-width:640px; margin:22px auto 0; color:var(--ink-2); font-size:clamp(17px,1.9vw,20px); }
+  .owns{ display:flex; flex-wrap:wrap; justify-content:center; gap:11px; max-width:780px; margin:34px auto 0; }
+  .ochip{ font-weight:600; font-size:14px; padding:8px 16px; border:1.5px solid var(--burg); color:var(--burg); background:var(--burg-t); border-radius:60px; }
+
+  /* ===== RECEIPTS ===== */
+  .receipts{ background:var(--paper-2); }
+  .receipts .wrap{ padding:84px 32px 90px; }
+  .stats{ display:grid; grid-template-columns:repeat(3,1fr); gap:38px 32px; margin-top:56px; }
+  .stat{ border-top:2px solid var(--line); padding-top:18px; }
+  .stat .num{ font-family:"Fraunces",serif; font-weight:600; font-size:clamp(44px,5.4vw,66px); line-height:.92; letter-spacing:-.03em; color:var(--ink); }
+  .stat .num b{ color:var(--burg); font-weight:600; }
+  .stat .lab{ margin-top:11px; font-size:15px; line-height:1.5; color:var(--ink-2); }
+  .stat .lab b{ color:var(--ink); font-weight:700; }
+
+  /* ===== STAMPS ===== */
+  .rooms{ padding:78px 0 70px; text-align:center; background:var(--paper); }
+  .rooms .eyebrow{ justify-content:center; margin-bottom:34px; }
+  .stamps{ display:flex; flex-wrap:wrap; justify-content:center; gap:16px 18px; max-width:940px; margin:0 auto; }
+  .stamp{ font-family:"Fraunces",serif; font-weight:500; font-size:22px; padding:12px 24px; border:1px solid var(--line); border-radius:60px; background:var(--white); transition:transform .25s, background .25s, color .25s, border-color .25s; }
+  .stamp:nth-child(2n){ transform:rotate(-2deg); }
+  .stamp:nth-child(3n){ transform:rotate(1.6deg); }
+  .stamp:nth-child(5n){ transform:rotate(-1.2deg); }
+  .stamp:hover{ background:var(--burg); color:#fff; border-color:var(--burg); transform:rotate(0) translateY(-4px) scale(1.04); }
+
+  /* ===== REFRAME (charcoal) ===== */
+  .reframe{ padding:86px 0; background:var(--dgrey); }
+  .reframe .eyebrow{ color:var(--rose); } .reframe .eyebrow .ln{ background:var(--rose); }
+  .reframe .sec-head{ max-width:26ch; color:var(--cream); }
+  .reframe .sec-head em{ color:var(--rose); }
+  .reframe .lead{ max-width:680px; margin-top:20px; font-size:19px; color:rgba(250,247,241,.8); }
+
+  /* ===== MOVES ===== */
+  .moves{ background:var(--paper); }
+  .moves .wrap{ padding:84px 32px 90px; }
+  .moves .sec-head{ max-width:16ch; }
+  .move-list{ margin-top:50px; display:flex; flex-direction:column; }
+  .move{ display:grid; grid-template-columns:auto 1fr; gap:30px; align-items:start; padding:32px 0; border-top:2px solid var(--line); transition:padding-left .35s cubic-bezier(.2,.8,.3,1); }
+  .move:last-child{ border-bottom:2px solid var(--line); }
+  .move:hover{ padding-left:14px; }
+  .move .ord{ font-family:"Fraunces",serif; font-weight:600; font-style:italic; font-size:clamp(46px,7vw,90px); line-height:.8; color:var(--burg); }
+  .move .body h3{ font-family:"Fraunces",serif; font-weight:600; font-size:clamp(26px,3.4vw,40px); letter-spacing:-.015em; color:var(--ink); }
+  .move .body p{ margin-top:10px; max-width:64ch; font-size:18px; color:var(--ink-2); }
+
+  /* ===== SKILLS ===== */
+  .skills{ padding:86px 0; background:var(--paper-2); }
+  .skills .sec-head{ max-width:none; }
+  .skills .lead{ max-width:640px; margin-top:18px; font-size:19px; }
+  .skillgrid{ display:grid; grid-template-columns:repeat(4,1fr); gap:30px 28px; margin-top:50px; }
+  .skillcol h4{ font-weight:700; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--burg); padding-bottom:12px; border-bottom:2px solid var(--line); margin-bottom:14px; }
+  .skillcol ul{ list-style:none; }
+  .skillcol li{ font-size:16px; color:var(--ink); padding:5px 0; }
+
+  /* ===== CREDENTIALS ===== */
+  .creds{ background:var(--paper); }
+  .creds .wrap{ padding:84px 32px 82px; }
+  .credgrid{ display:grid; grid-template-columns:repeat(4,1fr); gap:30px 28px; margin-top:48px; }
+  .cred{ border-top:2px solid var(--line); padding-top:16px; }
+  .cred .clabel{ font-weight:700; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--burg); margin-bottom:10px; }
+  .cred p{ font-size:15.5px; line-height:1.55; color:var(--ink-2); }
+  .cred p b{ color:var(--ink); font-weight:700; }
+  .cred a{ color:var(--burg); border-bottom:1.5px solid var(--burg); }
+  .cred a:hover{ color:var(--burg-d); }
+
+  /* ===== HUMAN (charcoal) ===== */
+  .human{ padding:90px 0; background:var(--dgrey); }
+  .human-grid{ display:grid; grid-template-columns:1fr 1.02fr; gap:56px; align-items:center; }
+  .human .eyebrow{ color:var(--rose); } .human .eyebrow .ln{ background:var(--rose); }
+  .human .sec-head{ max-width:none; color:var(--cream); }
+  .human .sec-head em{ color:var(--rose); }
+  .human .lead{ max-width:480px; color:rgba(250,247,241,.82); }
+  .human .also{ color:rgba(250,247,241,.72); max-width:480px; margin-top:16px; font-size:17px; }
+  .human .also b{ color:var(--cream); font-weight:700; }
+  .tags{ display:flex; flex-wrap:wrap; gap:12px; margin-top:26px; }
+  .tag{ font-weight:700; font-size:15px; padding:10px 18px; border:1px solid var(--line); border-radius:60px; background:var(--white); transition:transform .22s, background .22s, color .22s, border-color .22s; cursor:default; }
+  .tag:nth-child(2n){ transform:rotate(-2deg); }
+  .tag:hover{ background:var(--burg); color:#fff; border-color:var(--burg); transform:rotate(0) translateY(-3px); }
+  .quotecard{ background:var(--white); color:var(--ink); border-radius:24px; padding:46px 44px 38px; position:relative; overflow:hidden; border:1px solid var(--line); border-left:5px solid var(--burg); box-shadow:0 30px 60px -34px rgba(34,31,27,.3); }
+  .quotecard::before{ content:"“"; position:absolute; top:-30px; left:20px; font-family:"Fraunces"; font-size:170px; color:var(--burg-t); }
+  .quotecard p{ font-family:"Fraunces",serif; font-style:italic; font-weight:300; font-size:clamp(23px,3vw,32px); line-height:1.32; position:relative; z-index:1; color:var(--ink); }
+  .quotecard p em{ color:var(--burg); font-style:italic; }
+  .sign{ margin-top:26px; display:flex; align-items:baseline; gap:12px; flex-wrap:wrap; }
+  .sign .nm{ font-family:"Caveat",cursive; font-weight:700; font-size:42px; color:var(--burg); line-height:1; transform:rotate(-4deg); }
+  .sign .role{ font-size:13px; letter-spacing:.12em; text-transform:uppercase; font-weight:700; color:var(--ink-2); }
+
+  /* ===== Q&A ===== */
+  .qa{ padding:90px 0; background:var(--paper-2); }
+  .qa-list{ max-width:840px; margin:44px auto 0; }
+  details.qaitem{ border-top:1px solid var(--line); }
+  details.qaitem:last-of-type{ border-bottom:1px solid var(--line); }
+  .qaitem summary{ list-style:none; cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:24px; padding:24px 4px; font-family:"Fraunces",serif; font-weight:600; font-size:clamp(20px,2.3vw,27px); letter-spacing:-.01em; color:var(--ink); transition:color .2s; }
+  .qaitem summary::-webkit-details-marker{ display:none; }
+  .qaitem summary:hover{ color:var(--burg); }
+  .qaicon{ position:relative; width:20px; height:20px; flex:none; }
+  .qaicon::before{ content:""; position:absolute; left:0; top:9px; width:20px; height:2px; background:var(--burg); }
+  .qaicon::after{ content:""; position:absolute; left:9px; top:0; width:2px; height:20px; background:var(--burg); transition:opacity .2s, transform .2s; }
+  .qaitem[open] .qaicon::after{ opacity:0; transform:scaleY(0); }
+  .qa-ans{ padding:2px 4px 26px; max-width:64ch; color:var(--ink-2); font-size:17.5px; line-height:1.62; }
+
+  /* ===== APPLY ===== */
+  .apply{ padding:92px 0; background:var(--paper); }
+  .apply .head-wrap{ text-align:center; max-width:640px; margin:0 auto 38px; }
+  .apply .sec-head{ max-width:none; }
+  .apply .head-wrap .lead{ margin:14px auto 0; max-width:520px; }
+  .applycard{ max-width:680px; margin:0 auto; background:var(--white); border:1px solid var(--line); border-radius:26px; padding:40px 38px 34px; box-shadow:0 32px 64px -34px rgba(34,31,27,.28); }
+  .q{ margin-bottom:26px; }
+  .q .qlabel{ font-weight:700; font-size:16px; color:var(--ink); margin-bottom:12px; display:block; }
+  .opts{ display:flex; flex-wrap:wrap; gap:10px; }
+  .opt input{ position:absolute; opacity:0; pointer-events:none; }
+  .opt label{ display:inline-block; cursor:pointer; font-weight:600; font-size:15px; padding:9px 18px; border:1.5px solid var(--line); border-radius:60px; background:var(--white); transition:background .2s,color .2s,border-color .2s; }
+  .opt input:checked + label{ background:var(--burg); color:#fff; border-color:var(--burg); }
+  .opt input:focus-visible + label{ outline:2px solid var(--burg); outline-offset:2px; }
+  .q input[type=text], .q input[type=email]{ width:100%; font-family:inherit; font-size:16px; padding:13px 16px; border:1.5px solid var(--line); border-radius:12px; background:var(--white); color:var(--ink); }
+  .q input::placeholder{ color:#aaa39a; }
+  .q input[type=text]:focus, .q input[type=email]:focus{ outline:2px solid var(--burg); outline-offset:1px; border-color:var(--burg); }
+  .apply .btn{ width:100%; justify-content:center; margin-top:6px; }
+  .apply .fineprint{ text-align:center; font-size:13px; color:var(--ink-2); margin-top:14px; }
+
+  /* ===== CLOSE (black finale) ===== */
+  .close{ background:var(--black); color:var(--cream); text-align:center; }
+  .close .wrap{ padding:104px 32px 70px; }
+  .close .big{ font-family:"Fraunces",serif; font-weight:500; font-size:clamp(46px,9vw,116px); line-height:.94; letter-spacing:-.025em; }
+  .close .big em{ font-style:italic; color:var(--rose); }
+  .close p{ max-width:520px; margin:22px auto 0; color:rgba(250,247,241,.72); font-size:19px; }
+  .close .cta-row{ justify-content:center; margin-top:34px; }
+  .close .btn-primary{ background:var(--cream); color:var(--ink); border-color:var(--cream); box-shadow:0 14px 30px -14px rgba(0,0,0,.6); }
+  .close .btn-primary:hover{ background:#fff; border-color:#fff; }
+  .contact{ margin-top:42px; display:flex; flex-wrap:wrap; gap:10px 24px; justify-content:center; align-items:center; font-size:16px; font-weight:600; }
+  .contact a{ display:inline-flex; align-items:center; gap:8px; border-bottom:2px solid transparent; padding-bottom:2px; transition:border-color .22s,color .22s; }
+  .contact a:hover{ border-color:var(--rose); color:var(--rose); }
+  .contact .sep{ color:rgba(250,247,241,.3); }
+
+  footer{ background:var(--black); color:rgba(250,247,241,.58); text-align:center; padding:34px 0 46px; font-size:14px; border-top:1px solid rgba(250,247,241,.12); }
+  footer .mark{ font-family:"Caveat",cursive; font-weight:700; font-size:22px; color:var(--rose); }
+
+  /* ===== REVEAL ===== */
+  .reveal{ opacity:0; transform:translateY(28px); transition:opacity .8s cubic-bezier(.2,.8,.3,1), transform .8s cubic-bezier(.2,.8,.3,1); }
+  .reveal.in{ opacity:1; transform:none; }
+  .d1{ transition-delay:.08s; } .d2{ transition-delay:.16s; } .d3{ transition-delay:.24s; } .d4{ transition-delay:.32s; }
+  @media (prefers-reduced-motion:reduce){ *{ animation:none!important; transition:none!important; } .reveal{ opacity:1!important; transform:none!important; } }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width:920px){
+    .hero-grid{ grid-template-columns:1fr; gap:46px; }
+    .portrait-wrap{ order:-1; }
+    .stats{ grid-template-columns:1fr 1fr; gap:36px 26px; }
+    .skillgrid{ grid-template-columns:1fr 1fr; }
+    .credgrid{ grid-template-columns:1fr 1fr; }
+    .human-grid{ grid-template-columns:1fr; gap:40px; }
+    .quotecard{ order:-1; }
+  }
+  @media (max-width:540px){
+    body{ font-size:17px; }
+    .wrap{ padding:0 22px; }
+    .receipts .wrap,.moves .wrap{ padding:64px 22px 70px; }
+    .stats{ grid-template-columns:1fr; }
+    .skillgrid{ grid-template-columns:1fr 1fr; }
+    .credgrid{ grid-template-columns:1fr; }
+    .btn, .btn-primary{ width:100%; justify-content:center; } .cta-row{ width:100%; }
+    .portrait .mono{ font-size:96px; }
+    .move{ grid-template-columns:1fr; gap:6px; }
+  }
+</style>
+</head>
+<body>
+
+  <!-- TICKER -->
+  <div class="ticker" aria-hidden="true">
+    <div class="track">
+      <span><span class="hot">Available for hire</span></span><span>High-ticket closer</span><span>Fractional &amp; full-time</span><span>Hard rooms, warm closes</span><span>15+ years of yes</span>
+      <span><span class="hot">Available for hire</span></span><span>High-ticket closer</span><span>Fractional &amp; full-time</span><span>Hard rooms, warm closes</span><span>15+ years of yes</span>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="hero-copy reveal">
+          <span class="eyebrow"><span class="ln"></span> Anastasia Uglova · Closer</span>
+          <h1 class="title"><span class="l1">Hard rooms<span class="star-blue">✦</span></span><span class="l2">Warm closes<span class="star-gold">✦</span></span></h1>
+          <div class="annot">
+            <svg width="30" height="26" viewBox="0 0 30 26" fill="none"><path d="M2 3c8 0 17 4 21 12M23 15l1-9M23 15l-8 2" stroke="#7D273B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            getting to yes since the 2012 Olympics
+          </div>
+          <p class="sub">I'm a <strong>high-ticket closer</strong> who wins deals through trusted consultation, not pressure. Fifteen years bringing the hardest rooms along — newsrooms, boardrooms, war rooms, and a few actual jungles — and I'm at my sharpest in the conversation itself.</p>
+          <p class="transfer">Not a pivot — a convergence. Communications, thought leadership, speaking, persuasion, and program management, all channeled into the obvious next step: the close. <b>It all transfers.</b></p>
+          <div class="expertise">
+            <span class="lbl">Expertise in</span>
+            <span class="xchip">Technology</span><span class="xchip">AI</span><span class="xchip">Executive Career Coaching</span><span class="xchip">Fitness</span>
+          </div>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#apply">Let's talk <span class="arrow">→</span></a>
+            <a class="btn-text" href="#receipts">See the receipts</a>
+          </div>
+        </div>
+
+        <div class="portrait-wrap reveal d2">
+          <div class="portrait">
+            <img src="headshot.jpg" alt="Anastasia Uglova" onerror="this.style.display='none';document.getElementById('mono').style.display='grid';document.getElementById('hint').style.display='block';" />
+            <span class="mono" id="mono" style="display:none">AU</span>
+            <span class="hint" id="hint" style="display:none">save your photo as headshot.jpg</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- PRESS BAR -->
+  <section class="pressbar">
+    <div class="wrap">
+      <span class="flabel">Featured &amp; on stage</span>
+      <div class="marks">
+        <img class="mark-logo sxsw-logo" src="SxSW_logo.png" alt="SXSW" />
+        <span class="mark-logo">TechCrunch</span>
+        <span class="mark-logo guardian">The Guardian</span>
+        <span class="mark-logo">Consensus</span>
+        <span class="mark-logo eth">EthCC</span>
+        <span class="mark-logo oracle">ORACLE</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHILOSOPHY -->
+  <section class="philosophy">
+    <div class="wrap">
+      <p class="manifesto reveal">Closing isn't about the close.<br>It's <em>everything that comes before.</em></p>
+      <p class="manifesto-sub reveal d1">I create rapport and establish credibility in the first five minutes — exactly where most high-stakes conversations flounder.</p>
+      <div class="owns reveal d2">
+        <span class="ochip">Research before every call</span>
+        <span class="ochip">Know the offer cold</span>
+        <span class="ochip">Run the full lifecycle</span>
+        <span class="ochip">Triage &amp; prioritize</span>
+        <span class="ochip">Never miss a meeting</span>
+        <span class="ochip">Reliable to the decimal</span>
+        <span class="ochip">Feral about excellence</span>
+        <span class="ochip">Own the follow-through</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECEIPTS -->
+  <section class="receipts" id="receipts">
+    <div class="wrap">
+      <span class="eyebrow reveal"><span class="ln"></span> The receipts</span>
+      <h2 class="sec-head reveal">I've spent a career <em>doing hard things.</em></h2>
+      <p class="lead reveal">Not vanity metrics — real stakes, real signatures, real trust rebuilt from zero. A closer is someone who's trusted to partner, not pressure.</p>
+      <div class="stats">
+        <div class="stat reveal d1"><div class="num">$<b>27</b>M</div><div class="lab">budget owned at <b>NPR</b>, rebuilding trust across a 250-station ecosystem</div></div>
+        <div class="stat reveal d2"><div class="num">#<b>11</b></div><div class="lab">employee on the <b>first digital-only team at NBCUniversal</b> — scaled it to 200 and shipped the 2012 London Olympics</div></div>
+        <div class="stat reveal d3"><div class="num">#<b>1</b></div><div class="lab">podcast on U.S. politics — <b>founder &amp; host of the Cato Daily Podcast</b></div></div>
+        <div class="stat reveal d1"><div class="num"><b>4</b></div><div class="lab">companies I've <b>personally founded, run &amp; closed for</b></div></div>
+        <div class="stat reveal d2"><div class="num"><b>85</b>%</div><div class="lab">job placement on the talent marketplace I <b>co-founded</b> in East Africa</div></div>
+        <div class="stat reveal d3"><div class="num"><b>4</b></div><div class="lab">continents &amp; <b>4 languages</b> of skeptics saying yes</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STAMPS -->
+  <section class="rooms">
+    <div class="wrap">
+      <span class="eyebrow reveal"><span class="ln"></span> Rooms I've closed in <span class="ln"></span></span>
+      <div class="stamps reveal d1">
+        <span class="stamp">NBCUniversal</span><span class="stamp">NPR</span><span class="stamp">Notion</span>
+        <span class="stamp">Deloitte</span><span class="stamp">Cato Institute</span><span class="stamp">U.S. Senate</span>
+        <span class="stamp">The Olympics</span><span class="stamp">Founders &amp; VCs</span><span class="stamp">Global Health Corps</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- REFRAME -->
+  <section class="reframe">
+    <div class="wrap">
+      <span class="eyebrow reveal"><span class="ln"></span> The real question</span>
+      <h2 class="sec-head reveal">Is it a closer track record you need — or a proven public speaker and thought leader who's operated at the highest levels of <em>media, government, and the international stage?</em></h2>
+      <p class="lead reveal d1">Either way, you're covered. I've had to win the hardest audiences there are — skeptical newsrooms, congressional offices, global donors, founders mid-pitch, and rural clinics on three continents — and bring them along in real time. I read what a room needs, adapt on the spot, and I'm at my sharpest in the conversation itself.</p>
+    </div>
+  </section>
+
+  <!-- MOVES -->
+  <section class="moves">
+    <div class="wrap">
+      <span class="eyebrow reveal"><span class="ln"></span> What a closer actually does</span>
+      <h2 class="sec-head reveal">Three moves.<br><em>Every deal.</em></h2>
+      <div class="move-list">
+        <div class="move reveal d1"><div class="ord">01</div><div class="body"><h3>Build trust, fast</h3><p>I've walked into newsrooms, think tanks, founder pitches, and rural hospitals and earned the room in minutes. Buyers don't sign because of features. They sign because they believe in themselves when they partner with me.</p></div></div>
+        <div class="move reveal d2"><div class="ord">02</div><div class="body"><h3>Translate the value</h3><p>From AI security at Deloitte to enterprise positioning at Notion to executive career coaching for private clients, I make complex, high-stakes offerings make sense to the person whose name goes on the contract. Clarity closes.</p></div></div>
+        <div class="move reveal d3"><div class="ord">03</div><div class="body"><h3>Ownership, end-to-end</h3><p>I run the full motion — discovery, objection, the quiet pause, the follow-through — without ever sounding like a script. Consultative, honest, and uncompromising about building the trust that closes the deal.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="skills">
+    <div class="wrap">
+      <span class="eyebrow reveal"><span class="ln"></span> Tools &amp; fluency</span>
+      <h2 class="sec-head reveal">Fluent in<br><em>the whole stack.</em></h2>
+      <p class="lead reveal">Absolutely fluent across AI tooling, CRMs, and the full marketing suite. If your team runs on it, I'm already up to speed — and I learn new tools faster than onboarding can keep up.</p>
+      <div class="skillgrid">
+        <div class="skillcol reveal d1"><h4>AI &amp; automation</h4><ul><li>ChatGPT</li><li>Claude</li><li>Claude Code</li><li>Gemini &amp; Perplexity</li><li>AI video &amp; image generation</li><li>Custom GPTs &amp; agents</li></ul></div>
+        <div class="skillcol reveal d2"><h4>CRM &amp; sales</h4><ul><li>Salesforce</li><li>HubSpot</li><li>Pipeline &amp; forecasting</li><li>Sales enablement</li><li>+ any CRM</li></ul></div>
+        <div class="skillcol reveal d3"><h4>Marketing</h4><ul><li>Squarespace</li><li>Wix</li><li>HubSpot</li><li>Email &amp; lifecycle</li><li>SEO &amp; content</li></ul></div>
+        <div class="skillcol reveal d4"><h4>Collaboration</h4><ul><li>Notion</li><li>Slack</li><li>Airtable</li><li>Loom</li><li>Zoom &amp; Motion</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREDENTIALS -->
+  <section class="creds">
+    <div class="wrap">
+      <span class="eyebrow reveal"><span class="ln"></span> The foundation</span>
+      <h2 class="sec-head reveal">Credentials &amp; <em>craft.</em></h2>
+      <div class="credgrid">
+        <div class="cred reveal d1"><div class="clabel">Education</div><p><b>M.S. Information Security &amp; Privacy</b>, UT Austin<br><b>B.A. Government</b>, Cornell</p></div>
+        <div class="cred reveal d2"><div class="clabel">Sales craft</div><p>Sharpening the craft at the <b>Silver Selling Academy</b> — training to deliver the close with integrity.</p></div>
+        <div class="cred reveal d3"><div class="clabel">Selectivity</div><p><b>Global Health Corps</b> fellow — selected from a <b>&lt;2%</b> acceptance pool.</p></div>
+        <div class="cred reveal d4"><div class="clabel">Operator</div><p>Founder in <b>relational AI</b> · former <b>CIO</b>, Akilah Institute · founder &amp; chief convener of <a href="https://tethicsandchill.com" target="_blank" rel="noopener">Tethics &amp; Chill</a>.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HUMAN -->
+  <section class="human">
+    <div class="wrap">
+      <div class="human-grid">
+        <div class="reveal">
+          <span class="eyebrow"><span class="ln"></span> A little human</span>
+          <h2 class="sec-head">Trust is <em>personal.</em><br>So am I.</h2>
+          <p class="lead">People buy from people they like and believe. Off the clock, I'm the one who'll jump out of the plane, spar three rounds, then debate ethics over dinner — and show up sharp the next morning.</p>
+          <p class="also">I even ran my own <b>career-coaching practice for three years</b> on the side while at NPR — purely because I loved it, people needed it, and I was good at it.</p>
+          <div class="tags">
+            <span class="tag">Skydiving</span><span class="tag">Boxing</span><span class="tag">Scuba</span>
+            <span class="tag">Climbing</span><span class="tag">Acro yoga</span><span class="tag">Skiing</span>
+            <span class="tag">Pilates</span><span class="tag">Writing</span><span class="tag">Jewelry design</span>
+          </div>
+        </div>
+        <div class="quotecard reveal d2">
+          <p>High-ticket deals don't get won with pressure. They close the moment the buyer stops thinking about who they are now — and starts imagining <em>who they can be with you in their corner.</em></p>
+          <div class="sign"><span class="nm">Anastasia</span><span class="role">my entire pitch, basically</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Q&A -->
+  <section class="qa">
+    <div class="wrap">
+      <span class="eyebrow reveal"><span class="ln"></span> Q&amp;A</span>
+      <h2 class="sec-head reveal">A few straight answers.</h2>
+      <div class="qa-list reveal d1">
+        <details class="qaitem" name="qa" open>
+          <summary>Why sales, and why now? <span class="qaicon"></span></summary>
+          <p class="qa-ans">After a decade at the frontier of tech, I'm ready for a break — and I want to work directly with people.</p>
+        </details>
+        <details class="qaitem" name="qa">
+          <summary>What motivates you? <span class="qaicon"></span></summary>
+          <p class="qa-ans">The privilege of being able to help and positively impact another human being. All my work has always been about mission and impact.</p>
+        </details>
+        <details class="qaitem" name="qa">
+          <summary>What's your work style? <span class="qaicon"></span></summary>
+          <p class="qa-ans">Radical personal responsibility and ownership. I take great pride in my work because it's a reflection of who I am and what I care about.</p>
+        </details>
+        <details class="qaitem" name="qa">
+          <summary>What's the coolest thing you've ever done? <span class="qaicon"></span></summary>
+          <p class="qa-ans">There are a lot of things — but the one I'm most proud of is helping thousands of women in rural Rwanda find their voice, advocate for themselves, learn to interview, and land life-changing jobs in Kigali, the capital.</p>
+        </details>
+        <details class="qaitem" name="qa">
+          <summary>What kind of offers are you looking for? <span class="qaicon"></span></summary>
+          <p class="qa-ans">High integrity, a real sense of mission, tangible impact, and joyful clients.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- APPLY -->
+  <section class="apply" id="apply">
+    <div class="wrap">
+      <div class="head-wrap reveal">
+        <span class="eyebrow" style="justify-content:center;"><span class="ln"></span> Apply to work with me</span>
+        <h2 class="sec-head" style="margin-top:14px;">Let's see if we're <em>a fit.</em></h2>
+        <p class="lead">Two minutes, four questions, and you're straight onto my calendar.</p>
+      </div>
+      <form class="applycard reveal d1" id="applyForm">
+        <div class="q">
+          <span class="qlabel">Do you need a polished closer for a high-ticket offer?</span>
+          <div class="opts">
+            <span class="opt"><input type="radio" name="need" id="need-y" value="Yes" required><label for="need-y">Yes</label></span>
+            <span class="opt"><input type="radio" name="need" id="need-n" value="Not yet"><label for="need-n">Not yet</label></span>
+          </div>
+        </div>
+        <div class="q">
+          <label class="qlabel" for="closerate">What's your average close rate now?</label>
+          <input type="text" id="closerate" name="closerate" placeholder="e.g. 20%, varies, not sure…">
+        </div>
+        <div class="q">
+          <span class="qlabel">Would you like to close more prospects?</span>
+          <div class="opts">
+            <span class="opt"><input type="radio" name="more" id="more-y" value="Yes"><label for="more-y">Obviously</label></span>
+            <span class="opt"><input type="radio" name="more" id="more-n" value="No"><label for="more-n">I'm good</label></span>
+          </div>
+        </div>
+        <div class="q">
+          <span class="qlabel">What's your industry?</span>
+          <div class="opts">
+            <span class="opt"><input type="radio" name="industry" id="ind-1" value="Fitness & Health"><label for="ind-1">Fitness &amp; Health</label></span>
+            <span class="opt"><input type="radio" name="industry" id="ind-2" value="Tech & AI"><label for="ind-2">Tech &amp; AI</label></span>
+            <span class="opt"><input type="radio" name="industry" id="ind-3" value="Coaching & Careers"><label for="ind-3">Coaching &amp; Careers</label></span>
+            <span class="opt"><input type="radio" name="industry" id="ind-4" value="Other"><label for="ind-4">Other</label></span>
+          </div>
+        </div>
+        <div class="q">
+          <label class="qlabel" for="email">Your email</label>
+          <input type="email" id="email" name="email" placeholder="you@company.com" required>
+        </div>
+        <button type="submit" class="btn">Apply &amp; book my call <span class="arrow">→</span></button>
+        <p class="fineprint">Takes you straight to my calendar to lock a time.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- CLOSE -->
+  <section class="close">
+    <div class="wrap">
+      <div class="big reveal">Let's <em>close</em><br>something good.</div>
+      <p class="reveal d1">Hiring a closer, or want one on retainer? Tell me what you're selling and who's saying no. I'll tell you how I'd turn it around.</p>
+      <div class="cta-row reveal d1"><a class="btn btn-primary" href="#apply">Work with me <span class="arrow">→</span></a></div>
+      <div class="contact reveal d2">
+        <a href="mailto:anastasiau@gmail.com">anastasiau@gmail.com</a><span class="sep">/</span>
+        <a href="tel:+12023021405">202·302·1405</a><span class="sep">/</span>
+        <a href="https://www.linkedin.com/in/anastasiauglova/" target="_blank" rel="noopener">LinkedIn</a><span class="sep">/</span>
+        <a href="https://twitter.com/anastasiau" target="_blank" rel="noopener">Twitter</a>
+      </div>
+    </div>
+  </section>
+
+  <footer><div class="wrap">Built warm in Austin, TX · <span class="mark">Anastasia Uglova</span> · Hard rooms, warm closes.</div></footer>
+
+  <!-- FLOATING SXSW TALK PLAYER -->
+  <div class="float-talk" id="floatTalk">
+    <button class="ft-close" aria-label="Dismiss" onclick="document.getElementById('floatTalk').style.display='none';">×</button>
+    <div class="ft-player" id="ftPlayer" data-id="Bv5zmbRloJA" role="button" tabindex="0" aria-label="Play my SXSW 2026 talk">
+      <img class="ft-poster" src="sxsw-poster.jpg" alt="Anastasia Uglova — SXSW 2026 talk" />
+      <span class="ft-play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+    </div>
+    <div class="ft-bar"><span class="ft-tag"><img class="ft-sxsw" src="SxSW_logo.png" alt="SXSW" /> 2026</span><span class="ft-title">Watch my talk</span></div>
+  </div>
+
+  <script>
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => { if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold:0.14, rootMargin:'0px 0px -7% 0px' });
+    document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+
+    // Floating SXSW player: click poster -> autoplay embed
+    var ftp = document.getElementById('ftPlayer');
+    if (ftp) {
+      var playFt = function () {
+        var id = ftp.getAttribute('data-id');
+        ftp.innerHTML = '<iframe src="https://www.youtube.com/embed/' + id + '?autoplay=1&rel=0" title="SXSW 2026 talk" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>';
+        ftp.style.cursor = 'default';
+      };
+      ftp.addEventListener('click', playFt);
+      ftp.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); playFt(); } });
+    }
+
+    // Apply form -> Calendly
+    var CALENDLY = "https://calendly.com/anastasia-better-half/close";
+    var af = document.getElementById('applyForm');
+    if (af) {
+      af.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var email = (document.getElementById('email').value || '').trim();
+        var url = CALENDLY + (email ? ('?email=' + encodeURIComponent(email)) : '');
+        window.open(url, '_blank', 'noopener');
+      });
+    }
+  </script>
+</body>
+</html>
