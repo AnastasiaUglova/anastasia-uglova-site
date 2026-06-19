@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="color-scheme" content="light" />
+<meta name="darkreader-lock" />
+<title>Anastasia Uglova — Strong body. Clear mind. Whole life.</title>
+<meta name="description" content="Holistic coaching for women who want to feel good in their body — and everywhere else. Movement, mindset, relationships, and purpose, coached as one." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://anastasiauglova.com/thrive/" />
+<meta property="og:title" content="Anastasia Uglova — Strong body. Clear mind. Whole life." />
+<meta property="og:description" content="Holistic coaching for women who want to feel good in their body — and everywhere else." />
+<meta property="og:image" content="https://anastasiauglova.com/thrive/og-image.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&family=Hanken+Grotesk:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:       #F2F6EF;   /* pale sage off-white */
+    --bg-2:     #E7EFE6;   /* soft sage */
+    --white:    #FFFFFF;
+    --ink:      #1C2A24;   /* deep green-charcoal */
+    --ink-2:    #586B62;   /* muted green-grey */
+    --green:    #2F6B53;   /* emerald primary */
+    --green-d:  #21503D;
+    --green-t:  rgba(47,107,83,0.09);
+    --blue:     #2E7FA6;   /* calm teal-blue */
+    --blue-d:   #236583;
+    --blue-t:   rgba(46,127,166,0.10);
+    --gold:     #C0863A;   /* warm field accent */
+    --cream:    #F2F6EF;
+    --line:     rgba(28,42,36,0.13);
+    --maxw:     1180px;
+    --grad:     linear-gradient(120deg, var(--green), var(--blue));
+  }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html{ scroll-behavior:smooth; }
+  body{
+    font-family:"Hanken Grotesk", system-ui, sans-serif;
+    background:var(--bg); color:var(--ink);
+    font-size:18px; line-height:1.65; -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  a{ color:inherit; text-decoration:none; }
+  .wrap{ width:100%; max-width:var(--maxw); margin:0 auto; padding:0 32px; }
+
+  /* ===== TYPE ===== */
+  .eyebrow{ display:inline-flex; align-items:center; gap:11px; font-weight:700; font-size:12.5px; letter-spacing:.22em; text-transform:uppercase; color:var(--green); }
+  .eyebrow .ln{ width:30px; height:2px; background:var(--green); border-radius:2px; }
+  .sec-head{ font-family:"Fraunces",serif; font-weight:500; font-size:clamp(32px,5vw,56px); line-height:1.05; letter-spacing:-.015em; color:var(--ink); margin-top:16px; }
+  .sec-head em{ font-style:italic; color:var(--green); }
+  .lead{ font-size:clamp(17px,1.7vw,19.5px); color:var(--ink-2); max-width:620px; }
+  .annot{ font-family:"Caveat",cursive; font-weight:700; font-size:27px; color:var(--blue); display:inline-flex; gap:8px; transform:rotate(-2.5deg); }
+
+  /* ===== BUTTONS ===== */
+  .btn{ display:inline-flex; align-items:center; gap:10px; font-weight:700; font-size:16.5px; padding:15px 28px; border-radius:60px; background:var(--grad); color:#fff; border:none; cursor:pointer; box-shadow:0 14px 30px -12px rgba(47,107,83,.5); transition:transform .2s cubic-bezier(.2,.8,.3,1), box-shadow .2s; }
+  .btn:hover{ transform:translateY(-2px); box-shadow:0 18px 36px -12px rgba(47,107,83,.6); }
+  .btn .arr{ transition:transform .2s; }
+  .btn:hover .arr{ transform:translateX(4px); }
+  .btn-ghost{ display:inline-flex; align-items:center; gap:8px; font-weight:700; font-size:16px; color:var(--green); border-bottom:2px solid transparent; padding-bottom:2px; transition:border-color .2s; }
+  .btn-ghost:hover{ border-color:var(--green); }
+
+  /* ===== blobs ===== */
+  .blob{ position:absolute; border-radius:50%; filter:blur(60px); opacity:.5; z-index:0; pointer-events:none; }
+
+  /* ===== HERO ===== */
+  .hero{ position:relative; padding:64px 0 40px; overflow:hidden; }
+  .hero .b1{ width:520px; height:520px; background:var(--green-t); top:-120px; left:-140px; }
+  .hero .b2{ width:460px; height:460px; background:var(--blue-t); bottom:-160px; right:-120px; }
+  .hero-grid{ position:relative; z-index:1; display:grid; grid-template-columns:1.05fr .95fr; gap:50px; align-items:center; }
+  h1.title{ font-family:"Fraunces",serif; font-weight:600; font-size:clamp(46px,7.2vw,90px); line-height:.98; letter-spacing:-.025em; margin:20px 0 0; }
+  h1.title em{ font-style:italic; background:var(--grad); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
+  .hero .sub{ margin-top:24px; max-width:520px; font-size:clamp(17px,1.8vw,20px); color:var(--ink-2); }
+  .hero .cta-row{ margin-top:32px; display:flex; flex-wrap:wrap; gap:18px 26px; align-items:center; }
+  .hero .annot{ margin:18px 0 0 4px; }
+
+  .portrait-wrap{ position:relative; justify-self:end; }
+  .portrait{ position:relative; width:min(440px,86vw); aspect-ratio:3/4; border-radius:200px 200px 24px 24px; overflow:hidden; box-shadow:0 40px 80px -36px rgba(28,42,36,.4); border:6px solid var(--white); }
+  .portrait img{ width:100%; height:100%; object-fit:cover; display:block; }
+  .portrait-wrap .badge{ position:absolute; bottom:18px; left:-22px; background:var(--white); border-radius:16px; padding:12px 18px; box-shadow:0 18px 40px -16px rgba(28,42,36,.35); display:flex; align-items:center; gap:11px; z-index:2; }
+  .badge .dot{ width:10px; height:10px; border-radius:50%; background:var(--green); box-shadow:0 0 0 4px var(--green-t); }
+  .badge b{ font-size:14px; font-weight:800; color:var(--ink); display:block; line-height:1.2; }
+  .badge span{ font-size:12px; color:var(--ink-2); }
+
+  /* value strip */
+  .strip{ background:var(--grad); color:#fff; }
+  .strip .wrap{ display:flex; flex-wrap:wrap; justify-content:center; gap:14px 40px; padding:18px 32px; font-weight:700; font-size:13.5px; letter-spacing:.16em; text-transform:uppercase; }
+  .strip span{ display:inline-flex; align-items:center; gap:40px; }
+  .strip span::after{ content:"✺"; opacity:.6; }
+
+  /* ===== APPROACH ===== */
+  .approach{ padding:96px 0 84px; text-align:center; position:relative; overflow:hidden; }
+  .approach .b1{ width:480px; height:480px; background:var(--blue-t); top:-160px; right:-120px; }
+  .approach .inner{ position:relative; z-index:1; max-width:760px; margin:0 auto; }
+  .approach .eyebrow{ justify-content:center; }
+  .approach .sec-head{ max-width:18ch; margin-left:auto; margin-right:auto; }
+  .approach .lead{ margin:22px auto 0; }
+
+  /* ===== PILLARS ===== */
+  .pillars{ padding:20px 0 96px; }
+  .pillar-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:22px; }
+  .pillar{ background:var(--white); border:1px solid var(--line); border-radius:22px; padding:30px 26px 32px; position:relative; overflow:hidden; transition:transform .25s, box-shadow .25s; }
+  .pillar:hover{ transform:translateY(-5px); box-shadow:0 28px 50px -28px rgba(28,42,36,.3); }
+  .pillar .ico{ width:48px; height:48px; border-radius:14px; background:var(--green-t); display:grid; place-items:center; color:var(--green); margin-bottom:18px; }
+  .pillar:nth-child(2) .ico{ background:var(--blue-t); color:var(--blue); }
+  .pillar:nth-child(4) .ico{ background:var(--blue-t); color:var(--blue); }
+  .pillar .ico svg{ width:25px; height:25px; }
+  .pillar h3{ font-family:"Fraunces",serif; font-weight:600; font-size:24px; letter-spacing:-.01em; margin-bottom:8px; }
+  .pillar p{ font-size:15.5px; color:var(--ink-2); line-height:1.55; }
+
+  /* ===== MISSION ===== */
+  .mission{ padding:90px 0; background:var(--green); color:#eaf2ed; position:relative; overflow:hidden; }
+  .mission .b1{ width:560px;height:560px;background:rgba(46,127,166,.25);top:-180px;left:-160px;filter:blur(80px); }
+  .mission .wrap{ position:relative; z-index:1; }
+  .mission .eyebrow{ color:#bce0cf; } .mission .eyebrow .ln{ background:#bce0cf; }
+  .mission .sec-head{ color:#fff; max-width:18ch; }
+  .mission .sec-head em{ color:#9ad9ff; }
+  .mission .lead{ color:rgba(234,242,237,.86); max-width:640px; margin-top:20px; }
+  .mstats{ display:grid; grid-template-columns:repeat(4,1fr); gap:30px 26px; margin-top:54px; }
+  .mstat{ border-top:2px solid rgba(255,255,255,.22); padding-top:16px; }
+  .mstat .num{ font-family:"Fraunces",serif; font-weight:600; font-size:clamp(38px,4.6vw,54px); line-height:.95; color:#fff; }
+  .mstat .num b{ color:#9ad9ff; font-weight:600; }
+  .mstat .lab{ margin-top:10px; font-size:14.5px; color:rgba(234,242,237,.8); line-height:1.5; }
+  .mstat .lab b{ color:#fff; font-weight:700; }
+
+  /* ===== PRACTICE / FITNESS ===== */
+  .practice{ padding:94px 0 86px; text-align:center; position:relative; overflow:hidden; }
+  .practice .b1{ width:440px;height:440px;background:var(--green-t);bottom:-160px;left:-120px; }
+  .practice .inner{ position:relative; z-index:1; }
+  .practice .eyebrow{ justify-content:center; }
+  .practice .sec-head{ max-width:16ch; margin:0 auto; }
+  .practice .lead{ margin:20px auto 0; }
+  .polaroids{ display:flex; flex-wrap:nowrap; justify-content:center; align-items:flex-start; gap:14px; margin-top:52px; }
+  .polaroid{ background:#fff; padding:9px 9px 28px; border-radius:4px; box-shadow:0 16px 34px -14px rgba(28,42,36,.45); flex:1 1 0; min-width:0; max-width:128px; transition:transform .25s, box-shadow .25s; }
+  .polaroid img{ width:100%; aspect-ratio:1/1; object-fit:cover; display:block; border-radius:2px; }
+  .polaroid .cap{ font-family:"Caveat",cursive; font-weight:700; font-size:16px; color:var(--green-d); text-align:center; margin-top:7px; line-height:1; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .polaroid:nth-child(odd){ transform:rotate(-2.5deg); }
+  .polaroid:nth-child(even){ transform:rotate(2.5deg); }
+  .polaroid:hover{ z-index:3; }
+  .polaroid:nth-child(odd):hover{ transform:rotate(0) translateY(-12px) scale(1.9); box-shadow:0 26px 50px -16px rgba(28,42,36,.5); }
+  .polaroid:nth-child(even):hover{ transform:rotate(0) translateY(-12px) scale(1.9); box-shadow:0 26px 50px -16px rgba(28,42,36,.5); }
+  .pquote{ max-width:680px; margin:60px auto 0; font-family:"Fraunces",serif; font-style:italic; font-weight:400; font-size:clamp(22px,2.8vw,30px); line-height:1.4; color:var(--ink); }
+  .pquote .by{ display:block; font-family:"Hanken Grotesk",sans-serif; font-style:normal; font-weight:700; font-size:13px; letter-spacing:.14em; text-transform:uppercase; color:var(--green); margin-top:18px; }
+
+  /* ===== DIFFERENT (relational intelligence) ===== */
+  .diff{ padding:0 0 96px; }
+  .diffcard{ background:var(--white); border:1px solid var(--line); border-radius:28px; padding:54px 56px; position:relative; overflow:hidden; box-shadow:0 30px 60px -40px rgba(28,42,36,.3); }
+  .diffcard::before{ content:""; position:absolute; inset:0 auto 0 0; width:6px; background:var(--grad); }
+  .diff .eyebrow{ color:var(--blue); } .diff .eyebrow .ln{ background:var(--blue); }
+  .diffcard .sec-head{ max-width:24ch; }
+  .diffcard .sec-head em{ color:var(--blue); }
+  .diffcard p{ margin-top:18px; max-width:680px; color:var(--ink-2); font-size:17px; }
+  .diffcard p b{ color:var(--ink); font-weight:700; }
+
+  /* ===== Q&A ===== */
+  .qa{ padding:90px 0; background:var(--bg-2); }
+  .qa .eyebrow{ justify-content:flex-start; }
+  .qa-list{ margin-top:34px; max-width:820px; }
+  .qaitem{ border-top:1px solid var(--line); }
+  .qaitem summary{ list-style:none; cursor:pointer; padding:22px 44px 22px 0; position:relative; font-family:"Fraunces",serif; font-weight:600; font-size:clamp(19px,2.2vw,24px); color:var(--ink); }
+  .qaitem summary::-webkit-details-marker{ display:none; }
+  .qaicon{ position:absolute; right:6px; top:50%; transform:translateY(-50%); width:20px; height:20px; }
+  .qaicon::before,.qaicon::after{ content:""; position:absolute; background:var(--green); border-radius:2px; }
+  .qaicon::before{ left:0; top:9px; width:20px; height:2px; }
+  .qaicon::after{ left:9px; top:0; width:2px; height:20px; transition:opacity .2s, transform .2s; }
+  .qaitem[open] .qaicon::after{ opacity:0; transform:scaleY(0); }
+  .qa-ans{ padding:0 40px 26px 0; color:var(--ink-2); font-size:16.5px; line-height:1.6; max-width:680px; }
+
+  /* ===== CLOSE ===== */
+  .close{ padding:104px 0 96px; text-align:center; position:relative; overflow:hidden; background:var(--grad); color:#fff; }
+  .close .b1{ width:520px;height:520px;background:rgba(255,255,255,.10);top:-160px;right:-120px;filter:blur(70px); }
+  .close .inner{ position:relative; z-index:1; }
+  .close h2{ font-family:"Fraunces",serif; font-weight:500; font-size:clamp(40px,6.5vw,82px); line-height:1; letter-spacing:-.02em; }
+  .close h2 em{ font-style:italic; }
+  .close p{ max-width:520px; margin:22px auto 0; font-size:19px; color:rgba(255,255,255,.92); }
+  .close .cta-row{ margin-top:34px; display:flex; flex-wrap:wrap; gap:16px 22px; justify-content:center; align-items:center; }
+  .close .btn{ background:#fff; color:var(--green-d); box-shadow:0 16px 34px -14px rgba(0,0,0,.4); }
+  .close .btn:hover{ background:#fff; }
+  .close .contact{ margin-top:42px; display:flex; flex-wrap:wrap; gap:10px 22px; justify-content:center; align-items:center; font-weight:600; font-size:15.5px; color:rgba(255,255,255,.92); }
+  .close .contact a{ border-bottom:2px solid transparent; padding-bottom:2px; transition:border-color .2s; }
+  .close .contact a:hover{ border-color:rgba(255,255,255,.7); }
+  .close .contact .sep{ opacity:.4; }
+
+  footer{ background:var(--ink); color:rgba(242,246,239,.6); text-align:center; padding:32px 0 42px; font-size:14px; }
+  footer .mark{ font-family:"Caveat",cursive; font-weight:700; font-size:21px; color:#9ad9ff; }
+
+  /* ===== REVEAL ===== */
+  .reveal{ opacity:0; transform:translateY(26px); transition:opacity .8s cubic-bezier(.2,.8,.3,1), transform .8s cubic-bezier(.2,.8,.3,1); }
+  .reveal.in{ opacity:1; transform:none; }
+  .d1{ transition-delay:.08s; } .d2{ transition-delay:.16s; } .d3{ transition-delay:.24s; } .d4{ transition-delay:.32s; }
+  @media (prefers-reduced-motion:reduce){ *{ animation:none!important; transition:none!important; } .reveal{ opacity:1!important; transform:none!important; } }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width:920px){
+    .hero-grid{ grid-template-columns:1fr; gap:40px; }
+    .portrait-wrap{ order:-1; justify-self:center; }
+    .pillar-grid{ grid-template-columns:1fr 1fr; }
+    .mstats{ grid-template-columns:1fr 1fr; }
+  }
+  @media (max-width:540px){
+    body{ font-size:17px; }
+    .wrap{ padding:0 22px; }
+    .hero{ padding:30px 0 28px; }
+    .portrait{ width:min(300px,80vw); }
+    .pillar-grid{ grid-template-columns:1fr; }
+    .mstats{ grid-template-columns:1fr 1fr; gap:26px 20px; }
+    .diffcard{ padding:38px 26px; }
+    .polaroids{ display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:8px; }
+    .polaroid{ flex:none; width:auto; max-width:none; padding:5px 5px 7px; }
+    .polaroid .cap{ font-size:10px; }
+    .polaroid:nth-child(odd):hover,.polaroid:nth-child(even):hover{ transform:rotate(0) scale(2.4); }
+  }
+</style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <header class="hero">
+    <span class="blob b1"></span><span class="blob b2"></span>
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <span class="eyebrow reveal"><span class="ln"></span> Anastasia Uglova · Coach</span>
+          <h1 class="title reveal d1">Strong body.<br>Clear mind.<br><em>Whole life.</em></h1>
+          <div class="annot reveal d1">↳ let's get you there</div>
+          <p class="sub reveal d2">I coach women to feel good in their body — and everywhere else. Movement, mindset, relationships, and purpose, brought into one life that actually fits.</p>
+          <div class="cta-row reveal d2">
+            <a class="btn" href="#start">Start with a conversation <span class="arr">→</span></a>
+            <a class="btn-ghost" href="#approach">How I work</a>
+          </div>
+        </div>
+        <div class="portrait-wrap reveal d2">
+          <div class="portrait"><img src="hero.jpg" alt="Anastasia Uglova" /></div>
+          <div class="badge"><span class="dot"></span><div><b>Now coaching</b><span>1:1 &amp; small groups</span></div></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- VALUE STRIP -->
+  <div class="strip" aria-hidden="true">
+    <div class="wrap"><span>Move</span><span>Breathe</span><span>Connect</span><span>Rise</span><span>Feel good</span></div>
+  </div>
+
+  <!-- APPROACH -->
+  <section class="approach" id="approach">
+    <span class="blob b1"></span>
+    <div class="wrap"><div class="inner">
+      <span class="eyebrow reveal"><span class="ln"></span> The approach <span class="ln"></span></span>
+      <h2 class="sec-head reveal">You don't need another diet. You need to feel <em>at home in yourself.</em></h2>
+      <p class="lead reveal d1">Real wellness isn't a six-week shred. It's strength, clarity, and connection that hold up in your actual life — the kind that changes how you show up in every room you walk into.</p>
+    </div></div>
+  </section>
+
+  <!-- PILLARS -->
+  <section class="pillars">
+    <div class="wrap">
+      <div class="pillar-grid">
+        <div class="pillar reveal d1">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 6.5l11 11M21 21l-1-1M3 3l1 1M18 22l4-4M2 6l4-4M3 10l4-4M14 21l4-4"/></svg></div>
+          <h3>Body</h3>
+          <p>Move with strength. Train in a way that builds energy, not punishment — so you feel powerful and at home in your skin.</p>
+        </div>
+        <div class="pillar reveal d2">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 0 0-7 7c0 2.5 1.3 4 2.5 5.2.8.8 1.5 1.6 1.5 2.8v1h6v-1c0-1.2.7-2 1.5-2.8C17.7 13 19 11.5 19 9a7 7 0 0 0-7-7Z"/><path d="M9 21h6"/></svg></div>
+          <h3>Mind</h3>
+          <p>Calm the noise. Tools for emotional regulation, focus, and the quiet confidence that changes how you carry yourself.</p>
+        </div>
+        <div class="pillar reveal d3">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 5.6a5.5 5.5 0 0 0-7.8 0L12 6.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 22l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"/></svg></div>
+          <h3>Connection</h3>
+          <p>Relationships that nourish. Bring relational intelligence to the people who matter — partner, family, and yourself.</p>
+        </div>
+        <div class="pillar reveal d4">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M6 21V10M12 21V4M18 21v-7"/><path d="M12 4l4 3M12 4 8 7"/></svg></div>
+          <h3>Purpose</h3>
+          <p>Work that fits your life. Clarity on what you want and the steps to get there — career, calling, the next chapter.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSION -->
+  <section class="mission">
+    <span class="blob b1"></span>
+    <div class="wrap">
+      <span class="eyebrow reveal"><span class="ln"></span> Why I do this</span>
+      <h2 class="sec-head reveal">I've spent my career helping <em>women rise.</em></h2>
+      <p class="lead reveal d1">From Kigali to here: I built and ran career programs that moved thousands of women from uncertainty into life-changing work. I'm a Global Health Corps fellow and an Akilah Institute leader, and I've coached women across three continents to advocate for themselves — and win.</p>
+      <div class="mstats">
+        <div class="mstat reveal d1"><div class="num"><b>85</b>%</div><div class="lab">job placement for women I coached on a talent marketplace in <b>East Africa</b></div></div>
+        <div class="mstat reveal d2"><div class="num"><b>1000</b>s</div><div class="lab">women coached to interview, advocate, and <b>land the work</b></div></div>
+        <div class="mstat reveal d3"><div class="num">&lt;<b>2</b>%</div><div class="lab"><b>Global Health Corps</b> fellowship acceptance rate</div></div>
+        <div class="mstat reveal d4"><div class="num"><b>3</b></div><div class="lab">continents of rooms — newsrooms, clinics, classrooms, boardrooms</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRACTICE / FITNESS -->
+  <section class="practice">
+    <span class="blob b1"></span>
+    <div class="wrap"><div class="inner">
+      <span class="eyebrow reveal"><span class="ln"></span> I practice what I coach <span class="ln"></span></span>
+      <h2 class="sec-head reveal">Strong is a <em>practice.</em></h2>
+      <p class="lead reveal d1">Off the clock you'll find me in the ring, on the mat, up a wall, or out of a plane. I don't coach from theory — I live this, every week.</p>
+      <div class="polaroids reveal d1">
+        <div class="polaroid"><img src="poly9.jpg" alt="boxing" /><div class="cap">in the ring</div></div>
+        <div class="polaroid"><img src="poly10.jpg" alt="yoga" /><div class="cap">on the mat</div></div>
+        <div class="polaroid"><img src="poly8.jpg" alt="climbing" /><div class="cap">going up</div></div>
+        <div class="polaroid"><img src="poly5.jpg" alt="skydiving" /><div class="cap">up above</div></div>
+        <div class="polaroid"><img src="poly7.jpg" alt="scuba" /><div class="cap">down below</div></div>
+        <div class="polaroid"><img src="poly6.jpg" alt="skiing" /><div class="cap">off-piste</div></div>
+        <div class="polaroid"><img src="poly2.jpg" alt="hiking" /><div class="cap">on the trail</div></div>
+        <div class="polaroid"><img src="poly1.jpg" alt="outdoors" /><div class="cap">wide open</div></div>
+      </div>
+      <p class="pquote reveal d1">"You don't have to be an athlete. You have to be willing to feel strong — and that's a decision you can make today."<span class="by">Anastasia</span></p>
+    </div></div>
+  </section>
+
+  <!-- DIFFERENT -->
+  <section class="diff">
+    <div class="wrap">
+      <div class="diffcard reveal">
+        <span class="eyebrow"><span class="ln"></span> What makes it different</span>
+        <h2 class="sec-head">Most coaching stops at the body. I coach the <em>whole system.</em></h2>
+        <p>I work at the intersection of physical health and <b>relational intelligence</b> — the science of understanding yourself and the people around you. Because feeling good in your body is only half of it. The other half is the calm, the clarity, and the relationships that let you actually enjoy the life you're building.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Q&A -->
+  <section class="qa">
+    <div class="wrap">
+      <span class="eyebrow reveal"><span class="ln"></span> Good to know</span>
+      <h2 class="sec-head reveal">A few <em>straight answers.</em></h2>
+      <div class="qa-list reveal d1">
+        <details class="qaitem" name="qa" open>
+          <summary>Is this fitness coaching or life coaching? <span class="qaicon"></span></summary>
+          <p class="qa-ans">Both — by design. We usually start with the body because it's the fastest way to feel different, then build out into mindset, relationships, and the bigger picture.</p>
+        </details>
+        <details class="qaitem" name="qa">
+          <summary>Do I need to be fit already? <span class="qaicon"></span></summary>
+          <p class="qa-ans">No. We meet your body exactly where it is and build from there. This is about feeling strong and capable, not about looking a certain way.</p>
+        </details>
+        <details class="qaitem" name="qa">
+          <summary>What is relational intelligence? <span class="qaicon"></span></summary>
+          <p class="qa-ans">The skill of understanding and navigating relationships — with the people you love and with yourself. It's a huge, often-ignored part of feeling well, and it's at the center of how I coach.</p>
+        </details>
+        <details class="qaitem" name="qa">
+          <summary>Who do you work with? <span class="qaicon"></span></summary>
+          <p class="qa-ans">Women who are ready to feel strong, clear, and connected — in their body, their relationships, and their work. 1:1 and in small groups.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSE -->
+  <section class="close" id="start">
+    <span class="blob b1"></span>
+    <div class="wrap"><div class="inner">
+      <h2 class="reveal">Let's get you <em>feeling good.</em></h2>
+      <p class="reveal d1">Tell me where you are and where you want to be. We'll start with a conversation — no pressure, no program you didn't ask for.</p>
+      <div class="cta-row reveal d1">
+        <a class="btn" href="https://calendly.com/anastasia-better-half/close" target="_blank" rel="noopener">Book a conversation <span class="arr">→</span></a>
+      </div>
+      <div class="contact reveal d2">
+        <a href="mailto:anastasiau@gmail.com">anastasiau@gmail.com</a><span class="sep">/</span>
+        <a href="https://www.linkedin.com/in/anastasiauglova/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div></div>
+  </section>
+
+  <footer><div class="wrap">Made with care in Austin, TX · <span class="mark">Anastasia Uglova</span> · Strong body, clear mind, whole life.</div></footer>
+
+  <script>
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => { if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold:0.12, rootMargin:'0px 0px -7% 0px' });
+    document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+  </script>
+</body>
+</html>
