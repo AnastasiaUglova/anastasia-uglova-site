@@ -113,7 +113,7 @@
   /* ===== PRESS BAR ===== */
   .pressbar{ background:linear-gradient(var(--black),var(--black)); color-scheme:dark; }
   .pressbar .wrap{ display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:16px 32px; padding-top:18px; padding-bottom:18px; }
-  .pressbar .flabel{ font-weight:700; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:rgba(250,247,241,.55); }
+  .pressbar .flabel{ font-weight:700; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:rgba(250,247,241,.82); }
   .pressbar .marks{ display:flex; flex-wrap:wrap; align-items:center; gap:16px 30px; }
   .mark-logo{ font-weight:800; font-size:20px; letter-spacing:-.01em; color:#ece9e2; opacity:.85; transition:opacity .2s, color .2s; }
   a.mark-logo:hover{ opacity:1; color:#fff; }
@@ -391,9 +391,7 @@
 
         <div class="portrait-wrap reveal d2">
           <div class="portrait">
-            <img src="headshot.jpg" alt="Anastasia Uglova" onerror="this.style.display='none';document.getElementById('mono').style.display='grid';document.getElementById('hint').style.display='block';" />
-            <span class="mono" id="mono" style="display:none">AU</span>
-            <span class="hint" id="hint" style="display:none">save your photo as headshot.jpg</span>
+            <img src="headshot.jpg" alt="Anastasia Uglova" />
           </div>
         </div>
       </div>
