@@ -126,6 +126,7 @@
   .float-talk.min .ft-bar::after{ content:"+"; position:absolute; right:14px; top:50%; transform:translateY(-50%); color:var(--burg); font-size:19px; font-weight:700; line-height:1; }
   .ft-player{ position:relative; aspect-ratio:16/9; cursor:pointer; background:var(--paper-2); }
   .ft-poster{ width:100%; height:100%; object-fit:cover; object-position:50% 12%; display:block; filter:brightness(1.13) saturate(1.05); }
+  .ft-wm{ position:absolute; top:10px; right:11px; height:15px; opacity:.92; filter:drop-shadow(0 1px 3px rgba(0,0,0,.55)); pointer-events:none; z-index:1; }
   .ft-play{ position:absolute; left:14px; bottom:14px; width:50px; height:50px; display:grid; place-items:center; background:var(--burg); color:#fff; border-radius:50%; transition:transform .2s; animation:pulseB 2.6s infinite; }
   .ft-play svg{ width:23px; height:23px; margin-left:3px; }
   .float-talk:hover .ft-play{ background:var(--burg-d); }
@@ -156,6 +157,7 @@
   .stat{ border-top:2px solid var(--line); padding-top:18px; }
   .stat .num{ font-family:"Fraunces",serif; font-weight:600; font-size:clamp(44px,5.4vw,66px); line-height:.92; letter-spacing:-.03em; color:var(--ink); }
   .stat .num b{ color:var(--burg); font-weight:600; }
+  .stat .num .arr{ font-weight:300; }
   .stat .lab{ margin-top:11px; font-size:15px; line-height:1.5; color:var(--ink-2); }
   .stat .lab b{ color:var(--ink); font-weight:700; }
   .stat .xfer{ margin-top:13px; padding-top:11px; border-top:1px solid var(--line); font-size:13.5px; font-weight:600; color:var(--burg); line-height:1.4; display:flex; gap:7px; align-items:flex-start; }
@@ -239,7 +241,6 @@
   .human .also b{ color:var(--cream); font-weight:700; }
   .tags{ display:flex; flex-wrap:wrap; gap:12px; margin-top:26px; }
   .tag{ font-weight:700; font-size:15px; padding:10px 18px; border:1px solid var(--line); border-radius:60px; background:var(--white); transition:transform .22s, background .22s, color .22s, border-color .22s; cursor:default; }
-  .tag:nth-child(2n){ transform:rotate(-2deg); }
   .tag:hover{ background:var(--burg); color:#fff; border-color:var(--burg); transform:rotate(0) translateY(-3px); }
   .quotecard{ background:var(--white); color:var(--ink); border-radius:24px; padding:42px 40px 36px; position:relative; overflow:hidden; border:1px solid var(--line); border-left:5px solid var(--burg); box-shadow:0 30px 60px -34px rgba(34,31,27,.3); display:flex; flex-direction:column; justify-content:center; }
   .quotecard::before{ content:"“"; position:absolute; top:-30px; left:20px; font-family:"Fraunces"; font-size:170px; color:var(--burg-t); }
@@ -444,7 +445,7 @@
         <div class="stat reveal d2"><div class="num">#<b>1</b></div><div class="lab">podcast on U.S. politics — <b>founder &amp; host of the Cato Daily Podcast</b></div><div class="xfer">Builds attention and trust from a cold start</div></div>
         <div class="stat reveal d3"><div class="num"><b>85</b>%</div><div class="lab">job placement on the talent marketplace I<br><b>co-founded</b> in East Africa</div><div class="xfer">Moves people from uncertainty to action</div></div>
         <div class="stat reveal d1"><div class="num">$<b>2.5</b>M</div><div class="lab">NBC ad inventory optimized &amp; delivered against peak traffic — <b>London 2012 Olympic Games</b></div><div class="xfer">Performs under pressure with revenue on the line</div></div>
-        <div class="stat reveal d2"><div class="num">0 → <b>4</b></div><div class="lab">companies I've personally<br><b>founded, run &amp; closed for</b></div><div class="xfer">Knows the full funnel, not just the call</div></div>
+        <div class="stat reveal d2"><div class="num">0 <span class="arr">→</span> <b>4</b></div><div class="lab">companies I've personally<br><b>founded, run &amp; closed for</b></div><div class="xfer">Knows the full funnel, not just the call</div></div>
         <div class="stat reveal d3"><div class="num">#<b>11</b></div><div class="lab">employee on the <b>first digital-only team at NBCUniversal</b> — scaled it to 200 staff</div><div class="xfer">Steps into the unknown, then scales it</div></div>
       </div>
     </div>
@@ -459,7 +460,7 @@
         <span class="stamp">Deloitte</span><span class="stamp">Cato Institute</span><span class="stamp">U.S. Senate</span>
         <span class="stamp">The Olympics</span><span class="stamp">Founders &amp; VCs</span><span class="stamp">Global Health Corps</span>
       </div>
-      <p class="convergence reveal d2">Not a pivot — a convergence. Communications, thought leadership, speaking, persuasion, and program management, all channeled into the obvious next step: <span style="white-space:nowrap">the close. <b>It all transfers.</b></span></p>
+      <p class="convergence reveal d2">Not a pivot — a convergence. Communications, thought leadership, speaking, persuasion, and program management, all channeled into the obvious next step: the close.<br><b>It all transfers.</b></p>
     </div>
   </section>
 
@@ -640,7 +641,7 @@
           <label class="qlabel" for="email">Your email</label>
           <input type="email" id="email" name="email" placeholder="you@company.com" required>
         </div>
-        <button type="submit" class="btn">Apply &amp; book my call <span class="arrow">→</span></button>
+        <button type="submit" class="btn">Book me <span class="arrow">→</span></button>
         <p class="fineprint">Takes you straight to my calendar to lock a time.</p>
       </form>
     </div>
@@ -667,6 +668,7 @@
     <button class="ft-min" id="ftMin" type="button" aria-label="Minimize">&minus;</button>
     <div class="ft-player" id="ftPlayer" data-id="Bv5zmbRloJA" role="button" tabindex="0" aria-label="Play my SXSW 2026 talk">
       <img class="ft-poster" src="sxsw-poster.jpg" alt="Anastasia Uglova — SXSW 2026 talk" />
+      <img class="ft-wm" src="SxSW_logo_white.png" alt="" />
       <span class="ft-play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
     </div>
     <div class="ft-bar" id="ftBar"><span class="ft-tag"><img class="ft-sxsw" src="SxSW_logo.png" alt="SXSW" /> 2026</span><span class="ft-title">Watch my talk</span></div>
