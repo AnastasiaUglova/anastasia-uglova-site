@@ -152,6 +152,15 @@
   .diffcard p{ margin-top:18px; max-width:680px; color:var(--ink-2); font-size:17px; }
   .diffcard p b{ color:var(--ink); font-weight:700; }
 
+  /* ===== CREDENTIALS ===== */
+  .creds{ padding:90px 0; background:var(--white); }
+  .creds .eyebrow{ justify-content:flex-start; }
+  .credgrid{ display:grid; grid-template-columns:repeat(4,1fr); gap:28px 24px; margin-top:42px; }
+  .cred{ border-top:2px solid var(--line); padding-top:16px; }
+  .cred .clabel{ font-weight:700; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:var(--green); margin-bottom:10px; }
+  .cred p{ font-size:14.5px; line-height:1.55; color:var(--ink-2); }
+  .cred p b{ color:var(--ink); font-weight:700; }
+
   /* ===== Q&A ===== */
   .qa{ padding:90px 0; background:var(--bg-2); }
   .qa .eyebrow{ justify-content:flex-start; }
@@ -200,12 +209,14 @@
     .hero-copy{ max-width:none; margin-top:22px; }
     .pillar-grid{ grid-template-columns:1fr 1fr; }
     .mstats{ grid-template-columns:1fr 1fr; }
+    .credgrid{ grid-template-columns:1fr 1fr; }
   }
   @media (max-width:540px){
     body{ font-size:17px; }
     .wrap{ padding:0 22px; }
     .hero-photo{ height:56vh; }
     .pillar-grid{ grid-template-columns:1fr; }
+    .credgrid{ grid-template-columns:1fr; }
     .mstats{ grid-template-columns:1fr 1fr; gap:26px 20px; }
     .diffcard{ padding:38px 26px; }
     .polaroids{ display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:8px; }
@@ -247,8 +258,8 @@
     <span class="blob b1"></span>
     <div class="wrap"><div class="inner">
       <span class="eyebrow reveal"><span class="ln"></span> The approach <span class="ln"></span></span>
-      <h2 class="sec-head reveal">Your prospects don't need pressure. They need someone who <em>actually gets it.</em></h2>
-      <p class="lead reveal d1">People commit to high-ticket health programs when they trust the person across the table — and when that person truly understands what they're walking into. That's exactly where I close.</p>
+      <h2 class="sec-head reveal">I don't sell the problem. I sell the <em>possibility.</em></h2>
+      <p class="lead reveal d1">People don't commit because you reminded them what's wrong. They commit because they can finally see what's <em>possible</em> — and they trust you to get them there. I close on possibility and joy, not pressure and fear. It's also just how I live.</p>
     </div></div>
   </section>
 
@@ -284,14 +295,14 @@
   <section class="mission">
     <span class="blob b1"></span>
     <div class="wrap">
-      <span class="eyebrow reveal"><span class="ln"></span> Where I come from</span>
-      <h2 class="sec-head reveal">Health has always been my <em>world.</em></h2>
-      <p class="lead reveal d1">Global Health Corps fellow. I built career programs in Rwanda with the Akilah Institute that placed thousands of people into life-changing work. A lifelong athlete. I don't just sell wellness — I've spent my life inside it, moving real people to action.</p>
+      <span class="eyebrow reveal"><span class="ln"></span> Where I've been</span>
+      <h2 class="sec-head reveal">I've spent my life in the business of <em>possibility.</em></h2>
+      <p class="lead reveal d1">From Kigali to here: as a <b>Global Health Corps</b> fellow and a leader at Rwanda's <b>Akilah Institute</b>, I built education and career programs that helped thousands of women in East Africa see — and seize — futures they'd been told weren't theirs. The thread through all of it is joy, dignity, and a stubborn belief that people rise when someone shows them what's possible.</p>
       <div class="mstats">
-        <div class="mstat reveal d1"><div class="num"><b>15</b>+</div><div class="lab">years earning trust in <b>skeptical, high-stakes rooms</b></div></div>
-        <div class="mstat reveal d2"><div class="num"><b>85</b>%</div><div class="lab">placement rate moving people from “maybe” to <b>committed</b> (East Africa)</div></div>
-        <div class="mstat reveal d3"><div class="num">&lt;<b>2</b>%</div><div class="lab"><b>Global Health Corps</b> fellow — health credibility, not borrowed</div></div>
-        <div class="mstat reveal d4"><div class="num"><b>3</b></div><div class="lab">continents of rooms — clinics, classrooms, boardrooms, gyms</div></div>
+        <div class="mstat reveal d1"><div class="num"><b>1000</b>s</div><div class="lab">women in East Africa moved into <b>life-changing work</b></div></div>
+        <div class="mstat reveal d2"><div class="num">&lt;<b>2</b>%</div><div class="lab"><b>Global Health Corps</b> fellowship acceptance</div></div>
+        <div class="mstat reveal d3"><div class="num"><b>3</b></div><div class="lab">continents of <b>classrooms, clinics &amp; boardrooms</b></div></div>
+        <div class="mstat reveal d4"><div class="num"><b>15</b>+</div><div class="lab">years helping people <b>see what's possible</b></div></div>
       </div>
     </div>
   </section>
@@ -302,7 +313,7 @@
     <div class="wrap"><div class="inner">
       <span class="eyebrow reveal"><span class="ln"></span> I live what I sell <span class="ln"></span></span>
       <h2 class="sec-head reveal">I don't sell what I don't <em>live.</em></h2>
-      <p class="lead reveal d1">In the ring, on the mat, up a wall, out of a plane. Your prospects can smell a faker — so when I talk about your offer, it lands as truth, not a script.</p>
+      <p class="lead reveal d1">On the mat, deep in the trees, up a wall, out of a plane — yoga and the outdoors are where I find joy and clarity. Your prospects can smell a faker, so when I talk about feeling good in your body, it lands as truth, not a script.</p>
       <div class="polaroids reveal d1">
         <div class="polaroid"><img src="poly9.jpg" alt="boxing" /><div class="cap">in the ring</div></div>
         <div class="polaroid"><img src="poly10.jpg" alt="yoga" /><div class="cap">on the mat</div></div>
@@ -321,9 +332,24 @@
   <section class="diff">
     <div class="wrap">
       <div class="diffcard reveal">
-        <span class="eyebrow"><span class="ln"></span> What makes it different</span>
-        <h2 class="sec-head">Most closers don't know your world. I'm <em>fluent in it.</em></h2>
-        <p>I sit at the intersection of high-ticket sales, real <b>health fluency</b>, and <b>relational intelligence</b> — the skill of reading people and building trust fast. That's why prospects say yes to me after they've said no to everyone else. I represent your brand like I'd represent my own.</p>
+        <span class="eyebrow"><span class="ln"></span> Deep human connection</span>
+        <h2 class="sec-head">I built a company on <em>relational intelligence.</em></h2>
+        <p>Before closing for wellness brands, I founded and ran a practice helping people build the <b>relational intelligence</b> to thrive in authentic, deep human connection — with partners, with teams, with themselves.</p>
+        <p>That's not a tangent for a closer. It <b>is</b> the job: reading what someone truly needs, earning trust fast, and helping them say a joyful yes to what's genuinely good for them. Add real <b>health fluency</b> on top, and prospects say yes to me after they've said no to everyone else.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREDENTIALS -->
+  <section class="creds">
+    <div class="wrap">
+      <span class="eyebrow reveal"><span class="ln"></span> The foundation</span>
+      <h2 class="sec-head reveal">Credentials &amp; <em>craft.</em></h2>
+      <div class="credgrid reveal d1">
+        <div class="cred"><div class="clabel">Impact</div><p><b>Global Health Corps</b> fellow · leader at the <b>Akilah Institute</b>, Rwanda</p></div>
+        <div class="cred"><div class="clabel">Founder</div><p>Built &amp; ran a <b>relational-intelligence</b> practice for authentic, deep human connection</p></div>
+        <div class="cred"><div class="clabel">Education</div><p><b>M.S. InfoSec &amp; Privacy</b>, UT Austin · <b>B.A. Government</b>, Cornell</p></div>
+        <div class="cred"><div class="clabel">Practice</div><p>Lifelong athlete — <b>yoga</b>, boxing, climbing &amp; the outdoors</p></div>
       </div>
     </div>
   </section>
@@ -349,6 +375,14 @@
         <details class="qaitem" name="qa">
           <summary>What kind of offers? <span class="qaicon"></span></summary>
           <p class="qa-ans">High-ticket health and wellness — premium coaching, programs, memberships, functional-health packages, longevity and recovery. If it's real and it changes lives, I can close it.</p>
+        </details>
+        <details class="qaitem" name="qa">
+          <summary>Why does relational intelligence matter in sales? <span class="qaicon"></span></summary>
+          <p class="qa-ans">Because closing <em>is</em> relational intelligence: reading what someone really needs, earning trust quickly, and helping them choose what's genuinely good for them. I spent years teaching it — now I close with it.</p>
+        </details>
+        <details class="qaitem" name="qa">
+          <summary>What's your vibe on a call? <span class="qaicon"></span></summary>
+          <p class="qa-ans">Joyful and possibility-focused. I don't manufacture urgency or poke at wounds. I help people see what's possible and feel genuinely good about saying yes.</p>
         </details>
       </div>
     </div>
