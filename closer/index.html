@@ -158,6 +158,8 @@
   .stat .num b{ color:var(--burg); font-weight:600; }
   .stat .lab{ margin-top:11px; font-size:15px; line-height:1.5; color:var(--ink-2); }
   .stat .lab b{ color:var(--ink); font-weight:700; }
+  .stat .xfer{ margin-top:13px; padding-top:11px; border-top:1px solid var(--line); font-size:13.5px; font-weight:600; color:var(--burg); line-height:1.4; display:flex; gap:7px; align-items:flex-start; }
+  .stat .xfer::before{ content:"\2192"; flex:none; }
 
   /* ===== STAMPS ===== */
   .rooms{ padding:78px 0 70px; text-align:center; background:var(--white); }
@@ -221,9 +223,20 @@
   .honest .lead{ max-width:660px; margin:22px auto 0; font-size:18px; line-height:1.62; color:var(--ink-2); }
   .honest .lead b{ color:var(--ink); font-weight:700; }
 
+  /* ===== FIT / DIALOGUE ===== */
+  .fit{ padding:84px 0; background:var(--paper); text-align:center; }
+  .fit .eyebrow{ justify-content:center; }
+  .fit .fit-context{ font-family:"Fraunces",serif; font-style:italic; font-size:clamp(20px,2.8vw,28px); color:var(--ink); margin:16px auto 32px; max-width:22ch; }
+  .chat{ max-width:580px; margin:0 auto; display:flex; flex-direction:column; gap:14px; }
+  .bubble{ padding:16px 22px; border-radius:22px; line-height:1.5; max-width:90%; }
+  .bubble .who{ display:block; font-weight:700; font-size:11px; letter-spacing:.14em; text-transform:uppercase; margin-bottom:6px; opacity:.55; }
+  .bubble.you{ align-self:flex-start; text-align:left; background:var(--white); border:1px solid var(--line); border-bottom-left-radius:6px; color:var(--ink); font-size:17px; }
+  .bubble.me{ align-self:flex-end; text-align:left; background:var(--burg); color:var(--cream); border-bottom-right-radius:6px; font-family:"Fraunces",serif; font-style:italic; font-weight:500; font-size:26px; }
+  .bubble.me .who{ font-family:"Hanken Grotesk",system-ui,sans-serif; font-style:normal; color:var(--cream); opacity:.7; }
+
   /* ===== HUMAN (charcoal) ===== */
   .human{ padding:90px 0; background:linear-gradient(var(--dgrey),var(--dgrey)); position:relative; z-index:1; color-scheme:dark; }
-  .human-grid{ display:grid; grid-template-columns:1.32fr .86fr; gap:44px; align-items:center; }
+  .human-grid{ display:grid; grid-template-columns:1.22fr .95fr; gap:44px; align-items:start; }
   .human .eyebrow{ color:var(--rose); } .human .eyebrow .ln{ background:var(--rose); }
   .human .sec-head{ max-width:none; color:var(--cream); }
   .human .sec-head em{ color:var(--rose); }
@@ -245,8 +258,8 @@
   .polaroid:nth-child(odd){ transform:rotate(-3deg); }
   .polaroid:nth-child(even){ transform:rotate(3deg); }
   .polaroid:hover{ box-shadow:0 22px 40px -12px rgba(0,0,0,.6); z-index:2; }
-  .polaroid:nth-child(odd):hover{ transform:rotate(-3deg) translateY(-7px) scale(1.05); }
-  .polaroid:nth-child(even):hover{ transform:rotate(3deg) translateY(-7px) scale(1.05); }
+  .polaroid:nth-child(odd):hover{ transform:rotate(-3deg) translateY(-9px) scale(1.18); }
+  .polaroid:nth-child(even):hover{ transform:rotate(3deg) translateY(-9px) scale(1.18); }
   @media (max-width:540px){ .polaroids{ flex-wrap:wrap; } .polaroid{ flex:0 0 42%; width:42%; max-width:none; } }
   .sign{ margin-top:26px; display:flex; align-items:baseline; gap:12px; flex-wrap:wrap; }
   .sign .nm{ font-family:"Caveat",cursive; font-weight:700; font-size:42px; color:var(--burg); line-height:1; transform:rotate(-4deg); }
@@ -421,12 +434,12 @@
       <h2 class="sec-head reveal">I've spent a career <em>doing hard things.</em></h2>
       <p class="lead reveal">Not vanity metrics — real stakes, real signatures, real trust rebuilt from zero. A closer is someone who's trusted to partner, not pressure.</p>
       <div class="stats">
-        <div class="stat reveal d1"><div class="num">$<b>27</b>M</div><div class="lab">budget owned at <b>NPR</b>, rebuilding trust across a 250-station ecosystem</div></div>
-        <div class="stat reveal d2"><div class="num">#<b>1</b></div><div class="lab">podcast on U.S. politics — <b>founder &amp; host of the Cato Daily Podcast</b></div></div>
-        <div class="stat reveal d3"><div class="num"><b>85</b>%</div><div class="lab">job placement on the talent marketplace I<br><b>co-founded</b> in East Africa</div></div>
-        <div class="stat reveal d1"><div class="num">$<b>2.5</b>M</div><div class="lab">NBC ad inventory optimized &amp; delivered against peak traffic — <b>London 2012 Olympic Games</b></div></div>
-        <div class="stat reveal d2"><div class="num"><b>4</b></div><div class="lab">companies I've personally <b>founded, run &amp; closed for</b></div></div>
-        <div class="stat reveal d3"><div class="num">#<b>11</b></div><div class="lab">employee on the <b>first digital-only team at NBCUniversal</b> — scaled it to 200 staff</div></div>
+        <div class="stat reveal d1"><div class="num">$<b>27</b>M</div><div class="lab">budget owned at <b>NPR</b>, rebuilding trust across a 250-station ecosystem</div><div class="xfer">Trusted where credibility is the deal</div></div>
+        <div class="stat reveal d2"><div class="num">#<b>1</b></div><div class="lab">podcast on U.S. politics — <b>founder &amp; host of the Cato Daily Podcast</b></div><div class="xfer">Builds attention and trust from a cold start</div></div>
+        <div class="stat reveal d3"><div class="num"><b>85</b>%</div><div class="lab">job placement on the talent marketplace I<br><b>co-founded</b> in East Africa</div><div class="xfer">Moves people from uncertainty to action</div></div>
+        <div class="stat reveal d1"><div class="num">$<b>2.5</b>M</div><div class="lab">NBC ad inventory optimized &amp; delivered against peak traffic — <b>London 2012 Olympic Games</b></div><div class="xfer">Performs under pressure, revenue on the line</div></div>
+        <div class="stat reveal d2"><div class="num"><b>4</b></div><div class="lab">companies I've personally <b>founded, run &amp; closed for</b></div><div class="xfer">Knows the full funnel, not just the call</div></div>
+        <div class="stat reveal d3"><div class="num">#<b>11</b></div><div class="lab">employee on the <b>first digital-only team at NBCUniversal</b> — scaled it to 200 staff</div><div class="xfer">Sells the unproven, then scales it</div></div>
       </div>
     </div>
   </section>
@@ -539,6 +552,18 @@
       <p class="objq reveal">“But she hasn't carried a sales quota.”</p>
       <h2 class="sec-head reveal">True. I'm new to formal closing &mdash; <em>not to the hard part.</em></h2>
       <p class="lead reveal d1">I'm new to formal high-ticket closing, not to high-stakes persuasion. I've spent <b>15+ years earning trust</b> with skeptical rooms, senior stakeholders, founders, donors, executives, and operators. That means I'll <b>ramp faster than a typical beginner</b> &mdash; especially on consultative offers where trust, nuance, and judgment matter more than pressure.</p>
+    </div>
+  </section>
+
+  <!-- FIT / DIALOGUE -->
+  <section class="fit">
+    <div class="wrap">
+      <span class="eyebrow reveal"><span class="ln"></span> Who I'm for <span class="ln"></span></span>
+      <p class="fit-context reveal">For premium offers with discerning buyers.</p>
+      <div class="chat reveal d1">
+        <div class="bubble you"><span class="who">You</span>“My prospects are smart. My offer is nuanced. I need someone who can represent me without sounding cheap.”</div>
+        <div class="bubble me"><span class="who">Me</span>“Say less.”</div>
+      </div>
     </div>
   </section>
 
