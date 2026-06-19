@@ -286,8 +286,9 @@
   .close .btn-primary{ background:var(--cream); color:var(--ink); border-color:var(--cream); box-shadow:0 14px 30px -14px rgba(0,0,0,.6); }
   .close .btn-primary:hover{ background:#fff; border-color:#fff; }
   .contact{ margin-top:42px; display:flex; flex-wrap:wrap; gap:10px 24px; justify-content:center; align-items:center; font-size:16px; font-weight:600; }
-  .contact a{ display:inline-flex; align-items:center; gap:8px; border-bottom:2px solid transparent; padding-bottom:2px; transition:border-color .22s,color .22s; }
-  .contact a:hover{ border-color:var(--rose); color:var(--rose); }
+  .contact a{ display:inline-flex; align-items:center; gap:8px; color:var(--cream); border-bottom:2px solid transparent; padding-bottom:2px; transition:border-color .22s,color .22s; -webkit-tap-highlight-color:transparent; }
+  .contact a:link, .contact a:visited{ color:var(--cream); }
+  .contact a:hover, .contact a:focus, .contact a:active{ border-color:var(--rose); color:var(--rose); }
   .contact .sep{ color:rgba(250,247,241,.3); }
 
   footer{ background:linear-gradient(var(--black),var(--black)); color:rgba(250,247,241,.58); text-align:center; padding:34px 0 46px; font-size:14px; border-top:1px solid rgba(250,247,241,.12); position:relative; z-index:1; color-scheme:dark; }
@@ -493,7 +494,7 @@
   <!-- SKILLS -->
   <section class="skills">
     <div class="wrap">
-      <span class="eyebrow reveal"><span class="ln"></span> Tools &amp; fluency</span>
+      <span class="eyebrow reveal"><span class="ln"></span> Tools &amp; skillset</span>
       <h2 class="sec-head reveal">Fluent in<br><em>the whole stack.</em></h2>
       <p class="lead reveal">Absolutely fluent across AI tooling, CRMs, and the full marketing suite. If your team runs on it, I'm already up to speed — and I learn new tools faster than onboarding can keep up.</p>
       <div class="skillgrid">
