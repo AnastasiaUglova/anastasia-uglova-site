@@ -215,13 +215,13 @@
   .cred a:hover{ color:var(--burg-d); }
 
   /* ===== FIT / DIALOGUE ===== */
-  .fit{ padding:84px 0; background:var(--paper); text-align:center; }
+  .fit{ padding:84px 0; background:var(--white); text-align:center; border-top:1px solid var(--line); }
   .fit .eyebrow{ justify-content:center; }
   .fit .fit-context{ font-family:"Fraunces",serif; font-style:italic; font-size:clamp(20px,2.8vw,28px); color:var(--ink); margin:16px auto 32px; max-width:22ch; }
   .chat{ max-width:580px; margin:0 auto; display:flex; flex-direction:column; gap:14px; }
   .bubble{ padding:16px 22px; border-radius:22px; line-height:1.5; max-width:90%; }
   .bubble .who{ display:block; font-weight:700; font-size:11px; letter-spacing:.14em; text-transform:uppercase; margin-bottom:6px; opacity:.55; }
-  .bubble.you{ align-self:flex-start; text-align:left; background:var(--white); border:1px solid var(--line); border-bottom-left-radius:6px; color:var(--ink); font-size:17px; }
+  .bubble.you{ align-self:flex-start; text-align:left; background:var(--paper-2); border:1px solid var(--line); border-bottom-left-radius:6px; color:var(--ink); font-size:17px; }
   .bubble.me{ align-self:flex-end; text-align:left; background:var(--burg); color:var(--cream); border-bottom-right-radius:6px; font-family:"Fraunces",serif; font-style:italic; font-weight:500; font-size:26px; }
   .bubble.me .who{ font-family:"Hanken Grotesk",system-ui,sans-serif; font-style:normal; color:var(--cream); opacity:.7; }
 
@@ -418,6 +418,18 @@
     </div>
   </section>
 
+  <!-- FIT / DIALOGUE -->
+  <section class="fit">
+    <div class="wrap">
+      <span class="eyebrow reveal"><span class="ln"></span> Who I'm for <span class="ln"></span></span>
+      <p class="fit-context reveal">For premium offers with discerning buyers.</p>
+      <div class="chat reveal d1">
+        <div class="bubble you"><span class="who">You</span>“My prospects are smart. My offer is nuanced. I need someone who can represent me without sounding cheap.”</div>
+        <div class="bubble me"><span class="who">Me</span>“Say less.”</div>
+      </div>
+    </div>
+  </section>
+
   <!-- RECEIPTS -->
   <section class="receipts" id="receipts">
     <div class="wrap">
@@ -532,18 +544,6 @@
         <div class="cred reveal d2"><div class="clabel">Sales</div><p>Mentored in setting and closing by<br><a href="https://www.tiktok.com/@lo_silver" target="_blank" rel="noopener"><b>Lo Silver</b> | The Silver Selling System</a>.</p></div>
         <div class="cred reveal d3"><div class="clabel">Selectivity</div><p><b>Global Health Corps</b> fellow — less than <b>2%</b> acceptance rate.</p></div>
         <div class="cred reveal d4"><div class="clabel">Operator</div><p>Multiple time founder · <b>Director</b> · <b>CIO</b> · chief convener of <a href="https://tethicsandchill.com" target="_blank" rel="noopener">Tethics &amp; Chill</a>.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FIT / DIALOGUE -->
-  <section class="fit">
-    <div class="wrap">
-      <span class="eyebrow reveal"><span class="ln"></span> Who I'm for <span class="ln"></span></span>
-      <p class="fit-context reveal">For premium offers with discerning buyers.</p>
-      <div class="chat reveal d1">
-        <div class="bubble you"><span class="who">You</span>“My prospects are smart. My offer is nuanced. I need someone who can represent me without sounding cheap.”</div>
-        <div class="bubble me"><span class="who">Me</span>“Say less.”</div>
       </div>
     </div>
   </section>
