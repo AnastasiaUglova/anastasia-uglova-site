@@ -46,7 +46,7 @@
   .wrap{ width:100%; max-width:var(--maxw); margin:0 auto; padding:0 32px; }
 
   /* ===== TICKER ===== */
-  .ticker{ background:var(--black); color:var(--cream); overflow:hidden; }
+  .ticker{ background:linear-gradient(var(--black),var(--black)); color:var(--cream); overflow:hidden; color-scheme:dark; }
   .ticker .track{ display:flex; width:max-content; animation:scroll 32s linear infinite; padding:10px 0; }
   .ticker span{ font-weight:700; font-size:13px; letter-spacing:.16em; text-transform:uppercase; white-space:nowrap; padding:0 22px; display:flex; align-items:center; gap:22px; }
   .ticker span::after{ content:"✦"; color:var(--rose); }
@@ -55,7 +55,7 @@
 
   /* ===== HERO ===== */
   .hero{ position:relative; padding:56px 0 32px; }
-  .hero-grid{ display:grid; grid-template-columns:1.08fr .92fr; gap:48px; align-items:center; }
+  .hero-grid{ display:grid; grid-template-columns:1.34fr .66fr; gap:40px; align-items:center; }
 
   .eyebrow{ display:inline-flex; align-items:center; gap:10px; font-weight:700; font-size:13px; letter-spacing:.2em; text-transform:uppercase; color:var(--burg); }
   .eyebrow .ln{ width:34px; height:2px; background:var(--burg); }
@@ -76,7 +76,7 @@
   .transfer b{ color:var(--ink); font-weight:700; }
 
   .expertise{ display:flex; flex-wrap:wrap; align-items:center; gap:10px; margin-top:24px; }
-  .expertise .lbl{ flex-basis:100%; font-weight:700; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-2); margin-bottom:10px; }
+  .expertise .lbl{ font-weight:700; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-2); margin-right:6px; }
   .xchip{ font-weight:600; font-size:13px; padding:6px 13px; border:1.5px solid var(--burg); color:var(--burg); border-radius:60px; background:var(--burg-t); }
 
   .cta-row{ display:flex; flex-wrap:wrap; gap:18px 26px; align-items:center; margin-top:28px; }
@@ -88,7 +88,7 @@
   .btn-text:hover{ color:var(--burg); border-color:var(--burg); }
 
   /* portrait */
-  .portrait-wrap{ position:relative; justify-self:center; }
+  .portrait-wrap{ position:relative; justify-self:end; }
   .portrait{
     width:min(400px,82vw); aspect-ratio:3/4;
     border:1px solid var(--line);
@@ -102,7 +102,7 @@
   .portrait .hint{ position:absolute; bottom:18px; left:0; right:0; text-align:center; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-2); font-weight:700; }
 
   /* ===== PRESS BAR ===== */
-  .pressbar{ background:var(--black); }
+  .pressbar{ background:linear-gradient(var(--black),var(--black)); color-scheme:dark; }
   .pressbar .wrap{ display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:16px 32px; padding-top:18px; padding-bottom:18px; }
   .pressbar .flabel{ font-weight:700; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:rgba(250,247,241,.55); }
   .pressbar .marks{ display:flex; flex-wrap:wrap; align-items:center; gap:16px 30px; }
@@ -146,7 +146,7 @@
   .manifesto{ font-family:"Fraunces",serif; font-weight:500; font-size:clamp(27px,3.9vw,46px); line-height:1.14; letter-spacing:-.02em; max-width:none; margin:0 auto; color:var(--ink); }
   .manifesto em{ font-style:italic; color:var(--burg); }
   .manifesto-sub{ max-width:640px; margin:22px auto 0; color:var(--ink-2); font-size:clamp(17px,1.9vw,20px); }
-  .owns{ display:flex; flex-wrap:wrap; justify-content:center; gap:11px; max-width:780px; margin:34px auto 0; }
+  .owns{ display:grid; grid-template-columns:repeat(2,max-content); justify-content:center; gap:11px 14px; margin:34px auto 0; }
   .ochip{ font-weight:600; font-size:14px; padding:8px 16px; border:1.5px solid var(--burg); color:var(--burg); background:var(--burg-t); border-radius:60px; }
 
   /* ===== RECEIPTS ===== */
@@ -160,7 +160,7 @@
   .stat .lab b{ color:var(--ink); font-weight:700; }
 
   /* ===== STAMPS ===== */
-  .rooms{ padding:78px 0 70px; text-align:center; background:var(--paper); }
+  .rooms{ padding:78px 0 70px; text-align:center; background:var(--white); }
   .rooms .convergence{ max-width:680px; margin:40px auto 0; color:var(--ink-2); font-size:18px; line-height:1.6; }
   .rooms .convergence b{ color:var(--ink); font-weight:700; }
   .rooms .eyebrow{ justify-content:center; margin-bottom:34px; }
@@ -172,7 +172,7 @@
   .stamp:hover{ background:var(--burg); color:#fff; border-color:var(--burg); transform:rotate(0) translateY(-4px) scale(1.04); }
 
   /* ===== REFRAME (charcoal) ===== */
-  .reframe{ padding:86px 0; background:var(--dgrey); position:relative; z-index:1; transform:translateZ(0); backface-visibility:hidden; }
+  .reframe{ padding:86px 0; background:linear-gradient(var(--dgrey),var(--dgrey)); position:relative; z-index:1; color-scheme:dark; }
   .reframe .eyebrow{ color:var(--rose); } .reframe .eyebrow .ln{ background:var(--rose); }
   .reframe .sec-head{ max-width:26ch; color:var(--cream); }
   .reframe .sec-head em{ color:var(--rose); }
@@ -213,7 +213,7 @@
   .cred a:hover{ color:var(--burg-d); }
 
   /* ===== HUMAN (charcoal) ===== */
-  .human{ padding:90px 0; background:var(--dgrey); position:relative; z-index:1; transform:translateZ(0); backface-visibility:hidden; }
+  .human{ padding:90px 0; background:linear-gradient(var(--dgrey),var(--dgrey)); position:relative; z-index:1; color-scheme:dark; }
   .human-grid{ display:grid; grid-template-columns:1fr 1.02fr; gap:56px; align-items:center; }
   .human .eyebrow{ color:var(--rose); } .human .eyebrow .ln{ background:var(--rose); }
   .human .sec-head{ max-width:none; color:var(--cream); }
@@ -277,7 +277,7 @@
   .apply .fineprint{ text-align:center; font-size:13px; color:var(--ink-2); margin-top:14px; }
 
   /* ===== CLOSE (black finale) ===== */
-  .close{ background:var(--black); color:var(--cream); text-align:center; position:relative; z-index:1; transform:translateZ(0); will-change:transform; backface-visibility:hidden; }
+  .close{ background:linear-gradient(var(--black),var(--black)); color:var(--cream); text-align:center; position:relative; z-index:1; color-scheme:dark; }
   .close .wrap{ padding:104px 32px 70px; }
   .close .big{ font-family:"Fraunces",serif; font-weight:500; font-size:clamp(46px,9vw,116px); line-height:.94; letter-spacing:-.025em; color:#fff; }
   .close .big em{ font-style:italic; color:var(--rose); }
@@ -290,7 +290,7 @@
   .contact a:hover{ border-color:var(--rose); color:var(--rose); }
   .contact .sep{ color:rgba(250,247,241,.3); }
 
-  footer{ background:var(--black); color:rgba(250,247,241,.58); text-align:center; padding:34px 0 46px; font-size:14px; border-top:1px solid rgba(250,247,241,.12); position:relative; z-index:1; transform:translateZ(0); will-change:transform; backface-visibility:hidden; }
+  footer{ background:linear-gradient(var(--black),var(--black)); color:rgba(250,247,241,.58); text-align:center; padding:34px 0 46px; font-size:14px; border-top:1px solid rgba(250,247,241,.12); position:relative; z-index:1; color-scheme:dark; }
   footer .mark{ font-family:"Caveat",cursive; font-weight:700; font-size:22px; color:var(--rose); }
 
   /* ===== REVEAL ===== */
@@ -302,7 +302,7 @@
   /* ===== RESPONSIVE ===== */
   @media (max-width:920px){
     .hero-grid{ grid-template-columns:1fr; gap:46px; }
-    .portrait-wrap{ order:-1; }
+    .portrait-wrap{ order:-1; justify-self:center; }
     .stats{ grid-template-columns:1fr 1fr; gap:36px 26px; }
     .skillgrid{ grid-template-columns:1fr 1fr; }
     .credgrid{ grid-template-columns:1fr 1fr; }
@@ -385,7 +385,7 @@
   <!-- PHILOSOPHY -->
   <section class="philosophy">
     <div class="wrap">
-      <span class="eyebrow reveal" style="justify-content:center; margin-bottom:18px;"><span class="ln"></span> The craft</span>
+      <span class="eyebrow reveal" style="justify-content:center; margin-bottom:18px;"><span class="ln"></span> The craft <span class="ln"></span></span>
       <p class="manifesto reveal">Closing isn't about the close.<br>It's <em>everything that comes before.</em></p>
       <p class="manifesto-sub reveal d1">I create rapport and establish credibility in the first five minutes — exactly where most high-stakes conversations flounder.</p>
       <div class="owns reveal d2">
@@ -396,7 +396,7 @@
         <span class="ochip">Never miss a meeting</span>
         <span class="ochip">Reliable to the decimal</span>
         <span class="ochip">Feral about excellence</span>
-        <span class="ochip">Own the follow-through</span>
+        <span class="ochip">Own follow-through</span>
       </div>
     </div>
   </section>
@@ -427,7 +427,7 @@
         <span class="stamp">Deloitte</span><span class="stamp">Cato Institute</span><span class="stamp">U.S. Senate</span>
         <span class="stamp">The Olympics</span><span class="stamp">Founders &amp; VCs</span><span class="stamp">Global Health Corps</span>
       </div>
-      <p class="convergence reveal d2">Not a pivot — a convergence. Communications, thought leadership, speaking, persuasion, and program management, all channeled into the obvious next step: the close. <b>It all transfers.</b></p>
+      <p class="convergence reveal d2">Not a pivot — a convergence. Communications, thought leadership, speaking, persuasion, and program management, all channeled into the obvious next step: <span style="white-space:nowrap">the close. <b>It all transfers.</b></span></p>
     </div>
   </section>
 
@@ -445,11 +445,12 @@
   <section class="moves">
     <div class="wrap">
       <span class="eyebrow reveal"><span class="ln"></span> What a closer actually does</span>
-      <h2 class="sec-head reveal">Three moves.<br><em>Every deal.</em></h2>
+      <h2 class="sec-head reveal">Four moves.<br><em>Every deal.</em></h2>
       <div class="move-list">
         <div class="move reveal d1"><div class="ord">01</div><div class="body"><h3>Build trust, fast</h3><p>I've walked into newsrooms, think tanks, founder pitches, and rural hospitals and earned the room in minutes. Buyers don't sign because of features. They sign because they believe in themselves when they partner with me.</p></div></div>
-        <div class="move reveal d2"><div class="ord">02</div><div class="body"><h3>Translate the value</h3><p>From AI security at Deloitte to enterprise positioning at Notion to executive career coaching for private clients, I make complex, high-stakes offerings make sense to the person whose name goes on the contract. Clarity closes.</p></div></div>
-        <div class="move reveal d3"><div class="ord">03</div><div class="body"><h3>Ownership, end-to-end</h3><p>I run the full motion — discovery, objection, the quiet pause, the follow-through — without ever sounding like a script. Consultative, honest, and uncompromising about building the trust that closes the deal.</p></div></div>
+        <div class="move reveal d2"><div class="ord">02</div><div class="body"><h3>Find the pain</h3><p>Real discovery is getting people to open up — honestly, even a little vulnerably — about what's actually broken and what they truly want. I listen for what matters most, then either find the alignment that makes yes the obvious answer, or tell them the honest truth and downsell. Either way, they trust me.</p></div></div>
+        <div class="move reveal d3"><div class="ord">03</div><div class="body"><h3>Translate the value</h3><p>From AI security at Deloitte to enterprise positioning at Notion to executive career coaching for private clients, I make complex, high-stakes offerings make sense to the person whose name goes on the contract. Clarity closes.</p></div></div>
+        <div class="move reveal d4"><div class="ord">04</div><div class="body"><h3>Ownership, end-to-end</h3><p>I run the full motion — discovery, objection, the quiet pause, the follow-through — without ever sounding like a script. Consultative, honest, and uncompromising about building the trust that closes the deal.</p></div></div>
       </div>
     </div>
   </section>
@@ -521,7 +522,7 @@
   <section class="qa">
     <div class="wrap">
       <span class="eyebrow reveal"><span class="ln"></span> Q&amp;A</span>
-      <h2 class="sec-head reveal">A few straight answers.</h2>
+      <h2 class="sec-head reveal">A few straight <em>answers.</em></h2>
       <div class="qa-list reveal d1">
         <details class="qaitem" name="qa" open>
           <summary>Why sales, and why now? <span class="qaicon"></span></summary>
@@ -613,8 +614,7 @@
       <div class="contact reveal d2">
         <a href="mailto:anastasiau@gmail.com">anastasiau@gmail.com</a><span class="sep">/</span>
         <a href="tel:+12023021405">202·302·1405</a><span class="sep">/</span>
-        <a href="https://www.linkedin.com/in/anastasiauglova/" target="_blank" rel="noopener">LinkedIn</a><span class="sep">/</span>
-        <a href="https://twitter.com/anastasiau" target="_blank" rel="noopener">Twitter</a>
+        <a href="https://www.linkedin.com/in/anastasiauglova/" target="_blank" rel="noopener">LinkedIn</a>
       </div>
     </div>
   </section>
