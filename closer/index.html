@@ -102,16 +102,17 @@
   .portrait .hint{ position:absolute; bottom:18px; left:0; right:0; text-align:center; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-2); font-weight:700; }
 
   /* ===== PRESS BAR ===== */
-  .pressbar{ background:var(--black); }
-  .pressbar .wrap{ display:flex; flex-wrap:wrap; align-items:center; gap:14px 30px; padding-top:20px; padding-bottom:20px; }
-  .pressbar .flabel{ font-weight:700; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:rgba(250,247,241,.55); }
-  .pressbar .marks{ display:flex; flex-wrap:wrap; align-items:center; gap:14px 30px; }
-  .mark-logo{ font-weight:800; font-size:20px; letter-spacing:-.01em; color:#ece9e2; opacity:.9; transition:opacity .2s, color .2s; }
-  a.mark-logo:hover{ opacity:1; color:#fff; }
+  .pressbar{ background:var(--white); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+  .pressbar .wrap{ display:flex; flex-wrap:wrap; align-items:center; gap:16px 32px; padding-top:18px; padding-bottom:18px; }
+  .pressbar .flabel{ font-weight:700; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:var(--burg); }
+  .pressbar .marks{ display:flex; flex-wrap:wrap; align-items:center; gap:16px 30px; }
+  .mark-logo{ font-weight:800; font-size:20px; letter-spacing:-.01em; color:#1a1a1a; opacity:.72; transition:opacity .2s, color .2s; }
+  a.mark-logo:hover{ opacity:1; color:var(--burg); }
   .mark-logo.oracle{ letter-spacing:.16em; font-weight:700; }
   .mark-logo.eth{ font-family:"Fraunces",serif; font-weight:600; }
-  .mark-logo.guardian{ font-family:"Fraunces",serif; font-weight:600; letter-spacing:-.01em; }
-  img.sxsw-logo{ height:18px; width:auto; display:inline-block; vertical-align:middle; }
+  .barlogo{ width:auto; display:inline-block; vertical-align:middle; opacity:.82; transition:opacity .2s; }
+  .barlogo:hover{ opacity:1; }
+  .barlogo.sxsw{ height:18px; } .barlogo.tc{ height:16px; } .barlogo.guardian{ height:20px; } .barlogo.nbc{ height:30px; opacity:1; }
   .ft-sxsw{ height:11px; width:auto; display:inline-block; vertical-align:-1px; margin-right:4px; }
 
   /* ===== FLOATING SXSW PLAYER ===== */
@@ -192,6 +193,8 @@
   .skillcol li{ font-size:16px; color:var(--ink); padding:5px 0; }
 
   /* ===== CREDENTIALS ===== */
+  .sec-divider{ background:var(--white); line-height:0; text-align:center; }
+  .sec-divider span{ display:inline-block; width:64px; height:3px; background:var(--burg); border-radius:2px; }
   .creds{ background:var(--white); }
   .creds .wrap{ padding:84px 32px 82px; }
   .credgrid{ display:grid; grid-template-columns:repeat(4,1fr); gap:30px 28px; margin-top:48px; }
@@ -361,10 +364,10 @@
     <div class="wrap">
       <span class="flabel">Featured &amp; on stage</span>
       <div class="marks">
-        <img class="mark-logo sxsw-logo" src="SxSW_logo_white.png" alt="SXSW" />
-        <span class="mark-logo">London 2012</span>
-        <span class="mark-logo">TechCrunch</span>
-        <span class="mark-logo guardian">The Guardian</span>
+        <img class="barlogo sxsw" src="SxSW_logo.png" alt="SXSW" />
+        <img class="barlogo nbc" src="NBC_Olympics_2024.svg" alt="NBC Olympics" />
+        <img class="barlogo tc" src="TechCrunch_trim.png" alt="TechCrunch" />
+        <img class="barlogo guardian" src="Guardian_trim.png" alt="The Guardian" />
         <span class="mark-logo">Consensus</span>
         <span class="mark-logo eth">EthCC</span>
         <span class="mark-logo oracle">ORACLE</span>
@@ -485,6 +488,8 @@
       </div>
     </div>
   </section>
+
+  <div class="sec-divider"><span></span></div>
 
   <!-- CREDENTIALS -->
   <section class="creds">
