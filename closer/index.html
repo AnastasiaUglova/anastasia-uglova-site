@@ -264,7 +264,6 @@
   .polaroid:hover{ box-shadow:0 22px 40px -12px rgba(0,0,0,.6); z-index:2; }
   .polaroid:nth-child(odd):hover{ transform:rotate(-3deg) translateY(-11px) scale(1.28); }
   .polaroid:nth-child(even):hover{ transform:rotate(3deg) translateY(-11px) scale(1.28); }
-  @media (max-width:540px){ .polaroids{ display:grid; grid-template-columns:repeat(5,1fr); gap:7px; } .polaroid{ flex:none; width:auto; max-width:none; padding:4px 4px 5px; } .polaroid .cap{ font-size:8.5px; margin-top:2px; } }
   .sign{ margin-top:26px; display:flex; align-items:baseline; gap:12px; flex-wrap:wrap; }
   .sign .nm{ font-family:"Caveat",cursive; font-weight:700; font-size:42px; color:var(--burg); line-height:1; transform:rotate(-4deg); }
   .sign .role{ font-size:13px; letter-spacing:.12em; text-transform:uppercase; font-weight:700; color:var(--ink-2); }
@@ -351,6 +350,10 @@
     .owns{ grid-template-columns:repeat(2,max-content); gap:7px 10px; } .ochip{ font-size:12px; padding:6px 11px; }
     .stamps{ display:grid; grid-template-columns:1fr 1fr; gap:10px; max-width:none; } .stamps .stamp{ width:auto; font-size:15px; padding:10px 6px; text-align:center; }
     .pressbar .wrap{ flex-direction:column; gap:14px; } .pressbar .marks{ justify-content:center; width:100%; }
+    .contact{ font-size:12.5px; gap:6px 11px; }
+    .polaroids{ display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:7px; flex-wrap:nowrap; }
+    .polaroid{ flex:none; width:auto; max-width:none; padding:4px 4px 5px; }
+    .polaroid .cap{ font-size:8.5px; margin-top:2px; }
   }
 </style>
 </head>
@@ -603,9 +606,9 @@
   <section class="apply" id="apply">
     <div class="wrap">
       <div class="head-wrap reveal">
-        <span class="eyebrow" style="justify-content:center;"><span class="ln"></span> Apply to work with me <span class="ln"></span></span>
+        <span class="eyebrow" style="justify-content:center;"><span class="ln"></span> Work with me <span class="ln"></span></span>
         <h2 class="sec-head" style="margin-top:14px;">Let's see if we're <em>a fit.</em></h2>
-        <p class="lead">Two minutes, six questions, and straight to my calendar.</p>
+        <p class="lead">Sixty seconds takes you straight to my calendar.</p>
       </div>
       <form class="applycard reveal d1" id="applyForm" name="closer-application" method="POST" data-netlify="true" netlify-honeypot="bot-field">
         <input type="hidden" name="form-name" value="closer-application" />
