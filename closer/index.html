@@ -146,7 +146,7 @@
   .manifesto{ font-family:"Fraunces",serif; font-weight:500; font-size:clamp(27px,3.9vw,46px); line-height:1.14; letter-spacing:-.02em; max-width:none; margin:0 auto; color:var(--ink); }
   .manifesto em{ font-style:italic; color:var(--burg); }
   .manifesto-sub{ max-width:640px; margin:22px auto 0; color:var(--ink-2); font-size:clamp(17px,1.9vw,20px); }
-  .owns{ display:grid; grid-template-columns:repeat(2,max-content); justify-content:center; gap:11px 14px; margin:34px auto 0; }
+  .owns{ display:grid; grid-template-columns:repeat(4,max-content); justify-content:center; gap:11px 14px; margin:34px auto 0; }
   .ochip{ font-weight:600; font-size:14px; padding:8px 16px; border:1.5px solid var(--burg); color:var(--burg); background:var(--burg-t); border-radius:60px; }
 
   /* ===== RECEIPTS ===== */
@@ -214,7 +214,7 @@
 
   /* ===== HUMAN (charcoal) ===== */
   .human{ padding:90px 0; background:linear-gradient(var(--dgrey),var(--dgrey)); position:relative; z-index:1; color-scheme:dark; }
-  .human-grid{ display:grid; grid-template-columns:1fr 1.02fr; gap:56px; align-items:center; }
+  .human-grid{ display:grid; grid-template-columns:1.32fr .86fr; gap:44px; align-items:center; }
   .human .eyebrow{ color:var(--rose); } .human .eyebrow .ln{ background:var(--rose); }
   .human .sec-head{ max-width:none; color:var(--cream); }
   .human .sec-head em{ color:var(--rose); }
@@ -229,16 +229,16 @@
   .quotecard::before{ content:"“"; position:absolute; top:-30px; left:20px; font-family:"Fraunces"; font-size:170px; color:var(--burg-t); }
   .quotecard p{ font-family:"Fraunces",serif; font-style:italic; font-weight:300; font-size:clamp(23px,3vw,32px); line-height:1.32; position:relative; z-index:1; color:var(--ink); }
   .quotecard p em{ color:var(--burg); font-style:italic; font-weight:700; }
-  .polaroids{ display:flex; flex-wrap:wrap; justify-content:center; gap:16px; margin-top:56px; }
-  .polaroid{ background:#fff; padding:9px 9px 30px; border-radius:3px; box-shadow:0 14px 30px -10px rgba(0,0,0,.6); width:122px; transition:transform .25s, box-shadow .25s; }
+  .polaroids{ display:flex; flex-wrap:nowrap; justify-content:center; align-items:flex-start; gap:13px; margin-top:56px; }
+  .polaroid{ background:#fff; padding:8px 8px 26px; border-radius:3px; box-shadow:0 14px 30px -10px rgba(0,0,0,.6); flex:1 1 0; min-width:0; max-width:118px; transition:transform .25s, box-shadow .25s; }
   .polaroid img{ width:100%; aspect-ratio:1/1; object-fit:cover; display:block; }
-  .polaroid .cap{ font-family:"Caveat",cursive; font-weight:600; font-size:17px; color:#2b2620; text-align:center; margin-top:7px; line-height:1; }
+  .polaroid .cap{ font-family:"Caveat",cursive; font-weight:600; font-size:15px; color:#2b2620; text-align:center; margin-top:7px; line-height:1; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
   .polaroid:nth-child(odd){ transform:rotate(-3deg); }
-  .polaroid:nth-child(even){ transform:rotate(3deg); margin-top:14px; }
+  .polaroid:nth-child(even){ transform:rotate(3deg); }
   .polaroid:hover{ box-shadow:0 22px 40px -12px rgba(0,0,0,.6); z-index:2; }
   .polaroid:nth-child(odd):hover{ transform:rotate(-3deg) translateY(-7px) scale(1.05); }
   .polaroid:nth-child(even):hover{ transform:rotate(3deg) translateY(-7px) scale(1.05); }
-  @media (max-width:540px){ .polaroid{ width:43%; } }
+  @media (max-width:540px){ .polaroids{ flex-wrap:wrap; } .polaroid{ flex:0 0 42%; width:42%; max-width:none; } }
   .sign{ margin-top:26px; display:flex; align-items:baseline; gap:12px; flex-wrap:wrap; }
   .sign .nm{ font-family:"Caveat",cursive; font-weight:700; font-size:42px; color:var(--burg); line-height:1; transform:rotate(-4deg); }
   .sign .role{ font-size:13px; letter-spacing:.12em; text-transform:uppercase; font-weight:700; color:var(--ink-2); }
@@ -307,6 +307,7 @@
     .skillgrid{ grid-template-columns:1fr 1fr; }
     .credgrid{ grid-template-columns:1fr 1fr; }
     .human-grid{ grid-template-columns:1fr; gap:40px; }
+    .polaroids{ flex-wrap:wrap; } .polaroid{ flex:0 0 auto; width:108px; max-width:none; }
   }
   @media (max-width:540px){
     body{ font-size:17px; }
@@ -320,7 +321,9 @@
     .btn, .btn-primary{ width:100%; justify-content:center; } .cta-row{ width:100%; }
     .portrait .mono{ font-size:96px; }
     .move{ grid-template-columns:1fr; gap:6px; }
-    .owns{ gap:7px; } .ochip{ font-size:12px; padding:6px 11px; }
+    .owns{ grid-template-columns:repeat(2,max-content); gap:7px 10px; } .ochip{ font-size:12px; padding:6px 11px; }
+    .stamps{ display:grid; grid-template-columns:1fr 1fr; gap:10px; max-width:none; } .stamps .stamp{ width:auto; font-size:15px; padding:10px 6px; text-align:center; }
+    .pressbar .wrap{ flex-direction:column; gap:14px; } .pressbar .marks{ justify-content:center; width:100%; }
   }
 </style>
 </head>
@@ -410,9 +413,9 @@
       <div class="stats">
         <div class="stat reveal d1"><div class="num">$<b>27</b>M</div><div class="lab">budget owned at <b>NPR</b>, rebuilding trust across a 250-station ecosystem</div></div>
         <div class="stat reveal d2"><div class="num">#<b>1</b></div><div class="lab">podcast on U.S. politics — <b>founder &amp; host of the Cato Daily Podcast</b></div></div>
-        <div class="stat reveal d3"><div class="num"><b>85</b>%</div><div class="lab">job placement on the talent marketplace I <b>co-founded</b> in East Africa</div></div>
+        <div class="stat reveal d3"><div class="num"><b>85</b>%</div><div class="lab">job placement on the talent marketplace I<br><b>co-founded</b> in East Africa</div></div>
         <div class="stat reveal d1"><div class="num">$<b>2.5</b>M</div><div class="lab">NBC ad inventory optimized &amp; delivered against peak traffic — <b>London 2012 Olympic Games</b></div></div>
-        <div class="stat reveal d2"><div class="num"><b>4</b></div><div class="lab">companies I've <b>personally founded, run &amp; closed for</b></div></div>
+        <div class="stat reveal d2"><div class="num"><b>4</b></div><div class="lab">companies I've personally <b>founded, run &amp; closed for</b></div></div>
         <div class="stat reveal d3"><div class="num">#<b>11</b></div><div class="lab">employee on the <b>first digital-only team at NBCUniversal</b> — scaled it to 200 staff</div></div>
       </div>
     </div>
@@ -444,7 +447,7 @@
   <!-- MOVES -->
   <section class="moves">
     <div class="wrap">
-      <span class="eyebrow reveal"><span class="ln"></span> What a closer actually does</span>
+      <span class="eyebrow reveal"><span class="ln"></span> How a closer shows up</span>
       <h2 class="sec-head reveal">Four moves.<br><em>Every deal.</em></h2>
       <div class="move-list">
         <div class="move reveal d1"><div class="ord">01</div><div class="body"><h3>Build trust, fast</h3><p>I've walked into newsrooms, think tanks, founder pitches, and rural hospitals and earned the room in minutes. Buyers don't sign because of features. They sign because they believe in themselves when they partner with me.</p></div></div>
@@ -510,10 +513,10 @@
       <span class="eyebrow reveal"><span class="ln"></span> The foundation</span>
       <h2 class="sec-head reveal">Credentials &amp; <em>craft.</em></h2>
       <div class="credgrid">
-        <div class="cred reveal d1"><div class="clabel">Education</div><p><b>M.S. Information Security &amp; Privacy</b>, UT Austin<br><b>B.A. Government</b>, Cornell</p></div>
-        <div class="cred reveal d2"><div class="clabel">Sales</div><p>Mentored in setting and closing by <a href="https://www.tiktok.com/@lo_silver" target="_blank" rel="noopener"><b>Lo Silver</b> | The Silver Selling System</a>.</p></div>
-        <div class="cred reveal d3"><div class="clabel">Selectivity</div><p><b>Global Health Corps</b> fellow — selected from a <b>&lt;2%</b> applicant acceptance pool.</p></div>
-        <div class="cred reveal d4"><div class="clabel">Operator</div><p>Relational AI founder · <b>Director</b> at NPR · international <b>CIO</b> · founder &amp; chief convener of <a href="https://tethicsandchill.com" target="_blank" rel="noopener">Tethics &amp; Chill</a>.</p></div>
+        <div class="cred reveal d1"><div class="clabel">Education</div><p><b>M.S. InfoSec &amp; Privacy</b>, UT Austin<br><b>B.A. Government</b>, Cornell</p></div>
+        <div class="cred reveal d2"><div class="clabel">Sales</div><p>Mentored in setting and closing by<br><a href="https://www.tiktok.com/@lo_silver" target="_blank" rel="noopener"><b>Lo Silver</b> | The Silver Selling System</a>.</p></div>
+        <div class="cred reveal d3"><div class="clabel">Selectivity</div><p><b>Global Health Corps</b> fellow — less than <b>2%</b> acceptance rate.</p></div>
+        <div class="cred reveal d4"><div class="clabel">Operator</div><p>Multiple time founder · <b>Director</b> · <b>CIO</b> · chief convener of <a href="https://tethicsandchill.com" target="_blank" rel="noopener">Tethics &amp; Chill</a>.</p></div>
       </div>
     </div>
   </section>
@@ -552,7 +555,7 @@
   <section class="apply" id="apply">
     <div class="wrap">
       <div class="head-wrap reveal">
-        <span class="eyebrow" style="justify-content:center;"><span class="ln"></span> Apply to work with me</span>
+        <span class="eyebrow" style="justify-content:center;"><span class="ln"></span> Apply to work with me <span class="ln"></span></span>
         <h2 class="sec-head" style="margin-top:14px;">Let's see if we're <em>a fit.</em></h2>
         <p class="lead">Two minutes, six questions, and straight to my calendar.</p>
       </div>
