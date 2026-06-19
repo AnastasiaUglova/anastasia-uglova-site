@@ -103,7 +103,7 @@
 
   /* ===== PRESS BAR ===== */
   .pressbar{ background:var(--black); }
-  .pressbar .wrap{ display:flex; flex-wrap:wrap; align-items:center; gap:16px 32px; padding-top:18px; padding-bottom:18px; }
+  .pressbar .wrap{ display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:16px 32px; padding-top:18px; padding-bottom:18px; }
   .pressbar .flabel{ font-weight:700; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:rgba(250,247,241,.55); }
   .pressbar .marks{ display:flex; flex-wrap:wrap; align-items:center; gap:16px 30px; }
   .mark-logo{ font-weight:800; font-size:20px; letter-spacing:-.01em; color:#ece9e2; opacity:.85; transition:opacity .2s, color .2s; }
@@ -117,13 +117,18 @@
 
   /* ===== FLOATING SXSW PLAYER ===== */
   .float-talk{ position:fixed; right:24px; bottom:24px; transform:translateZ(0); will-change:transform; z-index:9000; width:300px; max-width:calc(100vw - 32px); background:var(--white); border:1px solid var(--line); border-radius:16px; overflow:hidden; box-shadow:0 24px 56px -18px rgba(34,31,27,.32); }
-  .ft-close{ position:absolute; top:9px; right:9px; z-index:4; width:28px; height:28px; border-radius:50%; border:0; background:rgba(34,31,27,.55); color:#fff; font-size:16px; line-height:1; cursor:pointer; display:grid; place-items:center; transition:background .2s; }
-  .ft-close:hover{ background:var(--burg); }
+  .ft-min{ position:absolute; top:9px; right:9px; z-index:4; width:28px; height:28px; border-radius:50%; border:0; background:rgba(34,31,27,.55); color:#fff; font-size:20px; line-height:1; cursor:pointer; display:grid; place-items:center; transition:background .2s; }
+  .ft-min:hover{ background:var(--burg); }
+  .float-talk.min{ width:auto; }
+  .float-talk.min .ft-player{ display:none; }
+  .float-talk.min .ft-min{ display:none; }
+  .float-talk.min .ft-bar{ cursor:pointer; padding-right:36px; position:relative; }
+  .float-talk.min .ft-bar::after{ content:"+"; position:absolute; right:14px; top:50%; transform:translateY(-50%); color:var(--burg); font-size:19px; font-weight:700; line-height:1; }
   .ft-player{ position:relative; aspect-ratio:16/9; cursor:pointer; background:var(--paper-2); }
   .ft-poster{ width:100%; height:100%; object-fit:cover; object-position:50% 12%; display:block; filter:brightness(1.13) saturate(1.05); }
   .ft-play{ position:absolute; left:14px; bottom:14px; width:50px; height:50px; display:grid; place-items:center; background:var(--burg); color:#fff; border-radius:50%; transition:transform .2s; animation:pulseB 2.6s infinite; }
   .ft-play svg{ width:23px; height:23px; margin-left:3px; }
-  .float-talk:hover .ft-play{ transform:scale(1.09); }
+  .float-talk:hover .ft-play{ background:var(--burg-d); }
   @keyframes pulseB{ 0%{ box-shadow:0 0 0 0 rgba(125,39,59,.5);} 70%{ box-shadow:0 0 0 16px rgba(125,39,59,0);} 100%{ box-shadow:0 0 0 0 rgba(125,39,59,0);} }
   .ft-player iframe{ width:100%; height:100%; border:0; display:block; }
   .ft-bar{ display:flex; align-items:baseline; gap:10px; padding:11px 15px 12px; }
@@ -167,7 +172,7 @@
   .stamp:hover{ background:var(--burg); color:#fff; border-color:var(--burg); transform:rotate(0) translateY(-4px) scale(1.04); }
 
   /* ===== REFRAME (charcoal) ===== */
-  .reframe{ padding:86px 0; background:var(--dgrey); }
+  .reframe{ padding:86px 0; background:var(--dgrey); position:relative; z-index:1; transform:translateZ(0); backface-visibility:hidden; }
   .reframe .eyebrow{ color:var(--rose); } .reframe .eyebrow .ln{ background:var(--rose); }
   .reframe .sec-head{ max-width:26ch; color:var(--cream); }
   .reframe .sec-head em{ color:var(--rose); }
@@ -208,7 +213,7 @@
   .cred a:hover{ color:var(--burg-d); }
 
   /* ===== HUMAN (charcoal) ===== */
-  .human{ padding:90px 0; background:var(--dgrey); }
+  .human{ padding:90px 0; background:var(--dgrey); position:relative; z-index:1; transform:translateZ(0); backface-visibility:hidden; }
   .human-grid{ display:grid; grid-template-columns:1fr 1.02fr; gap:56px; align-items:center; }
   .human .eyebrow{ color:var(--rose); } .human .eyebrow .ln{ background:var(--rose); }
   .human .sec-head{ max-width:none; color:var(--cream); }
@@ -228,11 +233,11 @@
   .polaroid{ background:#fff; padding:9px 9px 30px; border-radius:3px; box-shadow:0 14px 30px -10px rgba(0,0,0,.6); width:122px; transition:transform .25s, box-shadow .25s; }
   .polaroid img{ width:100%; aspect-ratio:1/1; object-fit:cover; display:block; }
   .polaroid .cap{ font-family:"Caveat",cursive; font-weight:600; font-size:17px; color:#2b2620; text-align:center; margin-top:7px; line-height:1; }
-  .polaroid:nth-child(1){ transform:rotate(-5deg); }
-  .polaroid:nth-child(2){ transform:rotate(3deg); margin-top:18px; }
-  .polaroid:nth-child(3){ transform:rotate(-2deg); margin-top:6px; }
-  .polaroid:nth-child(4){ transform:rotate(4deg); margin-top:14px; }
-  .polaroid:hover{ transform:rotate(0) scale(1.05); box-shadow:0 20px 38px -12px rgba(0,0,0,.6); z-index:2; }
+  .polaroid:nth-child(odd){ transform:rotate(-3deg); }
+  .polaroid:nth-child(even){ transform:rotate(3deg); margin-top:14px; }
+  .polaroid:hover{ box-shadow:0 22px 40px -12px rgba(0,0,0,.6); z-index:2; }
+  .polaroid:nth-child(odd):hover{ transform:rotate(-3deg) translateY(-7px) scale(1.05); }
+  .polaroid:nth-child(even):hover{ transform:rotate(3deg) translateY(-7px) scale(1.05); }
   @media (max-width:540px){ .polaroid{ width:43%; } }
   .sign{ margin-top:26px; display:flex; align-items:baseline; gap:12px; flex-wrap:wrap; }
   .sign .nm{ font-family:"Caveat",cursive; font-weight:700; font-size:42px; color:var(--burg); line-height:1; transform:rotate(-4deg); }
@@ -272,7 +277,7 @@
   .apply .fineprint{ text-align:center; font-size:13px; color:var(--ink-2); margin-top:14px; }
 
   /* ===== CLOSE (black finale) ===== */
-  .close{ background:var(--black); color:var(--cream); text-align:center; position:relative; z-index:1; transform:translateZ(0); }
+  .close{ background:var(--black); color:var(--cream); text-align:center; position:relative; z-index:1; transform:translateZ(0); will-change:transform; backface-visibility:hidden; }
   .close .wrap{ padding:104px 32px 70px; }
   .close .big{ font-family:"Fraunces",serif; font-weight:500; font-size:clamp(46px,9vw,116px); line-height:.94; letter-spacing:-.025em; color:#fff; }
   .close .big em{ font-style:italic; color:var(--rose); }
@@ -285,7 +290,7 @@
   .contact a:hover{ border-color:var(--rose); color:var(--rose); }
   .contact .sep{ color:rgba(250,247,241,.3); }
 
-  footer{ background:var(--black); color:rgba(250,247,241,.58); text-align:center; padding:34px 0 46px; font-size:14px; border-top:1px solid rgba(250,247,241,.12); }
+  footer{ background:var(--black); color:rgba(250,247,241,.58); text-align:center; padding:34px 0 46px; font-size:14px; border-top:1px solid rgba(250,247,241,.12); position:relative; z-index:1; transform:translateZ(0); will-change:transform; backface-visibility:hidden; }
   footer .mark{ font-family:"Caveat",cursive; font-weight:700; font-size:22px; color:var(--rose); }
 
   /* ===== REVEAL ===== */
@@ -372,7 +377,6 @@
         <img class="barlogo tc" src="TechCrunch_trim.png" alt="TechCrunch" />
         <img class="barlogo guardian" src="Guardian_trim.png" alt="The Guardian" />
         <img class="barlogo npr" src="NPR_white.png" alt="NPR" />
-        <span class="mark-logo eth">EthCC</span>
         <img class="barlogo oracle" src="Oracle_trim.png" alt="Oracle" />
       </div>
     </div>
@@ -469,15 +473,15 @@
         </div>
       </div>
       <div class="polaroids reveal">
-        <div class="polaroid"><img src="poly1.jpg" alt="Anastasia standing on a horse on a mountaintop" /><div class="cap">on top of the world</div></div>
-        <div class="polaroid"><img src="poly2.jpg" alt="Anastasia hiking in the desert mountains" /><div class="cap">trailhead</div></div>
+        <div class="polaroid"><img src="poly1.jpg" alt="Anastasia standing on a horse on a mountaintop" /><div class="cap">horsing around</div></div>
+        <div class="polaroid"><img src="poly2.jpg" alt="Anastasia hiking in the desert mountains" /><div class="cap">rest stop</div></div>
         <div class="polaroid"><img src="poly3.jpg" alt="Anastasia, off duty" /><div class="cap">off duty</div></div>
         <div class="polaroid"><img src="poly4.jpg" alt="Anastasia on safari" /><div class="cap">on safari</div></div>
-        <div class="polaroid"><img src="poly5.jpg" alt="Anastasia skydiving" /><div class="cap">free fall</div></div>
+        <div class="polaroid"><img src="poly5.jpg" alt="Anastasia skydiving" /><div class="cap">up above</div></div>
+        <div class="polaroid"><img src="poly7.jpg" alt="Anastasia scuba diving" /><div class="cap">down below</div></div>
         <div class="polaroid"><img src="poly6.jpg" alt="Anastasia skiing" /><div class="cap">off-piste</div></div>
-        <div class="polaroid"><img src="poly7.jpg" alt="Anastasia scuba diving" /><div class="cap">underwater</div></div>
-        <div class="polaroid"><img src="poly8.jpg" alt="Anastasia climbing in the Alps" /><div class="cap">the Alps</div></div>
-        <div class="polaroid"><img src="poly9.jpg" alt="Anastasia boxing, mid-air" /><div class="cap">gloves on</div></div>
+        <div class="polaroid"><img src="poly8.jpg" alt="Anastasia climbing in the Alps" /><div class="cap">going up</div></div>
+        <div class="polaroid"><img src="poly9.jpg" alt="Anastasia boxing at the gym" /><div class="cap">in the ring</div></div>
       </div>
     </div>
   </section>
@@ -506,7 +510,7 @@
       <h2 class="sec-head reveal">Credentials &amp; <em>craft.</em></h2>
       <div class="credgrid">
         <div class="cred reveal d1"><div class="clabel">Education</div><p><b>M.S. Information Security &amp; Privacy</b>, UT Austin<br><b>B.A. Government</b>, Cornell</p></div>
-        <div class="cred reveal d2"><div class="clabel">Sales</div><p>Mentored by <a href="https://www.tiktok.com/@lo_silver" target="_blank" rel="noopener"><b>Lo Silver</b> | The Silver Selling System</a>.</p></div>
+        <div class="cred reveal d2"><div class="clabel">Sales</div><p>Mentored in setting and closing by <a href="https://www.tiktok.com/@lo_silver" target="_blank" rel="noopener"><b>Lo Silver</b> | The Silver Selling System</a>.</p></div>
         <div class="cred reveal d3"><div class="clabel">Selectivity</div><p><b>Global Health Corps</b> fellow — selected from a <b>&lt;2%</b> applicant acceptance pool.</p></div>
         <div class="cred reveal d4"><div class="clabel">Operator</div><p>Relational AI founder · <b>Director</b> at NPR · international <b>CIO</b> · founder &amp; chief convener of <a href="https://tethicsandchill.com" target="_blank" rel="noopener">Tethics &amp; Chill</a>.</p></div>
       </div>
@@ -619,12 +623,12 @@
 
   <!-- FLOATING SXSW TALK PLAYER -->
   <div class="float-talk" id="floatTalk">
-    <button class="ft-close" aria-label="Dismiss" onclick="document.getElementById('floatTalk').style.display='none';">×</button>
+    <button class="ft-min" id="ftMin" type="button" aria-label="Minimize">&minus;</button>
     <div class="ft-player" id="ftPlayer" data-id="Bv5zmbRloJA" role="button" tabindex="0" aria-label="Play my SXSW 2026 talk">
       <img class="ft-poster" src="sxsw-poster.jpg" alt="Anastasia Uglova — SXSW 2026 talk" />
       <span class="ft-play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
     </div>
-    <div class="ft-bar"><span class="ft-tag"><img class="ft-sxsw" src="SxSW_logo.png" alt="SXSW" /> 2026</span><span class="ft-title">Watch my talk</span></div>
+    <div class="ft-bar" id="ftBar"><span class="ft-tag"><img class="ft-sxsw" src="SxSW_logo.png" alt="SXSW" /> 2026</span><span class="ft-title">Watch my talk</span></div>
   </div>
 
   <script>
@@ -644,6 +648,13 @@
       ftp.addEventListener('click', playFt);
       ftp.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); playFt(); } });
     }
+
+    // Floating player: minimize / maximize (no closing)
+    var ft = document.getElementById('floatTalk');
+    var ftMin = document.getElementById('ftMin');
+    var ftBar = document.getElementById('ftBar');
+    if (ftMin && ft) ftMin.addEventListener('click', function (e) { e.stopPropagation(); ft.classList.add('min'); });
+    if (ftBar && ft) ftBar.addEventListener('click', function () { if (ft.classList.contains('min')) ft.classList.remove('min'); });
 
     // Apply form -> Calendly
     var CALENDLY = "https://calendly.com/anastasia-better-half/close";
