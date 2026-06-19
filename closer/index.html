@@ -354,6 +354,11 @@
     .polaroids{ display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:7px; flex-wrap:nowrap; }
     .polaroid{ flex:none; width:auto; max-width:none; padding:4px 4px 5px; }
     .polaroid .cap{ font-size:8.5px; margin-top:2px; }
+    .polaroid:hover, .polaroid:active, .polaroid:focus{ z-index:9; }
+    .polaroid:nth-child(odd):hover, .polaroid:nth-child(odd):active, .polaroid:nth-child(odd):focus,
+    .polaroid:nth-child(even):hover, .polaroid:nth-child(even):active, .polaroid:nth-child(even):focus{ transform:rotate(0) scale(2.9); box-shadow:0 18px 36px -10px rgba(0,0,0,.65); }
+    .polaroid:nth-child(5n+1):hover, .polaroid:nth-child(5n+1):active, .polaroid:nth-child(5n+1):focus{ transform-origin:left center; }
+    .polaroid:nth-child(5n):hover, .polaroid:nth-child(5n):active, .polaroid:nth-child(5n):focus{ transform-origin:right center; }
   }
 </style>
 </head>
@@ -468,7 +473,7 @@
       <div class="stamps reveal d1">
         <span class="stamp">NBCUniversal</span><span class="stamp">NPR</span><span class="stamp">Notion</span>
         <span class="stamp">Deloitte</span><span class="stamp">Cato Institute</span><span class="stamp">U.S. Senate</span>
-        <span class="stamp">The Olympics</span><span class="stamp">Founders &amp; VCs</span><span class="stamp">Global Health Corps</span>
+        <span class="stamp">The Olympics</span><span class="stamp">Founders &amp; VCs</span>
       </div>
       <p class="convergence reveal d2">Not a pivot — a convergence. Communications, thought leadership, speaking, persuasion, and program management, all channeled into the obvious next step: the close.<br><b>It all transfers.</b></p>
     </div>
@@ -517,16 +522,16 @@
         </div>
       </div>
       <div class="polaroids reveal">
-        <div class="polaroid"><img src="poly1.jpg" alt="Anastasia standing on a horse on a mountaintop" /><div class="cap">horsing around</div></div>
-        <div class="polaroid"><img src="poly2.jpg" alt="Anastasia hiking in the desert mountains" /><div class="cap">rest stop</div></div>
-        <div class="polaroid"><img src="poly5.jpg" alt="Anastasia skydiving" /><div class="cap">up above</div></div>
-        <div class="polaroid"><img src="poly7.jpg" alt="Anastasia scuba diving" /><div class="cap">down below</div></div>
-        <div class="polaroid"><img src="poly3.jpg" alt="Anastasia, off duty" /><div class="cap">off duty</div></div>
-        <div class="polaroid"><img src="poly4.jpg" alt="Anastasia on safari" /><div class="cap">on safari</div></div>
-        <div class="polaroid"><img src="poly6.jpg" alt="Anastasia skiing" /><div class="cap">off-piste</div></div>
-        <div class="polaroid"><img src="poly8.jpg" alt="Anastasia climbing in the Alps" /><div class="cap">going up</div></div>
-        <div class="polaroid"><img src="poly9.jpg" alt="Anastasia boxing at the gym" /><div class="cap">in the ring</div></div>
-        <div class="polaroid"><img src="poly10.jpg" alt="Anastasia doing yoga on the mat" /><div class="cap">on the mat</div></div>
+        <div class="polaroid" tabindex="0"><img src="poly1.jpg" alt="Anastasia standing on a horse on a mountaintop" /><div class="cap">horsing around</div></div>
+        <div class="polaroid" tabindex="0"><img src="poly2.jpg" alt="Anastasia hiking in the desert mountains" /><div class="cap">rest stop</div></div>
+        <div class="polaroid" tabindex="0"><img src="poly5.jpg" alt="Anastasia skydiving" /><div class="cap">up above</div></div>
+        <div class="polaroid" tabindex="0"><img src="poly7.jpg" alt="Anastasia scuba diving" /><div class="cap">down below</div></div>
+        <div class="polaroid" tabindex="0"><img src="poly3.jpg" alt="Anastasia, off duty" /><div class="cap">off duty</div></div>
+        <div class="polaroid" tabindex="0"><img src="poly4.jpg" alt="Anastasia on safari" /><div class="cap">on safari</div></div>
+        <div class="polaroid" tabindex="0"><img src="poly6.jpg" alt="Anastasia skiing" /><div class="cap">off-piste</div></div>
+        <div class="polaroid" tabindex="0"><img src="poly8.jpg" alt="Anastasia climbing in the Alps" /><div class="cap">going up</div></div>
+        <div class="polaroid" tabindex="0"><img src="poly9.jpg" alt="Anastasia boxing at the gym" /><div class="cap">in the ring</div></div>
+        <div class="polaroid" tabindex="0"><img src="poly10.jpg" alt="Anastasia doing yoga on the mat" /><div class="cap">on the mat</div></div>
       </div>
     </div>
   </section>
