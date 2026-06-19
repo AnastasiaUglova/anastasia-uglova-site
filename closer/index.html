@@ -102,21 +102,21 @@
   .portrait .hint{ position:absolute; bottom:18px; left:0; right:0; text-align:center; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-2); font-weight:700; }
 
   /* ===== PRESS BAR ===== */
-  .pressbar{ background:var(--white); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+  .pressbar{ background:var(--black); }
   .pressbar .wrap{ display:flex; flex-wrap:wrap; align-items:center; gap:16px 32px; padding-top:18px; padding-bottom:18px; }
-  .pressbar .flabel{ font-weight:700; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:var(--burg); }
+  .pressbar .flabel{ font-weight:700; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:rgba(250,247,241,.55); }
   .pressbar .marks{ display:flex; flex-wrap:wrap; align-items:center; gap:16px 30px; }
-  .mark-logo{ font-weight:800; font-size:20px; letter-spacing:-.01em; color:#1a1a1a; opacity:.72; transition:opacity .2s, color .2s; }
-  a.mark-logo:hover{ opacity:1; color:var(--burg); }
+  .mark-logo{ font-weight:800; font-size:20px; letter-spacing:-.01em; color:#ece9e2; opacity:.85; transition:opacity .2s, color .2s; }
+  a.mark-logo:hover{ opacity:1; color:#fff; }
   .mark-logo.oracle{ letter-spacing:.16em; font-weight:700; }
   .mark-logo.eth{ font-family:"Fraunces",serif; font-weight:600; }
-  .barlogo{ width:auto; display:inline-block; vertical-align:middle; opacity:.68; filter:grayscale(1); transition:opacity .2s; }
+  .barlogo{ width:auto; display:inline-block; vertical-align:middle; opacity:.85; filter:brightness(0) invert(1); transition:opacity .2s; }
   .barlogo:hover{ opacity:1; }
-  .barlogo.sxsw{ height:18px; } .barlogo.tc{ height:16px; } .barlogo.guardian{ height:20px; } .barlogo.nbc{ height:30px; opacity:.82; } .barlogo.oracle{ height:15px; } .barlogo.npr{ height:17px; opacity:.85; }
+  .barlogo.sxsw{ height:18px; } .barlogo.tc{ height:16px; } .barlogo.guardian{ height:20px; } .barlogo.nbc{ height:30px; opacity:.78; } .barlogo.oracle{ height:15px; } .barlogo.npr{ height:17px; opacity:.92; filter:none; }
   .ft-sxsw{ height:11px; width:auto; display:inline-block; vertical-align:-1px; margin-right:4px; }
 
   /* ===== FLOATING SXSW PLAYER ===== */
-  .float-talk{ position:fixed; right:24px; bottom:24px; z-index:9000; width:328px; max-width:calc(100vw - 32px); background:var(--white); border:1px solid var(--line); border-radius:16px; overflow:hidden; box-shadow:0 24px 56px -18px rgba(34,31,27,.32); }
+  .float-talk{ position:fixed; right:24px; top:50%; transform:translateY(-50%) translateZ(0); will-change:transform; z-index:9000; width:300px; max-width:calc(100vw - 32px); background:var(--white); border:1px solid var(--line); border-radius:16px; overflow:hidden; box-shadow:0 24px 56px -18px rgba(34,31,27,.32); }
   .ft-close{ position:absolute; top:9px; right:9px; z-index:4; width:28px; height:28px; border-radius:50%; border:0; background:rgba(34,31,27,.55); color:#fff; font-size:16px; line-height:1; cursor:pointer; display:grid; place-items:center; transition:background .2s; }
   .ft-close:hover{ background:var(--burg); }
   .ft-player{ position:relative; aspect-ratio:16/9; cursor:pointer; background:var(--paper-2); }
@@ -129,7 +129,7 @@
   .ft-bar{ display:flex; align-items:baseline; gap:10px; padding:11px 15px 12px; }
   .ft-bar .ft-tag{ font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; font-weight:700; color:var(--burg); }
   .ft-bar .ft-title{ font-size:14.5px; font-weight:700; color:var(--ink); }
-  @media (max-width:540px){ .float-talk{ width:228px; right:12px; bottom:12px; } }
+  @media (max-width:540px){ .float-talk{ width:200px; right:12px; top:auto; bottom:12px; transform:translateZ(0); } }
 
   /* ===== SHARED HEADS ===== */
   .sec-head{ font-family:"Fraunces",serif; font-weight:500; font-size:clamp(32px,5vw,58px); line-height:1.02; letter-spacing:-.02em; margin-top:18px; max-width:14ch; color:var(--ink); }
@@ -196,7 +196,7 @@
 
   /* ===== CREDENTIALS ===== */
   .sec-divider{ background:var(--white); line-height:0; text-align:center; }
-  .sec-divider span{ display:inline-block; width:80px; height:2px; background:var(--burg); }
+  .sec-divider span{ display:block; width:88%; max-width:1080px; height:1px; background:rgba(125,39,59,.3); margin:0 auto; }
   .creds{ background:var(--white); }
   .creds .wrap{ padding:84px 32px 82px; }
   .credgrid{ display:grid; grid-template-columns:repeat(4,1fr); gap:30px 28px; margin-top:48px; }
@@ -272,7 +272,7 @@
   .apply .fineprint{ text-align:center; font-size:13px; color:var(--ink-2); margin-top:14px; }
 
   /* ===== CLOSE (black finale) ===== */
-  .close{ background:var(--black); color:var(--cream); text-align:center; }
+  .close{ background:var(--black); color:var(--cream); text-align:center; position:relative; z-index:1; transform:translateZ(0); }
   .close .wrap{ padding:104px 32px 70px; }
   .close .big{ font-family:"Fraunces",serif; font-weight:500; font-size:clamp(46px,9vw,116px); line-height:.94; letter-spacing:-.025em; color:#fff; }
   .close .big em{ font-style:italic; color:var(--rose); }
@@ -369,7 +369,7 @@
         <img class="barlogo nbc" src="NBC_Olympics_2024.svg" alt="NBC Olympics" />
         <img class="barlogo tc" src="TechCrunch_trim.png" alt="TechCrunch" />
         <img class="barlogo guardian" src="Guardian_trim.png" alt="The Guardian" />
-        <img class="barlogo npr" src="NPR_trim.png" alt="NPR" />
+        <img class="barlogo npr" src="NPR_white.png" alt="NPR" />
         <span class="mark-logo eth">EthCC</span>
         <img class="barlogo oracle" src="Oracle_trim.png" alt="Oracle" />
       </div>
@@ -472,6 +472,10 @@
         <div class="polaroid"><img src="poly2.jpg" alt="Anastasia hiking in the desert mountains" /><div class="cap">trailhead</div></div>
         <div class="polaroid"><img src="poly3.jpg" alt="Anastasia, off duty" /><div class="cap">off duty</div></div>
         <div class="polaroid"><img src="poly4.jpg" alt="Anastasia on safari" /><div class="cap">on safari</div></div>
+        <div class="polaroid"><img src="poly5.jpg" alt="Anastasia skydiving" /><div class="cap">free fall</div></div>
+        <div class="polaroid"><img src="poly6.jpg" alt="Anastasia skiing" /><div class="cap">off-piste</div></div>
+        <div class="polaroid"><img src="poly7.jpg" alt="Anastasia scuba diving" /><div class="cap">underwater</div></div>
+        <div class="polaroid"><img src="poly8.jpg" alt="Anastasia climbing in the Alps" /><div class="cap">the Alps</div></div>
       </div>
     </div>
   </section>
