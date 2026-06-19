@@ -143,7 +143,7 @@
 
   /* ===== PHILOSOPHY ===== */
   .philosophy{ padding:84px 0; text-align:center; background:var(--paper); border-top:1px solid var(--line); }
-  .manifesto{ font-family:"Fraunces",serif; font-weight:500; font-size:clamp(27px,3.9vw,46px); line-height:1.14; letter-spacing:-.02em; max-width:none; margin:0 auto; color:var(--ink); }
+  .manifesto{ font-family:"Fraunces",serif; font-weight:500; font-size:clamp(32px,5vw,58px); line-height:1.06; letter-spacing:-.02em; max-width:none; margin:0 auto; color:var(--ink); }
   .manifesto em{ font-style:italic; color:var(--burg); }
   .manifesto-sub{ max-width:640px; margin:22px auto 0; color:var(--ink-2); font-size:clamp(17px,1.9vw,20px); }
   .owns{ display:grid; grid-template-columns:repeat(4,max-content); justify-content:center; gap:11px 14px; margin:34px auto 0; }
@@ -230,7 +230,7 @@
 
   /* ===== HUMAN (charcoal) ===== */
   .human{ padding:90px 0; background:linear-gradient(var(--dgrey),var(--dgrey)); position:relative; z-index:1; color-scheme:dark; }
-  .human-grid{ display:grid; grid-template-columns:1.22fr .95fr; gap:44px; align-items:start; }
+  .human-grid{ display:grid; grid-template-columns:1.22fr .95fr; gap:44px; align-items:stretch; }
   .human .eyebrow{ color:var(--rose); } .human .eyebrow .ln{ background:var(--rose); }
   .human .sec-head{ max-width:none; color:var(--cream); }
   .human .sec-head em{ color:var(--rose); }
@@ -241,7 +241,7 @@
   .tag{ font-weight:700; font-size:15px; padding:10px 18px; border:1px solid var(--line); border-radius:60px; background:var(--white); transition:transform .22s, background .22s, color .22s, border-color .22s; cursor:default; }
   .tag:nth-child(2n){ transform:rotate(-2deg); }
   .tag:hover{ background:var(--burg); color:#fff; border-color:var(--burg); transform:rotate(0) translateY(-3px); }
-  .quotecard{ background:var(--white); color:var(--ink); border-radius:24px; padding:42px 40px 36px; position:relative; overflow:hidden; border:1px solid var(--line); border-left:5px solid var(--burg); box-shadow:0 30px 60px -34px rgba(34,31,27,.3); }
+  .quotecard{ background:var(--white); color:var(--ink); border-radius:24px; padding:42px 40px 36px; position:relative; overflow:hidden; border:1px solid var(--line); border-left:5px solid var(--burg); box-shadow:0 30px 60px -34px rgba(34,31,27,.3); display:flex; flex-direction:column; justify-content:center; }
   .quotecard::before{ content:"“"; position:absolute; top:-30px; left:20px; font-family:"Fraunces"; font-size:170px; color:var(--burg-t); }
   .quotecard p{ font-family:"Fraunces",serif; font-style:italic; font-weight:300; font-size:clamp(21px,2.5vw,29px); line-height:1.3; position:relative; z-index:1; color:var(--ink); }
   .quotecard p em{ color:var(--burg); font-style:italic; font-weight:700; }
