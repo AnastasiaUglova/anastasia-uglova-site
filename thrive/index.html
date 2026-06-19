@@ -157,7 +157,7 @@
   /* ===== MEET ===== */
   .meet{ padding:90px 0; }
   .meet-grid{ display:grid; grid-template-columns:300px 1fr; gap:54px; align-items:center; }
-  .meet-photo{ width:300px; height:300px; border-radius:50%; object-fit:cover; box-shadow:0 30px 60px -30px rgba(28,42,36,.4); border:6px solid var(--white); }
+  .meet-photo{ width:300px; height:380px; border-radius:22px; object-fit:cover; box-shadow:0 30px 60px -30px rgba(28,42,36,.4); border:6px solid var(--white); }
   .meet h2{ font-family:"Fraunces",serif; font-weight:600; font-size:clamp(28px,3.4vw,42px); margin:14px 0 16px; letter-spacing:-.01em; }
   .meet p{ color:var(--ink-2); font-size:17px; max-width:620px; }
   .meet p + p{ margin-top:14px; }
@@ -186,12 +186,31 @@
   .qaitem[open] .qaicon::after{ opacity:0; transform:scaleY(0); }
   .qa-ans{ padding:0 40px 26px 0; color:var(--ink-2); font-size:16.5px; line-height:1.6; max-width:680px; }
 
+  /* ===== APPLY ===== */
+  .apply{ padding:90px 0; background:var(--white); }
+  .apply .head-wrap{ text-align:center; }
+  .apply .eyebrow{ justify-content:center; }
+  .apply .sec-head{ margin:14px auto 8px; }
+  .apply .lead{ margin:0 auto; }
+  .applycard{ max-width:680px; margin:36px auto 0; background:var(--bg); border:1px solid var(--line); border-radius:24px; padding:38px 36px 30px; box-shadow:0 30px 60px -36px rgba(28,42,36,.28); }
+  .q{ margin-bottom:22px; }
+  .qlabel{ display:block; font-weight:700; font-size:15px; margin-bottom:10px; color:var(--ink); }
+  .applycard input[type=text], .applycard input[type=email]{ width:100%; font:inherit; font-size:16px; padding:13px 15px; border:1.5px solid var(--line); border-radius:12px; background:var(--white); color:var(--ink); }
+  .applycard input[type=text]:focus, .applycard input[type=email]:focus{ outline:none; border-color:var(--green); }
+  .opts{ display:flex; flex-wrap:wrap; gap:10px; }
+  .opt input{ position:absolute; opacity:0; width:0; height:0; }
+  .opt label{ display:inline-block; cursor:pointer; font-weight:600; font-size:15px; padding:9px 18px; border:1.5px solid var(--line); border-radius:60px; background:var(--white); transition:background .2s,color .2s,border-color .2s; }
+  .opt input:checked + label{ background:var(--green); color:#fff; border-color:var(--green); }
+  .opt input:focus-visible + label{ outline:2px solid var(--green); outline-offset:2px; }
+  .applycard .btn{ width:100%; justify-content:center; margin-top:8px; }
+  .fineprint{ text-align:center; font-size:13px; color:var(--ink-2); margin-top:14px; }
+
   /* ===== CLOSE ===== */
   .close{ padding:104px 0 96px; text-align:center; position:relative; overflow:hidden; background:var(--grad); color:#fff; color-scheme:dark; }
   .close .b1{ width:520px;height:520px;background:rgba(255,255,255,.10);top:-160px;right:-120px;filter:blur(70px); }
   .close .inner{ position:relative; z-index:1; }
   .close h2{ font-family:"Fraunces",serif; font-weight:500; font-size:clamp(40px,6.5vw,82px); line-height:1; letter-spacing:-.02em; color:#fff; }
-  .close h2 em{ font-style:italic; }
+  .close h2 em{ font-style:italic; color:#FFD27D; }
   .close p{ max-width:520px; margin:22px auto 0; font-size:19px; color:rgba(255,255,255,.92); }
   .close .cta-row{ margin-top:34px; display:flex; flex-wrap:wrap; gap:16px 22px; justify-content:center; align-items:center; }
   .close .btn{ background:#fff; color:var(--green-d); box-shadow:0 16px 34px -14px rgba(0,0,0,.4); }
@@ -222,7 +241,7 @@
     .mstats{ grid-template-columns:1fr 1fr; }
     .credgrid{ grid-template-columns:1fr 1fr; }
     .meet-grid{ grid-template-columns:1fr; gap:28px; }
-    .meet-photo{ width:220px; height:220px; }
+    .meet-photo{ width:240px; height:300px; }
   }
   @media (max-width:540px){
     body{ font-size:17px; }
@@ -254,7 +273,7 @@
         <p class="hero-kicker reveal d1"><em>That's how we get to yes.</em></p>
         <p class="sub reveal d2">I'm a consultative high-ticket closer for the health world with a background in women's empowerment, career coaching, and personal fitness. Founders with premium offers on a mission to help and heal are my happy place.</p>
         <div class="cta-row reveal d2">
-          <a class="btn" href="#start">Let's make more clients smile <span class="arr">→</span></a>
+          <a class="btn" href="#apply">Let's make more clients smile <span class="arr">→</span></a>
           <a class="btn-ghost" href="#approach">How I sell</a>
         </div>
       </div>
@@ -297,7 +316,7 @@
         </div>
         <div class="pillar reveal d4">
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M6 21V10M12 21V4M18 21v-7"/><path d="M12 4l4 3M12 4 8 7"/></svg></div>
-          <h3>Relational intelligence</h3>
+          <h3>Relational acumen</h3>
           <p>I read what a prospect actually needs and build the trust that turns curiosity into commitment — or an honest, no-hard-feelings no.</p>
         </div>
       </div>
@@ -312,8 +331,8 @@
         <div>
           <span class="eyebrow reveal"><span class="ln"></span> Meet me</span>
           <h2 class="reveal d1">Hi, I'm Anastasia.</h2>
-          <p class="reveal d1">I've spent fifteen years helping people see what's possible — building education and career programs for women in Rwanda, founding a relational intelligence company, and closing high-ticket offers for brands I genuinely believe in.</p>
-          <p class="reveal d2">I'm a Global Health Corps fellow, a lifelong athlete, and I'm happiest on a yoga mat, up a mountain, or deep in a real conversation. I sell the way I live — with warmth, honesty, and a stubborn belief that the right yes can change everything.</p>
+          <p class="reveal d1">I've spent fifteen years helping people see what's possible — building education and career programs for women in Rwanda, founding a relational intelligence company, and coaching executives on their careers while I was a director at NPR, purely because I loved it and was good at it.</p>
+          <p class="reveal d2">I'm a Global Health Corps fellow, a lifelong athlete, and I'm happiest on a yoga mat, up a mountain, or deep in a real conversation. I sell the way I live — with warmth, honesty, and a stubborn belief that the right person in your corner can change everything.</p>
           <span class="sign reveal d2">— Anastasia</span>
         </div>
       </div>
@@ -353,7 +372,7 @@
         <div class="polaroid"><img src="poly2.jpg" alt="hiking" /><div class="cap">on the trail</div></div>
         <div class="polaroid"><img src="poly1.jpg" alt="outdoors" /><div class="cap">wide open</div></div>
       </div>
-      <p class="pquote reveal d1">"I can't sell a transformation I haven't lived. Lucky for your pipeline — I have."<span class="by">Anastasia</span></p>
+      <p class="pquote reveal d1">"I can't sell a transformation I haven't lived."<span class="by">Anastasia</span></p>
     </div></div>
   </section>
 
@@ -428,10 +447,67 @@
   </section>
 
   <!-- CLOSE -->
+  <!-- APPLY -->
+  <section class="apply" id="apply">
+    <div class="wrap">
+      <div class="head-wrap">
+        <span class="eyebrow reveal"><span class="ln"></span> Work with me <span class="ln"></span></span>
+        <h2 class="sec-head reveal">Let's see if we're <em>a fit.</em></h2>
+        <p class="lead reveal d1">Sixty seconds takes you straight to my calendar.</p>
+      </div>
+      <form class="applycard reveal d1" id="applyForm" name="thrive-application" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="thrive-application" />
+        <input type="hidden" name="subject" value="thrive" />
+        <p hidden><label>Leave this empty: <input name="bot-field" /></label></p>
+        <div class="q">
+          <label class="qlabel" for="name">What's your name?</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required>
+        </div>
+        <div class="q">
+          <span class="qlabel">Do you have a high-ticket health or wellness offer?</span>
+          <div class="opts">
+            <span class="opt"><input type="radio" name="offer" id="offer-y" value="Yes" required><label for="offer-y">Yes</label></span>
+            <span class="opt"><input type="radio" name="offer" id="offer-n" value="Not yet"><label for="offer-n">Not yet</label></span>
+          </div>
+        </div>
+        <div class="q">
+          <label class="qlabel" for="closerate">What's your average close rate now?</label>
+          <input type="text" id="closerate" name="closerate" placeholder="e.g. 20%, varies, not sure…">
+        </div>
+        <div class="q">
+          <label class="qlabel" for="bottlenecks">Any bottlenecks in your sales process?</label>
+          <input type="text" id="bottlenecks" name="bottlenecks" placeholder="What's getting in the way?">
+        </div>
+        <div class="q">
+          <span class="qlabel">Want to close more of the right clients?</span>
+          <div class="opts">
+            <span class="opt"><input type="radio" name="more" id="more-y" value="Yes"><label for="more-y">Obviously</label></span>
+            <span class="opt"><input type="radio" name="more" id="more-n" value="No"><label for="more-n">I'm good</label></span>
+          </div>
+        </div>
+        <div class="q">
+          <span class="qlabel">What's your niche?</span>
+          <div class="opts">
+            <span class="opt"><input type="radio" name="niche" id="n1" value="Fitness & movement"><label for="n1">Fitness &amp; movement</label></span>
+            <span class="opt"><input type="radio" name="niche" id="n2" value="Functional health"><label for="n2">Functional health</label></span>
+            <span class="opt"><input type="radio" name="niche" id="n3" value="Wellness & coaching"><label for="n3">Wellness &amp; coaching</label></span>
+            <span class="opt"><input type="radio" name="niche" id="n4" value="Other"><label for="n4">Other</label></span>
+          </div>
+        </div>
+        <div class="q">
+          <label class="qlabel" for="email">Your email</label>
+          <input type="email" id="email" name="email" placeholder="you@brand.com" required>
+        </div>
+        <button type="submit" class="btn">Book me <span class="arr">→</span></button>
+        <p class="fineprint">Takes you straight to my calendar to lock a time.</p>
+      </form>
+    </div>
+  </section>
+
   <section class="close" id="start">
     <span class="blob b1"></span>
     <div class="wrap"><div class="inner">
-      <h2 class="reveal">Let's close more of the <em>right</em> clients.</h2>
+      <h2 class="reveal">Let's close more <em>happy</em> clients.</h2>
       <p class="reveal d1">Tell me what you're selling and who's saying no. I'll tell you how I'd turn it around — no pressure, naturally.</p>
       <div class="cta-row reveal d1">
         <a class="btn" href="https://calendly.com/anastasia-better-half/close" target="_blank" rel="noopener">Book a call <span class="arr">→</span></a>
@@ -450,6 +526,18 @@
       entries.forEach((e) => { if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
     }, { threshold:0.12, rootMargin:'0px 0px -7% 0px' });
     document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+
+    var CALENDLY = "https://calendly.com/anastasia-better-half/close";
+    var af = document.getElementById('applyForm');
+    if (af) {
+      af.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var email = (document.getElementById('email').value || '').trim();
+        var body = new URLSearchParams(new FormData(af)).toString();
+        var go = function () { window.open(CALENDLY + (email ? ('?email=' + encodeURIComponent(email)) : ''), '_blank', 'noopener'); };
+        fetch('/', { method:'POST', headers:{'Content-Type':'application/x-www-form-urlencoded'}, body:body }).then(go).catch(go);
+      });
+    }
   </script>
 </body>
 </html>
