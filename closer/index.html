@@ -217,13 +217,16 @@
   /* ===== FIT / DIALOGUE ===== */
   .fit{ padding:84px 0; background:var(--white); text-align:center; border-top:1px solid var(--line); }
   .fit .eyebrow{ justify-content:center; }
-  .fit .fit-context{ font-family:"Fraunces",serif; font-style:italic; font-size:clamp(20px,2.8vw,28px); color:var(--ink); margin:16px auto 32px; max-width:22ch; }
-  .chat{ max-width:580px; margin:0 auto; display:flex; flex-direction:column; gap:14px; }
-  .bubble{ padding:16px 22px; border-radius:22px; line-height:1.5; max-width:90%; }
-  .bubble .who{ display:block; font-weight:700; font-size:11px; letter-spacing:.14em; text-transform:uppercase; margin-bottom:6px; opacity:.55; }
-  .bubble.you{ align-self:flex-start; text-align:left; background:var(--paper-2); border:1px solid var(--line); border-bottom-left-radius:6px; color:var(--ink); font-size:17px; }
-  .bubble.me{ align-self:flex-end; text-align:left; background:var(--burg); color:var(--cream); border-bottom-right-radius:6px; font-family:"Fraunces",serif; font-style:italic; font-weight:500; font-size:26px; }
-  .bubble.me .who{ font-family:"Hanken Grotesk",system-ui,sans-serif; font-style:normal; color:var(--cream); opacity:.7; }
+  .fit .sec-head{ max-width:20ch; margin:14px auto 36px; }
+  .fit .sec-head em{ color:var(--burg); }
+  .fitcard{ max-width:600px; margin:0 auto; border-radius:24px; overflow:hidden; border:1px solid var(--line); box-shadow:0 34px 64px -36px rgba(34,31,27,.34); text-align:left; }
+  .fc-you{ background:var(--paper); padding:34px 38px; }
+  .fc-me{ background:var(--burg); padding:26px 38px 30px; display:flex; align-items:baseline; gap:16px; }
+  .fc-label{ font-weight:700; font-size:11px; letter-spacing:.16em; text-transform:uppercase; }
+  .fc-you .fc-label{ display:block; color:var(--burg); margin-bottom:12px; }
+  .fc-me .fc-label{ color:var(--cream); opacity:.6; flex:none; transform:translateY(-2px); }
+  .fc-you p{ font-family:"Fraunces",serif; font-style:italic; font-weight:300; font-size:clamp(19px,2.4vw,24px); line-height:1.42; color:var(--ink); }
+  .fc-me p{ font-family:"Fraunces",serif; font-style:italic; font-weight:500; font-size:clamp(28px,3.6vw,38px); line-height:1; color:var(--cream); }
 
   /* ===== HUMAN (charcoal) ===== */
   .human{ padding:90px 0; background:linear-gradient(var(--dgrey),var(--dgrey)); position:relative; z-index:1; color-scheme:dark; }
@@ -422,10 +425,10 @@
   <section class="fit">
     <div class="wrap">
       <span class="eyebrow reveal"><span class="ln"></span> Who I'm for <span class="ln"></span></span>
-      <p class="fit-context reveal">For premium offers with discerning buyers.</p>
-      <div class="chat reveal d1">
-        <div class="bubble you"><span class="who">You</span>“My prospects are smart. My offer is nuanced. I need someone who can represent me without sounding cheap — or leaving me stranded.”</div>
-        <div class="bubble me"><span class="who">Me</span>“Say less.”</div>
+      <h2 class="sec-head reveal">For premium offers with <em>discerning buyers.</em></h2>
+      <div class="fitcard reveal d1">
+        <div class="fc-you"><span class="fc-label">You</span><p>“My prospects are smart. My offer is nuanced. I need someone who can represent me without sounding cheap — or leaving me stranded.”</p></div>
+        <div class="fc-me"><span class="fc-label">Me</span><p>“Say less.”</p></div>
       </div>
     </div>
   </section>
