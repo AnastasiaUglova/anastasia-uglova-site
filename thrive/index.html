@@ -79,7 +79,7 @@
   h1.title{ font-family:"Fraunces",serif; font-weight:600; font-size:clamp(44px,6.4vw,84px); line-height:.98; letter-spacing:-.025em; margin:20px 0 0; }
   h1.title em{ font-style:italic; background:var(--grad); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
   .hero-kicker{ font-family:"Fraunces",serif; font-style:italic; font-weight:500; font-size:clamp(24px,3.2vw,40px); line-height:1.1; margin-top:12px; background:var(--grad); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
-  .hero .sub{ margin-top:24px; max-width:500px; font-size:clamp(17px,1.8vw,20px); color:var(--ink-2); }
+  .hero .sub{ margin-top:24px; max-width:540px; font-size:clamp(16px,1.6vw,18px); color:var(--ink-2); }
   .hero .cta-row{ margin-top:32px; display:flex; flex-wrap:wrap; gap:18px 26px; align-items:center; }
   .hero .annot{ margin:18px 0 0 4px; }
 
@@ -154,10 +154,17 @@
   .diffcard p{ margin-top:18px; max-width:680px; color:var(--ink-2); font-size:17px; }
   .diffcard p b{ color:var(--ink); font-weight:700; }
 
+  /* ===== ROOMS ===== */
+  .rooms{ padding:84px 0; background:var(--bg); text-align:center; }
+  .rooms .eyebrow{ justify-content:center; }
+  .stamps{ display:flex; flex-wrap:wrap; justify-content:center; gap:14px 16px; max-width:900px; margin:32px auto 0; }
+  .stamp{ font-family:"Fraunces",serif; font-weight:500; font-size:20px; padding:11px 22px; border:1px solid var(--line); border-radius:60px; background:var(--white); color:var(--ink); transition:transform .25s, background .25s, color .25s, border-color .25s; }
+  .stamp:hover{ background:var(--green); color:#fff; border-color:var(--green); transform:translateY(-3px); }
+
   /* ===== MEET ===== */
   .meet{ padding:90px 0; }
   .meet-grid{ display:grid; grid-template-columns:300px 1fr; gap:54px; align-items:center; }
-  .meet-photo{ width:300px; height:380px; border-radius:22px; object-fit:cover; box-shadow:0 30px 60px -30px rgba(28,42,36,.4); border:6px solid var(--white); }
+  .meet-photo{ width:300px; height:300px; border-radius:50%; object-fit:cover; box-shadow:0 30px 60px -30px rgba(28,42,36,.4); border:6px solid var(--white); }
   .meet h2{ font-family:"Fraunces",serif; font-weight:600; font-size:clamp(28px,3.4vw,42px); margin:14px 0 16px; letter-spacing:-.01em; }
   .meet p{ color:var(--ink-2); font-size:17px; max-width:620px; }
   .meet p + p{ margin-top:14px; }
@@ -241,7 +248,7 @@
     .mstats{ grid-template-columns:1fr 1fr; }
     .credgrid{ grid-template-columns:1fr 1fr; }
     .meet-grid{ grid-template-columns:1fr; gap:28px; }
-    .meet-photo{ width:240px; height:300px; }
+    .meet-photo{ width:220px; height:220px; }
   }
   @media (max-width:540px){
     body{ font-size:17px; }
@@ -269,8 +276,8 @@
     <div class="wrap">
       <div class="hero-copy">
         <span class="eyebrow reveal"><span class="ln"></span> Anastasia Uglova · High-ticket closer</span>
-        <h1 class="title reveal d1">Your offer changes lives.<br>So have I.</h1>
-        <p class="hero-kicker reveal d1"><em>That's how we get to yes.</em></p>
+        <h1 class="title reveal d1">Your offer changes lives.<br><em>So have I.</em></h1>
+        <div class="annot reveal d1">↳ That's how we get to yes.</div>
         <p class="sub reveal d2">I'm a consultative high-ticket closer for the health world with a background in women's empowerment, career coaching, and personal fitness. Founders with premium offers on a mission to help and heal are my happy place.</p>
         <div class="cta-row reveal d2">
           <a class="btn" href="#apply">Let's make more clients smile <span class="arr">→</span></a>
@@ -282,7 +289,7 @@
 
   <!-- VALUE STRIP -->
   <div class="strip" aria-hidden="true">
-    <div class="wrap"><span>Fitness</span><span>Functional health</span><span>Wellness</span><span>Longevity</span><span>Recovery</span></div>
+    <div class="wrap"><span>Fitness</span><span>Functional health</span><span>Wellness</span><span>Longevity</span><span>Empowerment</span></div>
   </div>
 
   <!-- APPROACH -->
@@ -290,7 +297,7 @@
     <span class="blob b1"></span>
     <div class="wrap"><div class="inner">
       <span class="eyebrow reveal"><span class="ln"></span> The approach <span class="ln"></span></span>
-      <h2 class="sec-head reveal">I don't sell pressure.<br>I sell the <em>possibility.</em></h2>
+      <h2 class="sec-head reveal">I don't sell pressure.<br>I sell <em>possibility.</em></h2>
       <p class="lead reveal d1">People don't commit because you reminded them what's wrong. They commit because they can finally see what's <em>possible</em> — and they trust you to get them there. I close on possibility and joy, not pressure and fear. It's also just how I live.</p>
     </div></div>
   </section>
@@ -307,7 +314,7 @@
         <div class="pillar reveal d2">
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 0 0-7 7c0 2.5 1.3 4 2.5 5.2.8.8 1.5 1.6 1.5 2.8v1h6v-1c0-1.2.7-2 1.5-2.8C17.7 13 19 11.5 19 9a7 7 0 0 0-7-7Z"/><path d="M9 21h6"/></svg></div>
           <h3>On a mission</h3>
-          <p>From global health to women's education, I've built my career on joy and expanding what people believe is possible. I close for missions that help and heal.</p>
+          <p>From global health to women's education, I've built my career on joy and expanding what people believe is possible.</p>
         </div>
         <div class="pillar reveal d3">
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 5.6a5.5 5.5 0 0 0-7.8 0L12 6.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 22l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"/></svg></div>
@@ -355,6 +362,16 @@
     </div>
   </section>
 
+  <!-- ROOMS -->
+  <section class="rooms">
+    <div class="wrap">
+      <span class="eyebrow reveal"><span class="ln"></span> Rooms I've closed in <span class="ln"></span></span>
+      <div class="stamps reveal d1">
+        <span class="stamp">NBCUniversal</span><span class="stamp">NPR</span><span class="stamp">Notion</span><span class="stamp">Deloitte</span><span class="stamp">U.S. Senate</span><span class="stamp">Cato Institute</span><span class="stamp">The Olympics</span><span class="stamp">Founders &amp; VCs</span>
+      </div>
+    </div>
+  </section>
+
   <!-- PRACTICE / FITNESS -->
   <section class="practice">
     <span class="blob b1"></span>
@@ -363,14 +380,15 @@
       <h2 class="sec-head reveal">I don't sell what I don't <em>live.</em></h2>
       <p class="lead reveal d1">On the mat, deep in the trees, up a wall, out of a plane — yoga and the outdoors are where I find joy and clarity. Your prospects can smell a faker, so when I talk about feeling good in your body, it lands as truth, not a script.</p>
       <div class="polaroids reveal d1">
-        <div class="polaroid"><img src="poly9.jpg" alt="boxing" /><div class="cap">in the ring</div></div>
-        <div class="polaroid"><img src="poly10.jpg" alt="yoga" /><div class="cap">on the mat</div></div>
         <div class="polaroid"><img src="poly8.jpg" alt="climbing" /><div class="cap">going up</div></div>
+        <div class="polaroid"><img src="poly1.jpg" alt="mountaintop" /><div class="cap">wide open</div></div>
+        <div class="polaroid"><img src="poly2.jpg" alt="hiking" /><div class="cap">on the trail</div></div>
+        <div class="polaroid"><img src="poly6.jpg" alt="skiing" /><div class="cap">off-piste</div></div>
+        <div class="polaroid"><img src="poly4.jpg" alt="on safari" /><div class="cap">on safari</div></div>
         <div class="polaroid"><img src="poly5.jpg" alt="skydiving" /><div class="cap">up above</div></div>
         <div class="polaroid"><img src="poly7.jpg" alt="scuba" /><div class="cap">down below</div></div>
-        <div class="polaroid"><img src="poly6.jpg" alt="skiing" /><div class="cap">off-piste</div></div>
-        <div class="polaroid"><img src="poly2.jpg" alt="hiking" /><div class="cap">on the trail</div></div>
-        <div class="polaroid"><img src="poly1.jpg" alt="outdoors" /><div class="cap">wide open</div></div>
+        <div class="polaroid"><img src="poly10.jpg" alt="yoga" /><div class="cap">on the mat</div></div>
+        <div class="polaroid"><img src="poly9.jpg" alt="boxing" /><div class="cap">in the ring</div></div>
       </div>
       <p class="pquote reveal d1">"I can't sell a transformation I haven't lived."<span class="by">Anastasia</span></p>
     </div></div>
@@ -382,7 +400,7 @@
       <div class="diffcard reveal">
         <span class="eyebrow"><span class="ln"></span> Deep human connection</span>
         <h2 class="sec-head">I built a company on <em>relational intelligence.</em></h2>
-        <p>Before closing for wellness brands, I founded and ran a <b>company</b> helping people build the <b>relational intelligence</b> to thrive in deeper, more authentic human connection — with partners, with teams, with themselves.</p>
+        <p>Before this pivot, I founded and ran a <b>company</b> helping people build the <b>relational intelligence</b> to thrive in deeper, more authentic human connection — with partners, with teams, with themselves.</p>
         <p>That's not a tangent for a closer. It <b>is</b> the job: reading what someone truly needs, earning trust fast, and helping them say a joyful yes to what's genuinely good for them. Add real <b>health fluency</b> on top, and prospects say yes to me after they've said no to everyone else.</p>
       </div>
     </div>
@@ -398,7 +416,7 @@
         <div class="cred"><div class="clabel">Career coaching</div><p>For <b>women in Rwanda</b> and <b>executives in the United States</b></p></div>
         <div class="cred"><div class="clabel">Founder</div><p>Built &amp; ran a <b>relational intelligence company</b> for deeper human connection</p></div>
         <div class="cred"><div class="clabel">Education</div><p><b>M.S. InfoSec &amp; Privacy</b>, UT Austin<br><b>B.A. Government</b>, Cornell</p></div>
-        <div class="cred"><div class="clabel">Skills</div><p>High-ticket closing · CRMs · AI tooling · public speaking</p></div>
+        <div class="cred"><div class="clabel">Skills</div><p>Public speaking · facilitation · program management · CRMs</p></div>
         <div class="cred"><div class="clabel">Practice</div><p>Lifelong athlete — <b>yoga</b>, boxing, climbing, skydiving &amp; the outdoors</p></div>
       </div>
     </div>
@@ -510,7 +528,7 @@
       <h2 class="reveal">Let's close more <em>happy</em> clients.</h2>
       <p class="reveal d1">Tell me what you're selling and who's saying no. I'll tell you how I'd turn it around — no pressure, naturally.</p>
       <div class="cta-row reveal d1">
-        <a class="btn" href="https://calendly.com/anastasia-better-half/close" target="_blank" rel="noopener">Book a call <span class="arr">→</span></a>
+        <a class="btn" href="https://calendly.com/anastasia-better-half/close" target="_blank" rel="noopener">Let's make more clients smile <span class="arr">→</span></a>
       </div>
       <div class="contact reveal d2">
         <a href="mailto:anastasiau@gmail.com">anastasiau@gmail.com</a><span class="sep">/</span>
