@@ -76,8 +76,8 @@
   .transfer b{ color:var(--ink); font-weight:700; }
 
   .expertise{ display:flex; flex-wrap:wrap; align-items:center; gap:10px; margin-top:24px; }
-  .expertise .lbl{ font-weight:700; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-2); margin-right:4px; }
-  .xchip{ font-weight:600; font-size:14px; padding:7px 15px; border:1.5px solid var(--burg); color:var(--burg); border-radius:60px; background:var(--burg-t); }
+  .expertise .lbl{ flex-basis:100%; font-weight:700; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-2); margin-bottom:10px; }
+  .xchip{ font-weight:600; font-size:13px; padding:6px 13px; border:1.5px solid var(--burg); color:var(--burg); border-radius:60px; background:var(--burg-t); }
 
   .cta-row{ display:flex; flex-wrap:wrap; gap:18px 26px; align-items:center; margin-top:28px; }
   .btn, .btn-primary{ display:inline-flex; align-items:center; gap:11px; font-weight:700; font-size:17px; padding:15px 30px; border-radius:60px; border:1.5px solid var(--burg); background:var(--burg); color:#fff; box-shadow:0 12px 26px -14px rgba(125,39,59,.55); transition:transform .2s cubic-bezier(.2,.8,.3,1), box-shadow .2s, background .2s; cursor:pointer; }
@@ -116,11 +116,11 @@
   .ft-sxsw{ height:11px; width:auto; display:inline-block; vertical-align:-1px; margin-right:4px; }
 
   /* ===== FLOATING SXSW PLAYER ===== */
-  .float-talk{ position:fixed; right:24px; top:50%; transform:translateY(-50%) translateZ(0); will-change:transform; z-index:9000; width:300px; max-width:calc(100vw - 32px); background:var(--white); border:1px solid var(--line); border-radius:16px; overflow:hidden; box-shadow:0 24px 56px -18px rgba(34,31,27,.32); }
+  .float-talk{ position:fixed; right:24px; bottom:24px; transform:translateZ(0); will-change:transform; z-index:9000; width:300px; max-width:calc(100vw - 32px); background:var(--white); border:1px solid var(--line); border-radius:16px; overflow:hidden; box-shadow:0 24px 56px -18px rgba(34,31,27,.32); }
   .ft-close{ position:absolute; top:9px; right:9px; z-index:4; width:28px; height:28px; border-radius:50%; border:0; background:rgba(34,31,27,.55); color:#fff; font-size:16px; line-height:1; cursor:pointer; display:grid; place-items:center; transition:background .2s; }
   .ft-close:hover{ background:var(--burg); }
   .ft-player{ position:relative; aspect-ratio:16/9; cursor:pointer; background:var(--paper-2); }
-  .ft-poster{ width:100%; height:100%; object-fit:cover; object-position:50% 12%; display:block; }
+  .ft-poster{ width:100%; height:100%; object-fit:cover; object-position:50% 12%; display:block; filter:brightness(1.13) saturate(1.05); }
   .ft-play{ position:absolute; left:14px; bottom:14px; width:50px; height:50px; display:grid; place-items:center; background:var(--burg); color:#fff; border-radius:50%; transition:transform .2s; animation:pulseB 2.6s infinite; }
   .ft-play svg{ width:23px; height:23px; margin-left:3px; }
   .float-talk:hover .ft-play{ transform:scale(1.09); }
@@ -196,7 +196,7 @@
 
   /* ===== CREDENTIALS ===== */
   .sec-divider{ background:var(--white); line-height:0; text-align:center; }
-  .sec-divider span{ display:block; width:88%; max-width:1080px; height:1px; background:rgba(125,39,59,.3); margin:0 auto; }
+  .sec-divider span{ display:block; height:1px; background:rgba(125,39,59,.2); }
   .creds{ background:var(--white); }
   .creds .wrap{ padding:84px 32px 82px; }
   .credgrid{ display:grid; grid-template-columns:repeat(4,1fr); gap:30px 28px; margin-top:48px; }
@@ -302,11 +302,12 @@
     .skillgrid{ grid-template-columns:1fr 1fr; }
     .credgrid{ grid-template-columns:1fr 1fr; }
     .human-grid{ grid-template-columns:1fr; gap:40px; }
-    .quotecard{ order:-1; }
   }
   @media (max-width:540px){
     body{ font-size:17px; }
     .wrap{ padding:0 22px; }
+    .hero{ padding:30px 0 24px; }
+    .portrait{ width:min(210px,56vw); }
     .receipts .wrap,.moves .wrap{ padding:64px 22px 70px; }
     .stats{ grid-template-columns:1fr; }
     .skillgrid{ grid-template-columns:1fr 1fr; }
@@ -314,6 +315,7 @@
     .btn, .btn-primary{ width:100%; justify-content:center; } .cta-row{ width:100%; }
     .portrait .mono{ font-size:96px; }
     .move{ grid-template-columns:1fr; gap:6px; }
+    .owns{ gap:7px; } .ochip{ font-size:12px; padding:6px 11px; }
   }
 </style>
 </head>
@@ -379,10 +381,11 @@
   <!-- PHILOSOPHY -->
   <section class="philosophy">
     <div class="wrap">
+      <span class="eyebrow reveal" style="justify-content:center; margin-bottom:18px;"><span class="ln"></span> The craft</span>
       <p class="manifesto reveal">Closing isn't about the close.<br>It's <em>everything that comes before.</em></p>
       <p class="manifesto-sub reveal d1">I create rapport and establish credibility in the first five minutes — exactly where most high-stakes conversations flounder.</p>
       <div class="owns reveal d2">
-        <span class="ochip">Research before every call</span>
+        <span class="ochip">Research the call</span>
         <span class="ochip">Know the offer cold</span>
         <span class="ochip">Run the full lifecycle</span>
         <span class="ochip">Triage &amp; prioritize</span>
@@ -457,9 +460,7 @@
           <p class="lead">People buy from people they like and believe. Off the clock, I'm the one who'll jump out of the plane, spar three rounds, then debate ethics over dinner — and show up sharp the next morning.</p>
           <p class="also">I even ran my own <b>career-coaching practice for three years</b> on the side while at NPR — purely because I loved it, people needed it, and I was good at it.</p>
           <div class="tags">
-            <span class="tag">Skydiving</span><span class="tag">Boxing</span><span class="tag">Scuba</span>
-            <span class="tag">Climbing</span><span class="tag">Acro yoga</span><span class="tag">Skiing</span>
-            <span class="tag">Pilates</span><span class="tag">Writing</span><span class="tag">Jewelry design</span>
+            <span class="tag">Skydiving</span><span class="tag">Boxing</span><span class="tag">Scuba</span><span class="tag">Climbing</span><span class="tag">Acro</span><span class="tag">Skiing</span>
           </div>
         </div>
         <div class="quotecard reveal d2">
@@ -476,6 +477,7 @@
         <div class="polaroid"><img src="poly6.jpg" alt="Anastasia skiing" /><div class="cap">off-piste</div></div>
         <div class="polaroid"><img src="poly7.jpg" alt="Anastasia scuba diving" /><div class="cap">underwater</div></div>
         <div class="polaroid"><img src="poly8.jpg" alt="Anastasia climbing in the Alps" /><div class="cap">the Alps</div></div>
+        <div class="polaroid"><img src="poly9.jpg" alt="Anastasia boxing, mid-air" /><div class="cap">gloves on</div></div>
       </div>
     </div>
   </section>
@@ -495,7 +497,7 @@
     </div>
   </section>
 
-  <div class="sec-divider"><span></span></div>
+  <div class="sec-divider"><div class="wrap"><span></span></div></div>
 
   <!-- CREDENTIALS -->
   <section class="creds">
