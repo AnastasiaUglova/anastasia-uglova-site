@@ -78,12 +78,13 @@
   .hero-copy{ max-width:560px; }
   h1.title{ font-family:"Fraunces",serif; font-weight:600; font-size:clamp(44px,6.4vw,84px); line-height:.98; letter-spacing:-.025em; margin:20px 0 0; }
   h1.title em{ font-style:italic; background:var(--grad); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
+  .hero-kicker{ font-family:"Fraunces",serif; font-style:italic; font-weight:500; font-size:clamp(24px,3.2vw,40px); line-height:1.1; margin-top:12px; background:var(--grad); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
   .hero .sub{ margin-top:24px; max-width:500px; font-size:clamp(17px,1.8vw,20px); color:var(--ink-2); }
   .hero .cta-row{ margin-top:32px; display:flex; flex-wrap:wrap; gap:18px 26px; align-items:center; }
   .hero .annot{ margin:18px 0 0 4px; }
 
   /* value strip */
-  .strip{ background:var(--grad); color:#fff; }
+  .strip{ background:var(--grad); color:#fff; color-scheme:dark; }
   .strip .wrap{ display:flex; flex-wrap:wrap; justify-content:center; gap:14px 40px; padding:18px 32px; font-weight:700; font-size:13.5px; letter-spacing:.16em; text-transform:uppercase; }
   .strip span{ display:inline-flex; align-items:center; gap:40px; }
   .strip span::after{ content:"✺"; opacity:.6; }
@@ -109,7 +110,7 @@
   .pillar p{ font-size:15.5px; color:var(--ink-2); line-height:1.55; }
 
   /* ===== MISSION ===== */
-  .mission{ padding:90px 0; background:var(--green); color:#eaf2ed; position:relative; overflow:hidden; }
+  .mission{ padding:90px 0; background:linear-gradient(var(--green),var(--green)); color:#eaf2ed; position:relative; overflow:hidden; color-scheme:dark; }
   .mission .b1{ width:560px;height:560px;background:rgba(46,127,166,.25);top:-180px;left:-160px;filter:blur(80px); }
   .mission .wrap{ position:relative; z-index:1; }
   .mission .eyebrow{ color:#bce0cf; } .mission .eyebrow .ln{ background:#bce0cf; }
@@ -152,6 +153,15 @@
   .diffcard p{ margin-top:18px; max-width:680px; color:var(--ink-2); font-size:17px; }
   .diffcard p b{ color:var(--ink); font-weight:700; }
 
+  /* ===== MEET ===== */
+  .meet{ padding:90px 0; }
+  .meet-grid{ display:grid; grid-template-columns:300px 1fr; gap:54px; align-items:center; }
+  .meet-photo{ width:300px; height:300px; border-radius:50%; object-fit:cover; box-shadow:0 30px 60px -30px rgba(28,42,36,.4); border:6px solid var(--white); }
+  .meet h2{ font-family:"Fraunces",serif; font-weight:600; font-size:clamp(28px,3.4vw,42px); margin:14px 0 16px; letter-spacing:-.01em; }
+  .meet p{ color:var(--ink-2); font-size:17px; max-width:620px; }
+  .meet p + p{ margin-top:14px; }
+  .meet .sign{ font-family:"Caveat",cursive; font-weight:700; font-size:30px; color:var(--green); margin-top:20px; transform:rotate(-3deg); display:inline-block; }
+
   /* ===== CREDENTIALS ===== */
   .creds{ padding:90px 0; background:var(--white); }
   .creds .eyebrow{ justify-content:flex-start; }
@@ -176,10 +186,10 @@
   .qa-ans{ padding:0 40px 26px 0; color:var(--ink-2); font-size:16.5px; line-height:1.6; max-width:680px; }
 
   /* ===== CLOSE ===== */
-  .close{ padding:104px 0 96px; text-align:center; position:relative; overflow:hidden; background:var(--grad); color:#fff; }
+  .close{ padding:104px 0 96px; text-align:center; position:relative; overflow:hidden; background:var(--grad); color:#fff; color-scheme:dark; }
   .close .b1{ width:520px;height:520px;background:rgba(255,255,255,.10);top:-160px;right:-120px;filter:blur(70px); }
   .close .inner{ position:relative; z-index:1; }
-  .close h2{ font-family:"Fraunces",serif; font-weight:500; font-size:clamp(40px,6.5vw,82px); line-height:1; letter-spacing:-.02em; }
+  .close h2{ font-family:"Fraunces",serif; font-weight:500; font-size:clamp(40px,6.5vw,82px); line-height:1; letter-spacing:-.02em; color:#fff; }
   .close h2 em{ font-style:italic; }
   .close p{ max-width:520px; margin:22px auto 0; font-size:19px; color:rgba(255,255,255,.92); }
   .close .cta-row{ margin-top:34px; display:flex; flex-wrap:wrap; gap:16px 22px; justify-content:center; align-items:center; }
@@ -190,7 +200,7 @@
   .close .contact a:hover{ border-color:rgba(255,255,255,.7); }
   .close .contact .sep{ opacity:.4; }
 
-  footer{ background:var(--ink); color:rgba(242,246,239,.6); text-align:center; padding:32px 0 42px; font-size:14px; }
+  footer{ background:linear-gradient(var(--ink),var(--ink)); color:rgba(242,246,239,.6); text-align:center; padding:32px 0 42px; font-size:14px; color-scheme:dark; }
   footer .mark{ font-family:"Caveat",cursive; font-weight:700; font-size:21px; color:#9ad9ff; }
 
   /* ===== REVEAL ===== */
@@ -210,6 +220,8 @@
     .pillar-grid{ grid-template-columns:1fr 1fr; }
     .mstats{ grid-template-columns:1fr 1fr; }
     .credgrid{ grid-template-columns:1fr 1fr; }
+    .meet-grid{ grid-template-columns:1fr; gap:28px; }
+    .meet-photo{ width:220px; height:220px; }
   }
   @media (max-width:540px){
     body{ font-size:17px; }
@@ -237,11 +249,11 @@
     <div class="wrap">
       <div class="hero-copy">
         <span class="eyebrow reveal"><span class="ln"></span> Anastasia Uglova · High-ticket closer</span>
-        <h1 class="title reveal d1">Your offer changes lives.<br>I get more people to <em>yes.</em></h1>
-        <div class="annot reveal d1">↳ and I actually live it</div>
-        <p class="sub reveal d2">I'm a consultative high-ticket closer for the health world — fitness, wellness, and functional-health founders with premium offers that deserve more yeses. I sell it the way I live it. Because I do.</p>
+        <h1 class="title reveal d1">Your offer changes lives.<br>So have I.</h1>
+        <p class="hero-kicker reveal d1"><em>That's how we get to yes.</em></p>
+        <p class="sub reveal d2">I'm a consultative high-ticket closer for the health world — fitness, wellness, and functional-health founders with premium offers that deserve more yeses. I sell it the way I live it.</p>
         <div class="cta-row reveal d2">
-          <a class="btn" href="#start">Let's close more clients <span class="arr">→</span></a>
+          <a class="btn" href="#start">Let's make more clients smile <span class="arr">→</span></a>
           <a class="btn-ghost" href="#approach">How I sell</a>
         </div>
       </div>
@@ -258,7 +270,7 @@
     <span class="blob b1"></span>
     <div class="wrap"><div class="inner">
       <span class="eyebrow reveal"><span class="ln"></span> The approach <span class="ln"></span></span>
-      <h2 class="sec-head reveal">I don't sell the problem. I sell the <em>possibility.</em></h2>
+      <h2 class="sec-head reveal">Your prospects don't need pressure. They need <em>someone to believe in.</em></h2>
       <p class="lead reveal d1">People don't commit because you reminded them what's wrong. They commit because they can finally see what's <em>possible</em> — and they trust you to get them there. I close on possibility and joy, not pressure and fear. It's also just how I live.</p>
     </div></div>
   </section>
@@ -286,6 +298,22 @@
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M6 21V10M12 21V4M18 21v-7"/><path d="M12 4l4 3M12 4 8 7"/></svg></div>
           <h3>Relational intelligence</h3>
           <p>I read what a prospect actually needs and build the trust that turns curiosity into commitment — or an honest, no-hard-feelings no.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEET -->
+  <section class="meet">
+    <div class="wrap">
+      <div class="meet-grid">
+        <img class="meet-photo reveal" src="meet.jpg" alt="Anastasia Uglova" />
+        <div>
+          <span class="eyebrow reveal"><span class="ln"></span> Meet me</span>
+          <h2 class="reveal d1">Hi, I'm Anastasia.</h2>
+          <p class="reveal d1">I've spent fifteen years helping people see what's possible — building education and career programs for women in Rwanda, founding a practice in relational intelligence, and closing high-ticket offers for brands I genuinely believe in.</p>
+          <p class="reveal d2">I'm a Global Health Corps fellow, a lifelong athlete, and I'm happiest on a yoga mat, up a mountain, or deep in a real conversation. I sell the way I live — with warmth, honesty, and a stubborn belief that the right yes can change everything.</p>
+          <span class="sign reveal d2">— Anastasia</span>
         </div>
       </div>
     </div>
@@ -382,7 +410,7 @@
         </details>
         <details class="qaitem" name="qa">
           <summary>What's your vibe on a call? <span class="qaicon"></span></summary>
-          <p class="qa-ans">Joyful and possibility-focused. I don't manufacture urgency or poke at wounds. I help people see what's possible and feel genuinely good about saying yes.</p>
+          <p class="qa-ans">Joyful and possibility-focused. I don't manufacture urgency or poke at wounds. I help people see what's possible to feel genuinely good about saying yes.</p>
         </details>
       </div>
     </div>
@@ -404,7 +432,7 @@
     </div></div>
   </section>
 
-  <footer><div class="wrap">Made with care in Austin, TX · <span class="mark">Anastasia Uglova</span> · High-ticket closer · health, wellness &amp; fitness.</div></footer>
+  <footer><div class="wrap">Made with care in Austin, TX · <span class="mark">Anastasia Uglova</span> · Health, wellness &amp; fitness high-ticket closer.</div></footer>
 
   <script>
     const io = new IntersectionObserver((entries) => {
