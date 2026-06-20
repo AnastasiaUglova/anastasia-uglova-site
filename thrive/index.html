@@ -210,6 +210,10 @@
   .vid-cover::after{ content:""; position:absolute; inset:0; background:linear-gradient(180deg, rgba(0,0,0,.34) 0%, rgba(0,0,0,0) 36%); }
   .vid-cap{ position:absolute; top:16px; left:20px; z-index:2; font-family:"Caveat",cursive; font-weight:700; font-size:clamp(22px,2.5vw,32px); color:#fff; line-height:1.0; text-shadow:0 1px 3px rgba(0,0,0,.55),0 2px 16px rgba(0,0,0,.4); pointer-events:none; }
   .vidframe.playing .vid-cap{ display:none; }
+  .vid-end{ position:absolute; inset:0; z-index:4; display:none; flex-direction:column; align-items:center; justify-content:center; gap:15px; background:rgba(21,18,14,.8); text-align:center; padding:24px; }
+  .vidframe.ended .vid-end{ display:flex; }
+  .vid-end p{ color:#fff; font-family:"Fraunces",serif; font-style:italic; font-size:clamp(19px,2.4vw,26px); margin:0; }
+  .vid-replay{ background:none; border:none; color:rgba(255,255,255,.85); font:inherit; font-size:14px; font-weight:600; cursor:pointer; text-decoration:underline; }
 
   /* ===== APPLY ===== */
   .apply{ padding:90px 0; background:var(--white); }
@@ -397,6 +401,11 @@
         </div>
         <div class="vid-cap">What it’s like<br>to work with me</div>
         <button class="vid-play" id="vidPlay" type="button" aria-label="Play video"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
+        <div class="vid-end" id="vidEnd">
+          <p>Like what you heard?</p>
+          <a class="btn" href="https://calendly.com/anastasia-better-half/close" target="_blank" rel="noopener">Book a call →</a>
+          <button class="vid-replay" id="vidReplay" type="button">↺ Watch again</button>
+        </div>
       </div>
     </div>
   </section>
@@ -409,6 +418,9 @@
       if(vp) vp.addEventListener('click',play);
       if(cover) cover.addEventListener('click',play);
       if(vv) vv.addEventListener('click',function(){ if(!vf.classList.contains('playing')) play(); });
+      var rep=document.getElementById('vidReplay');
+      if(vv) vv.addEventListener('ended',function(){ vf.classList.add('ended'); });
+      if(rep) rep.addEventListener('click',function(){ vf.classList.remove('ended'); vv.currentTime=0; var p=vv.play(); if(p&&p.catch)p.catch(function(){}); });
     })();
   </script>
 
