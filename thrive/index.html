@@ -198,13 +198,13 @@
   .intro-vid .eyebrow{ justify-content:center; }
   .intro-vid .sec-head{ margin:14px auto 0; }
   .vidframe{ position:relative; max-width:880px; margin:36px auto 0; border-radius:18px; overflow:hidden; box-shadow:0 30px 60px -30px rgba(28,28,28,.45); background:transparent; aspect-ratio:16/9; transform:translateZ(0); }
-  .vidframe video{ width:100%; height:100%; object-fit:cover; display:block; border-radius:18px; }
+  .vidframe video{ width:100%; height:100%; object-fit:cover; display:block; border-radius:18px; transform:scale(1.03); }
   .vid-play{ position:absolute; left:18px; bottom:18px; z-index:2; width:62px; height:62px; display:grid; place-items:center; background:var(--grad); color:#fff; border:none; border-radius:50%; cursor:pointer; box-shadow:0 12px 30px -8px rgba(0,0,0,.5); transition:transform .2s, background .2s; }
   .vid-play:hover{  transform:scale(1.06); }
   .vid-play svg{ width:26px; height:26px; margin-left:3px; }
   .vidframe.playing .vid-play{ display:none; }
   .vid-cover{ position:absolute; inset:0; z-index:1; cursor:pointer; }
-  .vid-cover .cv{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0; transition:opacity .5s ease; }
+  .vid-cover .cv{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0; transition:opacity .5s ease; border-radius:18px; transform:scale(1.03); }
   .vid-cover .cv.on{ opacity:1; }
   .vidframe.playing .vid-cover{ display:none; }
   .vid-cover::after{ content:""; position:absolute; inset:0; background:linear-gradient(180deg, rgba(0,0,0,.34) 0%, rgba(0,0,0,0) 36%); }
@@ -403,7 +403,7 @@
         <button class="vid-play" id="vidPlay" type="button" aria-label="Play video"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
         <div class="vid-end" id="vidEnd">
           <p>Like what you heard?</p>
-          <a class="btn" href="https://calendly.com/anastasia-better-half/close" target="_blank" rel="noopener">Book a call →</a>
+          <a class="btn" href="#apply">Book a call →</a>
           <button class="vid-replay" id="vidReplay" type="button">↺ Watch again</button>
         </div>
       </div>
