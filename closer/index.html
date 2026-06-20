@@ -226,11 +226,14 @@
   .cred a:hover{ color:var(--burg-d); }
 
   /* ===== FIT / DIALOGUE ===== */
-  .fit{ padding:84px 0; background:var(--white); text-align:center; border-top:1px solid var(--line); }
-  .fit .eyebrow{ justify-content:center; }
-  .fit .sec-head{ max-width:20ch; margin:14px auto 36px; }
+  .fit{ padding:84px 0; background:var(--white); text-align:left; border-top:1px solid var(--line); }
+  .fit-grid{ display:grid; grid-template-columns:1.02fr .98fr; gap:48px; align-items:center; }
+  .fit-video .vidframe{ max-width:none; margin:0; }
+  @media (max-width:760px){ .fit-grid{ grid-template-columns:1fr; gap:30px; } }
+  .fit .eyebrow{ justify-content:flex-start; }
+  .fit .sec-head{ max-width:16ch; margin:14px 0 0; }
   .fit .sec-head em{ color:var(--burg); }
-  .fitcard{ max-width:600px; margin:0 auto; border-radius:24px; overflow:hidden; border:1px solid var(--line); box-shadow:0 34px 64px -36px rgba(34,31,27,.34); text-align:left; }
+  .fitcard{ max-width:none; margin:28px 0 0; border-radius:24px; overflow:hidden; border:1px solid var(--line); box-shadow:0 34px 64px -36px rgba(34,31,27,.34); text-align:left; }
   .fc-you{ background:var(--paper); padding:34px 38px; }
   .fc-me{ background:var(--burg); padding:26px 38px 30px; display:flex; align-items:baseline; gap:16px; }
   .fc-label{ font-weight:700; font-size:11px; letter-spacing:.16em; text-transform:uppercase; }
@@ -449,17 +452,37 @@
     </div>
   </section>
 
-  <!-- FIT / DIALOGUE -->
+  <!-- FIT / DIALOGUE + VIDEO -->
   <section class="fit">
     <div class="wrap">
-      <span class="eyebrow reveal"><span class="ln"></span> Who I'm for <span class="ln"></span></span>
-      <h2 class="sec-head reveal">For premium offers with <em>discerning buyers.</em></h2>
-      <div class="fitcard reveal d1">
-        <div class="fc-you"><span class="fc-label">You</span><p>“My prospects are smart. My offer is nuanced. I need someone who can represent me without sounding cheap — or leaving me stranded.”</p></div>
-        <div class="fc-me"><span class="fc-label">Me</span><p>“Say less.”</p></div>
+      <div class="fit-grid">
+        <div class="fit-copy">
+          <span class="eyebrow reveal"><span class="ln"></span> Who I'm for</span>
+          <h2 class="sec-head reveal">For premium offers with <em>discerning buyers.</em></h2>
+          <div class="fitcard reveal d1">
+            <div class="fc-you"><span class="fc-label">You</span><p>“My prospects are smart. My offer is nuanced. I need someone who can represent me without sounding cheap — or leaving me stranded.”</p></div>
+            <div class="fc-me"><span class="fc-label">Me</span><p>“Say less.”</p></div>
+          </div>
+        </div>
+        <div class="fit-video reveal d1">
+          <div class="vidframe" id="vidFrame">
+            <video id="introVideo" poster="intro-poster.jpg" preload="none" playsinline>
+              <source src="intro.mp4" type="video/mp4" />
+            </video>
+            <button class="vid-play" id="vidPlay" type="button" aria-label="Play video"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
+          </div>
+        </div>
       </div>
     </div>
   </section>
+  <script>
+    (function(){
+      var vf=document.getElementById('vidFrame'),vp=document.getElementById('vidPlay'),vv=document.getElementById('introVideo');
+      function play(){ if(!vf) return; vf.classList.add('playing'); vv.setAttribute('controls','controls'); var p=vv.play(); if(p&&p.catch)p.catch(function(){}); }
+      if(vp) vp.addEventListener('click',play);
+      if(vv) vv.addEventListener('click',function(){ if(!vf.classList.contains('playing')) play(); });
+    })();
+  </script>
 
   <!-- RECEIPTS -->
   <section class="receipts" id="receipts">
@@ -617,29 +640,6 @@
     </div>
   </section>
 
-  <!-- INTRO VIDEO -->
-  <section class="intro-vid">
-    <div class="wrap">
-      <div class="head-wrap reveal">
-        <span class="eyebrow"><span class="ln"></span> A 2-minute hello <span class="ln"></span></span>
-        <h2 class="sec-head" style="margin-top:14px;">What it's like to <em>work with me.</em></h2>
-      </div>
-      <div class="vidframe reveal d1" id="vidFrame">
-        <video id="introVideo" poster="intro-poster.jpg" preload="none" playsinline>
-          <source src="intro.mp4" type="video/mp4" />
-        </video>
-        <button class="vid-play" id="vidPlay" type="button" aria-label="Play video"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
-      </div>
-    </div>
-  </section>
-  <script>
-    (function(){
-      var vf=document.getElementById('vidFrame'),vp=document.getElementById('vidPlay'),vv=document.getElementById('introVideo');
-      function play(){ if(!vf) return; vf.classList.add('playing'); vv.setAttribute('controls','controls'); var p=vv.play(); if(p&&p.catch)p.catch(function(){}); }
-      if(vp) vp.addEventListener('click',play);
-      if(vv) vv.addEventListener('click',function(){ if(!vf.classList.contains('playing')) play(); });
-    })();
-  </script>
 
   <!-- APPLY -->
   <section class="apply" id="apply">
