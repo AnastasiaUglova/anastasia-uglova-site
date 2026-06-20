@@ -292,10 +292,14 @@
   .intro-vid .sec-head{ margin:14px auto 0; }
   .vidframe{ position:relative; max-width:880px; margin:36px auto 0; border-radius:18px; overflow:hidden; box-shadow:0 30px 60px -30px rgba(28,28,28,.45); background:var(--black); aspect-ratio:16/9; }
   .vidframe video{ width:100%; height:100%; object-fit:cover; display:block; }
-  .vid-play{ position:absolute; inset:0; margin:auto; width:84px; height:84px; display:grid; place-items:center; background:var(--burg); color:#fff; border:none; border-radius:50%; cursor:pointer; box-shadow:0 12px 30px -8px rgba(0,0,0,.5); transition:transform .2s, background .2s; }
+  .vid-play{ position:absolute; inset:0; margin:auto; z-index:2; width:84px; height:84px; display:grid; place-items:center; background:var(--burg); color:#fff; border:none; border-radius:50%; cursor:pointer; box-shadow:0 12px 30px -8px rgba(0,0,0,.5); transition:transform .2s, background .2s; }
   .vid-play:hover{ background:var(--burg-d); transform:scale(1.06); }
   .vid-play svg{ width:34px; height:34px; margin-left:4px; }
   .vidframe.playing .vid-play{ display:none; }
+  .vid-cover{ position:absolute; inset:0; z-index:1; cursor:pointer; }
+  .vid-cover .cv{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0; transition:opacity .7s ease; }
+  .vid-cover .cv.on{ opacity:1; }
+  .vidframe.playing .vid-cover{ display:none; }
 
   /* ===== APPLY ===== */
   .apply{ padding:92px 0; background:var(--paper); }
@@ -466,9 +470,15 @@
         </div>
         <div class="fit-video reveal d1">
           <div class="vidframe" id="vidFrame">
-            <video id="introVideo" poster="intro-poster.jpg" preload="none" playsinline>
+            <video id="introVideo" preload="none" playsinline>
               <source src="intro.mp4" type="video/mp4" />
             </video>
+            <div class="vid-cover" id="vidCover">
+              <img src="cover1.jpg" class="cv on" alt="" />
+              <img src="cover2.jpg" class="cv" alt="" />
+              <img src="cover3.jpg" class="cv" alt="" />
+              <img src="cover4.jpg" class="cv" alt="" />
+            </div>
             <button class="vid-play" id="vidPlay" type="button" aria-label="Play video"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
           </div>
         </div>
@@ -477,9 +487,12 @@
   </section>
   <script>
     (function(){
-      var vf=document.getElementById('vidFrame'),vp=document.getElementById('vidPlay'),vv=document.getElementById('introVideo');
-      function play(){ if(!vf) return; vf.classList.add('playing'); vv.setAttribute('controls','controls'); var p=vv.play(); if(p&&p.catch)p.catch(function(){}); }
+      var vf=document.getElementById('vidFrame'),vp=document.getElementById('vidPlay'),vv=document.getElementById('introVideo'),cover=document.getElementById('vidCover');
+      var imgs=cover?cover.querySelectorAll('.cv'):[],idx=0,timer=null;
+      if(imgs.length>1){ timer=setInterval(function(){ imgs[idx].classList.remove('on'); idx=(idx+1)%imgs.length; imgs[idx].classList.add('on'); },2200); }
+      function play(){ if(!vf) return; if(timer)clearInterval(timer); vf.classList.add('playing'); vv.setAttribute('controls','controls'); var p=vv.play(); if(p&&p.catch)p.catch(function(){}); }
       if(vp) vp.addEventListener('click',play);
+      if(cover) cover.addEventListener('click',play);
       if(vv) vv.addEventListener('click',function(){ if(!vf.classList.contains('playing')) play(); });
     })();
   </script>
