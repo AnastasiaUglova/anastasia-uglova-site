@@ -192,6 +192,18 @@
   .qaitem[open] .qaicon::after{ opacity:0; transform:scaleY(0); }
   .qa-ans{ padding:0 40px 26px 0; color:var(--ink-2); font-size:16.5px; line-height:1.6; max-width:680px; }
 
+  /* ===== INTRO VIDEO ===== */
+  .intro-vid{ padding:90px 0; background:var(--bg-2); }
+  .intro-vid .head-wrap{ text-align:center; }
+  .intro-vid .eyebrow{ justify-content:center; }
+  .intro-vid .sec-head{ margin:14px auto 0; }
+  .vidframe{ position:relative; max-width:880px; margin:36px auto 0; border-radius:18px; overflow:hidden; box-shadow:0 30px 60px -30px rgba(28,28,28,.45); background:var(--ink); aspect-ratio:16/9; }
+  .vidframe video{ width:100%; height:100%; object-fit:cover; display:block; }
+  .vid-play{ position:absolute; inset:0; margin:auto; width:84px; height:84px; display:grid; place-items:center; background:var(--grad); color:#fff; border:none; border-radius:50%; cursor:pointer; box-shadow:0 12px 30px -8px rgba(0,0,0,.5); transition:transform .2s, background .2s; }
+  .vid-play:hover{  transform:scale(1.06); }
+  .vid-play svg{ width:34px; height:34px; margin-left:4px; }
+  .vidframe.playing .vid-play{ display:none; }
+
   /* ===== APPLY ===== */
   .apply{ padding:90px 0; background:var(--white); }
   .apply .head-wrap{ text-align:center; }
@@ -463,6 +475,30 @@
   </section>
 
   <!-- CLOSE -->
+  <!-- INTRO VIDEO -->
+  <section class="intro-vid">
+    <div class="wrap">
+      <div class="head-wrap reveal">
+        <span class="eyebrow"><span class="ln"></span> A 2-minute hello <span class="ln"></span></span>
+        <h2 class="sec-head" style="margin-top:14px;">What it's like to <em>work with me.</em></h2>
+      </div>
+      <div class="vidframe reveal d1" id="vidFrame">
+        <video id="introVideo" poster="intro-poster.jpg" preload="none" playsinline>
+          <source src="intro.mp4" type="video/mp4" />
+        </video>
+        <button class="vid-play" id="vidPlay" type="button" aria-label="Play video"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
+      </div>
+    </div>
+  </section>
+  <script>
+    (function(){
+      var vf=document.getElementById('vidFrame'),vp=document.getElementById('vidPlay'),vv=document.getElementById('introVideo');
+      function play(){ if(!vf) return; vf.classList.add('playing'); vv.setAttribute('controls','controls'); var p=vv.play(); if(p&&p.catch)p.catch(function(){}); }
+      if(vp) vp.addEventListener('click',play);
+      if(vv) vv.addEventListener('click',function(){ if(!vf.classList.contains('playing')) play(); });
+    })();
+  </script>
+
   <!-- APPLY -->
   <section class="apply" id="apply">
     <div class="wrap">
