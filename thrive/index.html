@@ -251,6 +251,8 @@
 
   footer{ background:linear-gradient(var(--ink),var(--ink)); color:rgba(242,246,239,.6); text-align:center; padding:32px 0 42px; font-size:14px; color-scheme:dark; }
   footer .mark{ font-family:"Caveat",cursive; font-weight:700; font-size:21px; color:#9ad9ff; }
+  footer .fnb{ white-space:nowrap; }
+  footer .wrap{ line-height:1.9; }
 
   /* ===== REVEAL ===== */
   .reveal{ opacity:0; transform:translateY(26px); transition:opacity .8s cubic-bezier(.2,.8,.3,1), transform .8s cubic-bezier(.2,.8,.3,1); }
@@ -615,7 +617,7 @@
     </div></div>
   </section>
 
-  <footer><div class="wrap">Made with care in Austin, TX · <span class="mark">Anastasia Uglova</span> · Health, wellness &amp; fitness high-ticket closer.</div></footer>
+  <footer><div class="wrap"><span class="fnb">Made with care in Austin, TX</span> · <span class="mark">Anastasia Uglova</span> · <span class="fnb">Health, wellness &amp; fitness high-ticket closer.</span></div></footer>
 
   <script>
     const io = new IntersectionObserver((entries) => {
